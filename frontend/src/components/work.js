@@ -192,7 +192,7 @@ function Work() {
             <li>List</li> */}
         </ul>
       </div>
-      <ul className="flex projectsList justify-start float-left items-start">
+      <ul className="flex projectsList justify-start float-left items-start mb-80">
         {selectedCategory !== "All"
           ? projectsArray
               .find((category) => category.name === selectedCategory)

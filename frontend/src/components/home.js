@@ -16,7 +16,7 @@ import spotlight2 from "../images/home/spotlight2.JPG";
 import gardenInDesert from "../images/home/gardenInDesert.jpg";
 import showCase2 from "../images/home/2222.jpg";
 import showCase1 from "../images/home/showCase1.bmp";
-import honeymoon from "../images/home/honeymoon.jpg";
+import honeymoon from "../images/home/honeymoon.png";
 
 const doonOfficePictures = [DoonOffice1, DoonOffice2];
 const spotlightPictures = [spotlight1, spotlight2];
@@ -273,7 +273,7 @@ function Home(props) {
           </div>
         </div>
       </div>
-      <div className="flex justify-end">
+      <div className="flex justify-end mt-32">
         <div className="insights">
           <span className="fs-12">INSIGHTS</span>
           <h3 className="fs-27 leading-10 mb-7 mt-7">

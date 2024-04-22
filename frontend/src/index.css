@@ -364,7 +364,6 @@ body {
   height: 89vh;
 }
 .insights {
-  margin-top: 70px;
   width: 70vw;
   padding-right: 20vw;
 }
@@ -416,4 +415,7 @@ body {
   top: 0;
   bottom: 0;
   width: 100%;
+}
+.footer {
+  margin-top: 320px;
 }

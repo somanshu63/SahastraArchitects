@@ -1,0 +1,429 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Noto Sans", sans-serif;
+}
+.fs-36 {
+  font-weight: 600;
+  font-size: 36px;
+}
+
+.fs-42 {
+  font-weight: 600;
+  font-size: 42px;
+}
+.fs-33 {
+  font-weight: 600;
+  font-size: 33px;
+}
+.fs-13 {
+  font-weight: 600;
+  font-size: 13px;
+}
+.fs-24 {
+  font-weight: 600;
+  font-size: 24px;
+}
+.fs-20 {
+  font-weight: 600;
+  font-size: 20px;
+}
+.fs-12 {
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.fs-14 {
+  font-weight: 600;
+  font-size: 14px;
+}
+.fs-30 {
+  font-weight: 700;
+  font-size: 30px;
+}
+.fs-27 {
+  font-weight: 700;
+  font-size: 27px;
+}
+.fs-17 {
+  font-weight: 600;
+  font-size: 17px;
+}
+.fw-700 {
+  font-weight: 700;
+}
+.black {
+  color: black;
+}
+.white {
+  color: white;
+}
+.pinkbg {
+  background-color: #ae478c;
+}
+.gray {
+  color: #636466;
+}
+.graybg {
+  background-color: #636466;
+}
+.green {
+  color: #009b77;
+}
+.greenbg {
+  background-color: #009b77;
+}
+.flex {
+  display: flex;
+}
+.center {
+  align-items: center;
+}
+.space-between {
+  justify-content: space-between;
+}
+
+/* header */
+.home {
+  position: relative;
+  height: 90vh;
+}
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-size: cover;
+}
+.header {
+  padding: 55px 94px;
+}
+img {
+  object-fit: cover;
+}
+/* .absolute {
+  position: absolute;
+  top: 55px;
+  left: 94px;
+  right: 94px;
+  z-index: 10;
+} */
+.sidebar {
+  box-shadow: 0px 1px 20px 0 rgba(0, 0, 0, 0.59);
+  position: absolute;
+  top: 0px;
+  right: 0;
+  height: 100vh;
+  width: 20%;
+  background-color: white;
+  padding: 30px;
+  z-index: 10;
+}
+.navigationList {
+  margin-top: 35px;
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+.close {
+  display: flex;
+  justify-content: flex-end;
+  width: 187%;
+}
+.pointer {
+  cursor: pointer;
+}
+.navLink {
+  text-decoration: none;
+  color: black;
+}
+.navLink:hover {
+  text-decoration: underline;
+}
+.active {
+  text-decoration: underline;
+}
+.no-underline {
+  text-decoration: none;
+}
+.content-right {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  text-align: right;
+}
+.pLR67 {
+  padding: 0 94px;
+}
+.mt-12 {
+  margin-top: 12px;
+}
+.mt-6 {
+  margin-top: 6px;
+}
+
+/* home */
+.pL67 {
+  margin-left: 94px;
+}
+.pR67 {
+  margin-right: 94px;
+}
+.w50 {
+  width: 50.5%;
+}
+.mt-144 {
+  margin-top: 144px;
+}
+.news1Image {
+  height: 510px;
+  width: 100%;
+}
+.newsContent {
+  width: 50%;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 120px;
+}
+.border-bottom {
+  border-bottom: 3px solid black;
+}
+.earthImage {
+  height: 100vh;
+  width: 100%;
+}
+.parallelImagesRight {
+  width: 100%;
+  height: 430px;
+}
+
+.parallelImagesLeft {
+  width: 100%;
+  height: 480px;
+}
+.w-727 {
+  width: 620px;
+}
+.w-355 {
+  width: 355px;
+}
+.collection-container {
+  width: 100%;
+  max-width: 100vw;
+}
+.collection {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+}
+.collectionList {
+  width: 250px;
+  display: block;
+}
+.collectionImage {
+  width: 240px;
+  height: 190px;
+  margin-bottom: 30px;
+}
+.border-bottom-white {
+  border-bottom: 3px solid white;
+}
+.bigImage {
+  width: 76vw;
+  height: 89vh;
+}
+.insights {
+  width: 70vw;
+  padding-right: 20vw;
+}
+
+/* work */
+.selectedProjectsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 200px);
+  grid-template-rows: auto;
+  gap: 12px 24px;
+}
+.line {
+  width: 70px;
+  height: 3px;
+  background-color: black;
+}
+.projectsList {
+  width: 103%;
+  flex-wrap: wrap;
+}
+.project {
+  margin-right: 30px;
+}
+.w-250 {
+  width: 250px;
+}
+
+/* our purpose */
+.ourPurposeImage {
+  width: 100%;
+  height: 460px;
+}
+.w-4x3 {
+  width: 360px;
+  height: 280px;
+}
+.mt-350 {
+  margin-top: 350px;
+}
+.p-60 {
+  padding: 0 80px;
+}
+.ppImage {
+  width: 570px;
+  height: 360px;
+}
+#map {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+.footer {
+  margin-top: 320px;
+}
+.video {
+  width: 100%;
+  height: 80vh;
+}

@@ -8,10 +8,7 @@ function Career() {
           </p>
           <p className="fs-17 white  leading-6">
             Drop Down Your Portfolio and Resume to
-            <span className="border-bottom-white">
-              {" "}
-              infoinsahastra@gmail.com
-            </span>
+            <span className="border-bottom-white"> sahastraa@gmail.com</span>
           </p>
         </div>
       </div>

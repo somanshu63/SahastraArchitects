@@ -13,13 +13,9 @@ function Header(props) {
   console.log(home);
   return (
     <div>
-      <div
-        className={`flex center space-between fs-36  ${
-          home ? "absolute" : "header"
-        }`}
-      >
+      <div className={`flex center space-between fs-36  header`}>
         <div className="fw-700">
-          <a href="/" className={`no-underline ${!home ? "" : "white"}`}>
+          <a href="/" className={`no-underline `}>
             Sahastra Architects
           </a>
         </div>
@@ -27,7 +23,6 @@ function Header(props) {
         <div className="center flex">
           <IoSearch
             style={{
-              color: !home ? "" : "white",
               marginRight: "48px",
               fontSize: "35px",
             }}
@@ -37,7 +32,7 @@ function Header(props) {
             onClick={() => {
               props.setSidebar(true);
             }}
-            style={{ color: !home ? "" : "white", fontSize: "50px" }}
+            style={{ fontSize: "50px" }}
           />
         </div>
       </div>

@@ -9,11 +9,15 @@ import image6 from "../images/home/5 (2).jpg";
 import image7 from "../images/home/IMG_1037 (2).JPG";
 import image8 from "../images/home/IMG_1200.JPG";
 import image9 from "../images/home/TGEG 327.JPG";
-
-import Header from "./header";
+import haveli from "../images/home/haveliFront.jpg";
 
 function HeaderHome(props) {
   const imagesArray = [
+    {
+      image: haveli,
+      name: "Haveli",
+      artist: "Chandigarh",
+    },
     {
       image: image4,
       name: "5 Star Hotel",

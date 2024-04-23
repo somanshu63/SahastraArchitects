@@ -17,6 +17,7 @@ import gardenInDesert from "../images/home/gardenInDesert.jpg";
 import showCase2 from "../images/home/2222.jpg";
 import showCase1 from "../images/home/showCase1.bmp";
 import honeymoon from "../images/home/honeymoon.png";
+import haveli from "../images/home/haveli.jpg";
 
 const doonOfficePictures = [DoonOffice1, DoonOffice2];
 const spotlightPictures = [spotlight1, spotlight2];
@@ -132,7 +133,7 @@ function Home(props) {
             className="parallelImagesLeft  mr-8"
           ></img>
           <div>
-            <p className="fs-13 mt-4 ">Old Green Cafe </p>
+            <p className="fs-13 mt-4 ">Rukkbay Cafe </p>
             <p className="fs-13 mt-6 gray">Dehradun</p>
           </div>
         </div>
@@ -266,10 +267,10 @@ function Home(props) {
       </div>
       <div className="flex justify-end mt-32">
         <div>
-          <img src={honeymoon} alt="honeymoon suite" className="bigImage"></img>
+          <img src={haveli} alt="haveli" className="bigImage"></img>
           <div>
-            <p className="fs-13 mt-4 ">5 Star Hotel </p>
-            <p className="fs-13 mt-6 gray">Mussoorie</p>
+            <p className="fs-13 mt-4 ">Haveli </p>
+            <p className="fs-13 mt-6 gray">Chandigarh</p>
           </div>
         </div>
       </div>

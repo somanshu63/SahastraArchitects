@@ -188,6 +188,7 @@ function Home(props) {
           ></img>
           <div className="flex mt-6">
             <RiArrowLeftSLine
+className="pointer"
               onClick={() => {
                 setCurrentSpotlightIndex(currentSpotlightIndex === 1 ? 0 : 0);
               }}
@@ -199,6 +200,8 @@ function Home(props) {
               }}
             />
             <RiArrowRightSLine
+className="pointer"
+
               onClick={() => {
                 setCurrentSpotlightIndex(currentSpotlightIndex === 0 ? 1 : 1);
               }}

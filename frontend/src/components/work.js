@@ -18,6 +18,8 @@ import residential9 from "../images/work images/residential9.jpg";
 import residential10 from "../images/work images/residential10.jpg";
 import rukkbay from "../images/work images/rukkbay.JPG";
 import gym from "../images/purpose/gym.JPG";
+import karma from "../images/home/haveli.png";
+import haveli from "../images/home/haveliFront.jpg";
 
 const projectsArray = [
   { name: "All", projects: [] },
@@ -29,6 +31,18 @@ const projectsArray = [
         alt: "commercial",
         location: "Mussoorie",
         image: star5,
+      },
+      {
+        name: "Karma Retreat",
+        alt: "commercial",
+        location: "Dehradun",
+        image: karma,
+      },
+      {
+        name: "Haveli",
+        alt: "commercial",
+        location: "Dehradun",
+        image: haveli,
       },
       {
         name: "Hobbit Cafe",

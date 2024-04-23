@@ -17,7 +17,7 @@ import gardenInDesert from "../images/home/gardenInDesert.jpg";
 import showCase2 from "../images/home/2222.jpg";
 import showCase1 from "../images/home/showCase1.bmp";
 import honeymoon from "../images/home/honeymoon.png";
-import haveli from "../images/home/haveli.jpg";
+import haveli from "../images/home/haveli.png";
 
 const doonOfficePictures = [DoonOffice1, DoonOffice2];
 const spotlightPictures = [spotlight1, spotlight2];
@@ -269,8 +269,8 @@ function Home(props) {
         <div>
           <img src={haveli} alt="haveli" className="bigImage"></img>
           <div>
-            <p className="fs-13 mt-4 ">Haveli </p>
-            <p className="fs-13 mt-6 gray">Chandigarh</p>
+            <p className="fs-13 mt-4 ">Karma Retreat </p>
+            <p className="fs-13 mt-6 gray">Dehradun</p>
           </div>
         </div>
       </div>

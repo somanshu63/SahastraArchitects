@@ -25,7 +25,7 @@ function Purpose() {
           </div>
         </div>
         <div className="w50 newsContent">
-          <h3 className="fs-33 leading-10 mb-9 fw-700">
+          <h3 className="fs-27 leading-10 mb-9 ">
             We're in it for the greater good.
           </h3>
           <p className="fs-17 leading-6 pr-8">

@@ -42,9 +42,9 @@ const news = [
 function News() {
   return (
     <div>
-      <div className="flex pL67">
+      <div className="flex pL67 mt-32">
         <div className="w50 newsContent">
-          <h3 className="fs-27 leading-10 mb-9 fw-700">
+          <h3 className="fs-27 leading-10 mb-9 ">
             Innovation in Sustainable Architecture with Solar Façades
           </h3>
           <p className="fs-17 leading-6 pr-8">
@@ -64,7 +64,7 @@ function News() {
           <img src={earth} className="ourPurposeImage" alt="earth"></img>
         </div>
         <div className="w50  newsContent">
-          <h3 className="fs-27 leading-10 mb-9 fw-700">
+          <h3 className="fs-27 leading-10 mb-9 ">
             Earth Day 2024: Urban and Architectural Strategies to Navigate the
             Climate Crisis
           </h3>
@@ -90,7 +90,7 @@ function News() {
       <div className="flex items-center justify-between mb-14 pLR67 mt-32">
         <div className="flex items-center">
           <div className="line"></div>
-          <p className="ml-7 fs-27 fw-700">News</p>
+          <p className="ml-7 fs-27 ">News</p>
         </div>
         <ul>
           <li className="fs-17">All</li>
@@ -107,7 +107,7 @@ function News() {
                 alt={news.name}
                 className="w-250 mb-6"
               ></img>
-              <p className="fs-17 mb-3 fw-700 leading-7">{news.name}</p>
+              <p className="fs-17 mb-3 leading-7">{news.name}</p>
             </li>
           );
         })}

@@ -20,11 +20,7 @@ function HeaderHome(props) {
       name: "The Karma Retreat",
       artist: "Dehradun",
     },
-    // {
-    //   image: petrolPump,
-    //   name: "Petrol Pump",
-    //   artist: "Dehradun",
-    // },
+
     {
       image: image4,
       name: "5 Star Hotel",

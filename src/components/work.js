@@ -16,13 +16,13 @@ import residential6 from "../images/work images/residential6.jpg";
 import residential7 from "../images/work images/residential7.jpg";
 import residential9 from "../images/work images/residential9.jpg";
 import residential10 from "../images/work images/residential10.jpg";
-import rukkbay from "../images/work images/rukkbay.JPG";
-import gym from "../images/purpose/gym.JPG";
+import rukkbay from "../images/work images/rukkbay.jpeg";
+import gym from "../images/purpose/gym.jpeg";
 import karma from "../images/home/haveli.png";
 import haveli from "../images/home/haveliFront.jpg";
 import kcCcafe from "../images/kc cafe.mp4";
 import Star5Hotel from "../images/5 Star Hotel.mp4";
-import petrolpump from "../images/petrol pump.mp4";
+import petrolpump from "../images/petrol pump1.mp4";
 import { RiArrowRightSLine } from "react-icons/ri";
 import { RiArrowLeftSLine } from "react-icons/ri";
 
@@ -262,14 +262,14 @@ function Work() {
       ) : (
         ""
       )}
-      <p className="ml-20 mt-36 mb-36 fs-42">Places that honor humanity.</p>
+      <p className="ml-20 mt-36 mb-36 fs-36">Places that honor humanity.</p>
       <div className="flex items-center justify-between mb-14">
         <div className="flex items-center">
           <div className="line"></div>
-          <p className="ml-7 fs-27 fw-700">Featured Work</p>
+          <p className="ml-7 fs-27 font-semibold">Featured Work</p>
         </div>
         <ul>
-          <li className="fs-17">Grid</li>
+          <li className="fs-17 ">Grid</li>
           {/* <li>Map</li>
             <li>List</li> */}
         </ul>
@@ -285,7 +285,7 @@ function Work() {
                     alt={project.alt}
                     className="w-250 mb-6 h-48"
                   ></img>
-                  <p className="fs-17 mb-3 fw-700 leading-7">{project.name}</p>
+                  <p className="fs-17 mb-3  leading-7">{project.name}</p>
                   <p className="fs-14 gray">{project.location}</p>
                 </li>
               ))
@@ -296,7 +296,7 @@ function Work() {
                   alt={project.alt}
                   className="w-250 mb-6 h-48"
                 ></img>
-                <p className="fs-17 mb-3 fw-700 leading-7">{project.name}</p>
+                <p className="fs-17 mb-3  leading-7">{project.name}</p>
                 <p className="fs-14 gray">{project.location}</p>
               </li>
             ))}

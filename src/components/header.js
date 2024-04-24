@@ -10,11 +10,14 @@ import { useHistory } from "react-router-dom";
 function Header(props) {
   const history = useHistory();
   const home = history.location.pathname === "/";
-  console.log(home);
   return (
     <div>
-      <div className={`flex center space-between fs-36  header`}>
-        <div className="fw-700">
+      <div
+        className={`flex center space-between fs-33  ${
+          home ? "absoluteSidebar" : "header"
+        }`}
+      >
+        <div className="brand">
           <a href="/" className={`no-underline `}>
             Sahastra Architects
           </a>
@@ -23,8 +26,8 @@ function Header(props) {
         <div className="center flex">
           <IoSearch
             style={{
-              marginRight: "48px",
-              fontSize: "35px",
+              marginRight: "30px",
+              fontSize: "27px",
             }}
           />
           <IoMdMenu
@@ -32,7 +35,7 @@ function Header(props) {
             onClick={() => {
               props.setSidebar(true);
             }}
-            style={{ fontSize: "50px" }}
+            style={{ fontSize: "35px" }}
           />
         </div>
       </div>

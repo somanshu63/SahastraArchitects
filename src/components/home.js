@@ -1,4 +1,4 @@
-import react, { useState } from "react";
+import react, { useState, useRef, useEffect } from "react";
 import earthImage from "../images/home/earthImage.JPG";
 import { RiArrowRightSLine } from "react-icons/ri";
 import { RiArrowLeftSLine } from "react-icons/ri";
@@ -7,16 +7,20 @@ import DoonOffice1 from "../images/home/DoonOffice2.jpg";
 import DoonOffice2 from "../images/home/DoonOffice1.jpg";
 import recycled from "../images/home/recycled.jpg";
 import tree from "../images/home/tree.jpeg";
-import monk from "../images/home/monk.JPG";
+import monk from "../images/home/monk.jpeg";
 import house1 from "../images/home/house1.jpg";
 import house3 from "../images/home/house3.jpg";
 import cycle from "../images/home/cycle.jpeg";
-import spotlight1 from "../images/home/spotlight1.JPG";
+import spotlight1 from "../images/home/spotlight1.jpeg";
 import spotlight2 from "../images/home/spotlight2.jpeg";
 import gardenInDesert from "../images/home/gardenInDesert.jpg";
 import showCase2 from "../images/home/2222.jpg";
 import showCase1 from "../images/home/showCase1.png";
 import haveli from "../images/home/haveli.png";
+import gym from "../images/purpose/gym.jpeg";
+import kitchen from "../images/home/kitchen.jpeg";
+import sns from "../images/home/sns.png";
+import { NavLink } from "react-router-dom/cjs/react-router-dom.min";
 
 const doonOfficePictures = [DoonOffice1, DoonOffice2];
 const spotlightPictures = [spotlight1, spotlight2];
@@ -40,18 +44,44 @@ const collectionArray = [
     description:
       "Modern apartment with clock, white exterior, fenced property, tree, blue sky, and birds.",
   },
+
   {
-    image: recycled,
-    alt: "frog tyre",
+    image: gym,
+    alt: "gym",
     description:
-      "Unique tire frog sits in grass, with pink flower pot nearby. Whimsical outdoor scene.",
+      "Let's work together to achieve your goals and elevate your wellbeing.",
+  },
+  {
+    image: kitchen,
+    alt: "kitchen",
+    description:
+      "Elevate cooking with us! Top appliances, expert guidance, culinary delights.",
+  },
+  {
+    image: sns,
+    alt: "sns",
+    description:
+      "Adventure at Sun n Soil Hostel: Comfort, community, unforgettable experiences!",
   },
 ];
 
 function Home(props) {
+  const containerRef = useRef(null);
+  const [collection, setCollection] = useState(collectionArray);
+
   const [currentPictureIndex, setCurrentPictureIndex] = useState(0);
   const [currentSpotlightIndex, setCurrentSpotlightIndex] = useState(1);
-
+  const handleNext = () => {
+    const updatedCollection = [...collection.slice(1), collection[0]]; // Move the first item to the end
+    setCollection(updatedCollection);
+  };
+  const handlePrevious = () => {
+    const updatedCollection = [
+      collection[collection.length - 1],
+      ...collection.slice(0, -1),
+    ];
+    setCollection(updatedCollection);
+  };
   return (
     <div>
       <HeaderHome />
@@ -64,9 +94,9 @@ function Home(props) {
           <p className="fs-17 leading-6">
             Hello, Uttarakhand! We couldn’t be more excited to announce that
             we’re{" "}
-            <span className="border-bottom">
+            <NavLink to="/studios" className="border-bottom pointer">
               expanding our presence with a new studio in Dehradun City
-            </span>
+            </NavLink>
             .
           </p>
         </div>
@@ -78,7 +108,7 @@ function Home(props) {
           ></img>
           <div className="flex mt-6">
             <RiArrowLeftSLine
-              className="pointer"
+              className={`${currentPictureIndex === 1 ? "pointer" : ""}`}
               onClick={() => {
                 setCurrentPictureIndex(currentPictureIndex === 1 ? 0 : 0);
               }}
@@ -90,7 +120,7 @@ function Home(props) {
               }}
             />
             <RiArrowRightSLine
-              className="pointer"
+              className={`${currentPictureIndex === 0 ? "pointer" : ""}`}
               onClick={() => {
                 setCurrentPictureIndex(currentPictureIndex === 0 ? 1 : 1);
               }}
@@ -146,29 +176,54 @@ function Home(props) {
           </div>
         </div>
       </div>
-      <div className="mt-32">
+      <div className="mt-32 relative">
         <h2 className="fs-30 mb-10 w-full text-center">
           Be inspired: Introducing{" "}
           <span className="underline">a new collection of client insights</span>
         </h2>
-        <div className="collection-container">
+        <div className="collection-container ">
           <div className="collection">
-            {collectionArray.map((item, id) => {
+            {collection.map((item, id) => {
               return (
-                <div key={id} className="collectionList mr-5">
+                <div key={id} className="collectionList relative mr-7">
                   <img
                     src={item.image}
                     alt={item.alt}
                     className="collectionImage"
                   ></img>
-                  <p className="gray fs-17 leading-6">{item.description} </p>
+                  <p className="gray fs-17 leading-6 pr-6">
+                    {item.description}{" "}
+                  </p>
+                  {id === 0 || id === 5 ? <div className="overlay"></div> : ""}
                 </div>
               );
             })}
           </div>
         </div>
+        <div className="flex mt-14 absolute right-24">
+          <RiArrowLeftSLine
+            className="pointer"
+            onClick={() => {
+              handlePrevious();
+            }}
+            style={{
+              fontSize: "30px",
+              marginRight: "10px",
+              marginLeft: "-8px",
+            }}
+          />
+          <RiArrowRightSLine
+            className="pointer"
+            onClick={() => {
+              handleNext();
+            }}
+            style={{
+              fontSize: "30px",
+            }}
+          />
+        </div>
       </div>
-      <div className="pL67 mt-32 flex">
+      <div className="pL67 mt-52 flex">
         <div className="w50 newsContent">
           <h3 className="fs-27 leading-10 mb-9">Designer Spotlight</h3>
           <p className="fs-17 leading-6">
@@ -188,7 +243,7 @@ function Home(props) {
           ></img>
           <div className="flex mt-6">
             <RiArrowLeftSLine
-className="pointer"
+              className={`${currentSpotlightIndex === 0 ? "" : "pointer"}`}
               onClick={() => {
                 setCurrentSpotlightIndex(currentSpotlightIndex === 1 ? 0 : 0);
               }}
@@ -200,8 +255,7 @@ className="pointer"
               }}
             />
             <RiArrowRightSLine
-className="pointer"
-
+              className={`${currentSpotlightIndex === 1 ? "" : "pointer"}`}
               onClick={() => {
                 setCurrentSpotlightIndex(currentSpotlightIndex === 0 ? 1 : 1);
               }}

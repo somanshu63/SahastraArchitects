@@ -1,6 +1,6 @@
 import shiv from "../images/purpose/shiv.jpg";
 import rukkbay from "../images/purpose/rukkbay.jpeg";
-import gym from "../images/purpose/gym.JPG";
+import gym from "../images/purpose/gym.jpeg";
 import sns from "../images/purpose/sns.jpg";
 import twh from "../images/purpose/twh.jpg";
 import sns2 from "../images/purpose/sns2.jpg";
@@ -11,7 +11,7 @@ function Purpose() {
       <div className="pLR67 mt-8">
         <p className="mr-3 fw-700 ">Our Purpose</p>
 
-        <p className="ml-20 mt-28 mb-36 fs-42 fw-700 leading-tight">
+        <p className="ml-20 mt-28 mb-36 fs-36 font-semibold leading-tight">
           Design has the power to inspire<br></br> joy, uplift lives, and
           strengthen<br></br> the spirit of community.
         </p>
@@ -79,7 +79,7 @@ function Purpose() {
           </div>
         </div>
         <div className="w50 newsContent">
-          <h3 className="fs-33 leading-10 fw-700 mb-9">
+          <h3 className="fs-27 leading-10  mb-9">
             We create places with meaning.
           </h3>
           <p className="fs-17 leading-6 pr-8">
@@ -90,35 +90,9 @@ function Purpose() {
           </p>
         </div>
       </div>
-      {/* <div className="mt-32 pLR67 flex items-start">
-        <div className="w50 p-60">
-          <h3 className="fs-33 leading-10 fw-700 mb-9">
-            We’re part of something bigger.
-          </h3>
-          <p className="fs-17 leading-6 pr-6 ">
-            We’re a member of the Sidara Collaborative, a global network of
-            leading designers, engineers, planners, and consultants committed to
-            advancing ecological health and well-being. When it makes sense for
-            our clients, we can offer a broad range of highly specialized
-            services—from architecture and design, engineering, and construction
-            management to digital strategy, sustainability consulting, and
-            energy innovation—all under one umbrella.
-          </p>
-        </div>
-        <div className="w50 text-left">
-          <img src={home1} className="ppImage" alt="imagehome1"></img>
-          <div>
-            <p className="fs-13 mt-4 ">
-              Princess Nora Bint Abdulrahman University{" "}
-            </p>
-            <p className="fs-13 mt-6 gray">Riyadh, Saudi Arabia</p>
-          </div>
-        </div>
-      </div> */}
+
       <div className="px-44 mt-32 w-3/4">
-        <h3 className="fs-33 leading-10 fw-700 mb-9">
-          We design with purpose.
-        </h3>
+        <h3 className="fs-27 leading-10  mb-9">We design with purpose.</h3>
         <p className="fs-17 leading-6 pr-6 ">
           Several ideals ignite our passions and keep us focused on what
           matters. These core values are the building blocks of who we are and

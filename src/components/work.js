@@ -262,14 +262,16 @@ function Work() {
       ) : (
         ""
       )}
-      <p className="ml-20 mt-36 mb-36 fs-36">Places that honor humanity.</p>
+      <p className="ml-20 mt-36 mb-36 fw-700 fs-36">
+        Places that honor humanity.
+      </p>
       <div className="flex items-center justify-between mb-14">
         <div className="flex items-center">
           <div className="line"></div>
-          <p className="ml-7 fs-27 font-semibold">Featured Work</p>
+          <p className="ml-7 fs-27 ">Featured Work</p>
         </div>
         <ul>
-          <li className="fs-17 ">Grid</li>
+          <li className="text-base font-bold">Grid</li>
           {/* <li>Map</li>
             <li>List</li> */}
         </ul>
@@ -285,8 +287,10 @@ function Work() {
                     alt={project.alt}
                     className="w-250 mb-6 h-48"
                   ></img>
-                  <p className="fs-17 mb-3  leading-7">{project.name}</p>
-                  <p className="fs-14 gray">{project.location}</p>
+                  <p className="text-base mb-3 font-bold leading-7">
+                    {project.name}
+                  </p>
+                  <p className="text-xs font-bold gray">{project.location}</p>
                 </li>
               ))
           : allProjects.map((project, id) => (
@@ -296,8 +300,10 @@ function Work() {
                   alt={project.alt}
                   className="w-250 mb-6 h-48"
                 ></img>
-                <p className="fs-17 mb-3  leading-7">{project.name}</p>
-                <p className="fs-14 gray">{project.location}</p>
+                <p className="text-base mb-3 font-bold leading-7">
+                  {project.name}
+                </p>
+                <p className="text-xs font-bold gray">{project.location}</p>
               </li>
             ))}
       </ul>

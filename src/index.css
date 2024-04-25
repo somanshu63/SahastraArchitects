@@ -164,7 +164,7 @@ body {
 }
 .fs-12 {
   font-weight: 600;
-  font-size: 12px;
+  font-size: 11px;
 }
 
 .fs-14 {
@@ -176,7 +176,7 @@ body {
   font-size: 30px;
 }
 .fs-27 {
-  font-weight: 600;
+  font-weight: 700;
   font-size: 27px;
 }
 .fs-17 {
@@ -217,6 +217,27 @@ body {
   justify-content: space-between;
 }
 
+.upArrowContainer {
+  position: fixed;
+  bottom: 15%;
+  right: 1%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: smooth;
+}
+.top {
+  scroll-behavior: smooth;
+}
+.upArrow {
+  color: white;
+  font-size: 1.25rem;
+}
 /* header */
 .home {
   position: relative;
@@ -229,34 +250,40 @@ body {
   background-size: cover;
 }
 .header {
-  padding: 55px 94px;
+  padding: 3.4375rem 5.875rem;
 }
 img {
   object-fit: cover;
 }
 .brand {
-  font-weight: 500;
+  color: rgb(0, 0, 0);
+  font-weight: 600;
+  letter-spacing: -2px;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  /* background-color: rgba(255, 255, 255, 0.5); */
+  font-size: 40px;
 }
 .absoluteSidebar {
   position: absolute;
-  top: 55px;
-  left: 94px;
-  right: 94px;
+  top: 3.4375rem;
+  left: 5.875rem;
+  right: 5.875rem;
   z-index: 10;
 }
 .sidebar {
   box-shadow: 0px 1px 20px 0 rgba(0, 0, 0, 0.59);
   position: absolute;
   top: 0px;
-  right: 0;
-  height: 100vh;
-  width: 18%;
+  left: 80%;
+  height: 90vh;
+  width: 20%;
   background-color: white;
-  padding: 30px;
+  padding: 1.875rem;
   z-index: 10;
+  margin-right: 5%;
 }
 .navigationList {
-  margin-top: 35px;
+  margin-top: 2.1875rem;
   font-size: 24px;
   font-weight: 500;
   text-transform: capitalize;
@@ -264,7 +291,7 @@ img {
 .close {
   display: flex;
   justify-content: flex-end;
-  width: 187%;
+  width: 100%;
 }
 .pointer {
   cursor: pointer;
@@ -290,7 +317,7 @@ img {
   text-align: right;
 }
 .pLR67 {
-  padding: 0 94px;
+  padding: 0 5.875rem;
 }
 .mt-12 {
   margin-top: 12px;
@@ -301,19 +328,19 @@ img {
 
 /* home */
 .pL67 {
-  margin-left: 94px;
+  margin-left: 5.875rem;
 }
 .pR67 {
-  margin-right: 94px;
+  margin-right: 5.875rem;
 }
 .w50 {
   width: 50.5%;
 }
 .mt-144 {
-  margin-top: 144px;
+  margin-top: 9rem;
 }
 .news1Image {
-  height: 430px;
+  height: 26.875rem;
   width: 100%;
 }
 .newsContent {
@@ -322,7 +349,7 @@ img {
   align-items: start;
   justify-content: center;
   flex-direction: column;
-  padding: 0 120px;
+  padding: 0 7.5rem;
 }
 .border-bottom {
   border-bottom: 3px solid black;
@@ -333,21 +360,18 @@ img {
 }
 .parallelImagesRight {
   width: 100%;
-  height: 430px;
+  height: 26.875rem;
 }
 
 .parallelImagesLeft {
   width: 100%;
-  height: 480px;
+  height: 30rem;
 }
 .w-727 {
-  width: 620px;
+  width: 57%;
 }
 .w-355 {
-  width: 355px;
-}
-
-.collection-container {
+  width: 32.5%;
 }
 
 .collection {
@@ -356,11 +380,11 @@ img {
   overflow: hidden;
   display: flex;
   align-items: start;
-  margin-left: -170px;
+  margin-left: -10.625rem;
   transition: all 0.5s ease; /* Smooth transition for sliding */
 }
 .collectionList {
-  width: 245px;
+  width: 15.3125rem;
   display: block;
   flex: 0 0 auto;
 }
@@ -376,8 +400,8 @@ img {
   background-color: rgba(255, 255, 255, 0.5);
 }
 .collectionImage {
-  width: 245px;
-  height: 170px;
+  width: 15.3125rem;
+  height: 10.625rem;
   margin-bottom: 30px;
 }
 .border-bottom-white {
@@ -395,9 +419,9 @@ img {
 /* work */
 .selectedProjectsGrid {
   display: grid;
-  grid-template-columns: repeat(3, 200px);
+  grid-template-columns: repeat(3, 12.5rem);
   grid-template-rows: auto;
-  gap: 12px 24px;
+  gap: 0.75rem 1.5rem;
 }
 .line {
   width: 70px;
@@ -412,27 +436,27 @@ img {
   margin-right: 30px;
 }
 .w-250 {
-  width: 250px;
+  width: 15.625rem;
 }
 
 /* our purpose */
 .ourPurposeImage {
   width: 100%;
-  height: 460px;
+  height: 28.75rem;
 }
 .w-4x3 {
-  width: 360px;
-  height: 280px;
+  width: 22.5rem;
+  height: 17.5rem;
 }
 .mt-350 {
-  margin-top: 350px;
+  margin-top: 21.875rem;
 }
 .p-60 {
-  padding: 0 80px;
+  padding: 0 5rem;
 }
 .ppImage {
-  width: 570px;
-  height: 360px;
+  width: 35.625rem;
+  height: 22.5rem;
 }
 #map {
   position: absolute;
@@ -441,7 +465,7 @@ img {
   width: 100%;
 }
 .footer {
-  margin-top: 320px;
+  margin-top: 20rem;
 }
 .video {
   width: 100%;

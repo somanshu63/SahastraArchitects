@@ -191,7 +191,7 @@ function Home(props) {
                     alt={item.alt}
                     className="collectionImage"
                   ></img>
-                  <p className="gray fs-17 leading-6 pr-6">
+                  <p className="gray text-base font-semibold  leading-6">
                     {item.description}{" "}
                   </p>
                   {id === 0 || id === 5 ? <div className="overlay"></div> : ""}

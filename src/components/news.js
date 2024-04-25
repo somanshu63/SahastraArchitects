@@ -93,7 +93,7 @@ function News() {
           <p className="ml-7 fs-27 ">News</p>
         </div>
         <ul>
-          <li className="fs-17">All</li>
+          <li className="fs-17 fw-700">All</li>
           {/* <li>Map</li>
             <li>List</li> */}
         </ul>
@@ -107,7 +107,7 @@ function News() {
                 alt={news.name}
                 className="w-250 mb-6"
               ></img>
-              <p className="fs-17 mb-3 leading-7">{news.name}</p>
+              <p className="text-base font-bold mb-3 leading-7">{news.name}</p>
             </li>
           );
         })}

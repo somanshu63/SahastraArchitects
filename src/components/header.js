@@ -11,7 +11,7 @@ function Header(props) {
   const history = useHistory();
   const home = history.location.pathname === "/";
   return (
-    <div>
+    <div className="relative">
       <div
         className={`flex center space-between fs-33  ${
           home ? "absoluteSidebar" : "header"
@@ -41,12 +41,12 @@ function Header(props) {
       </div>
       {props.sidebar ? (
         <div className="sidebar">
-          <div>
+          <div className="close">
             <IoClose
               onClick={() => {
                 props.setSidebar(false);
               }}
-              className="close pointer"
+              className=" pointer"
               style={{ fontSize: "40px" }}
             />
           </div>

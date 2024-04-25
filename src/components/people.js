@@ -2,7 +2,7 @@ import AbhinavGupta from "../images/home/AbhinavGupta.jpeg";
 function People() {
   return (
     <div className="pLR67">
-      <p className="fs-36  px-20 leading-tight mt-32">
+      <p className="fs-36 fw-700 px-20 leading-tight mt-32">
         We're creative thinkers with a <br></br> passion for design and{" "}
         <br></br> compassion for our <br></br>
         communities.
@@ -17,8 +17,8 @@ function People() {
           alt="projects"
           className="w-250 object-cover mb-6"
         ></img>
-        <p className="fs-17 mb-3  leading-7">Abhinav Gupta</p>
-        <p className="fs-14 gray">CEO</p>
+        <p className="text-base font-bold mb-3  leading-7">Abhinav Gupta</p>
+        <p className="text-xs font-bold gray">CEO</p>
       </div>
     </div>
   );

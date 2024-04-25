@@ -11,7 +11,7 @@ function Purpose() {
       <div className="pLR67 mt-8">
         <p className="mr-3 fw-700 ">Our Purpose</p>
 
-        <p className="ml-20 mt-28 mb-36 fs-36 font-semibold leading-tight">
+        <p className="ml-20 mt-28 mb-36 fs-36 fw-700 leading-tight">
           Design has the power to inspire<br></br> joy, uplift lives, and
           strengthen<br></br> the spirit of community.
         </p>

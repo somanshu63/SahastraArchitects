@@ -68,6 +68,8 @@ const collectionArray = [
 function Home(props) {
   const containerRef = useRef(null);
   const [collection, setCollection] = useState(collectionArray);
+  const [width, setWidth] = useState(window.innerWidth * 0.14);
+  const [actualWidth, setActualWidth] = useState(window.innerWidth * 1.14);
 
   const [currentPictureIndex, setCurrentPictureIndex] = useState(0);
   const [currentSpotlightIndex, setCurrentSpotlightIndex] = useState(1);
@@ -82,6 +84,16 @@ function Home(props) {
     ];
     setCollection(updatedCollection);
   };
+  useEffect(() => {
+    const handleWidth = () => {
+      setWidth(window.innerWidth * 0.14);
+      setActualWidth(window.innerWidth * 1.14);
+    };
+    window.addEventListener("resize", handleWidth);
+    return () => {
+      window.removeEventListener("resize", handleWidth);
+    };
+  }, []);
   return (
     <div>
       <HeaderHome />
@@ -182,7 +194,14 @@ function Home(props) {
           <span className="underline">a new collection of client insights</span>
         </h2>
         <div className="collection-container ">
-          <div className="collection">
+          <div
+            style={{
+              marginLeft: -width,
+              width: actualWidth,
+              maxWidth: actualWidth,
+            }}
+            className="collection"
+          >
             {collection.map((item, id) => {
               return (
                 <div key={id} className="collectionList relative mr-7">

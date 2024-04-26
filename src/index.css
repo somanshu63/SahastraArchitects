@@ -586,6 +586,9 @@ td {
   .bigImage {
     height: 45vh;
   }
+  .brand {
+    font-size: 25px;
+  }
 }
 
 @media screen and (max-width: 576px) {
@@ -616,7 +619,7 @@ td {
     margin-bottom: 1.5rem;
   }
   .brand {
-    font-size: 30px;
+    font-size: 20px;
   }
   .column {
     flex-direction: column;
@@ -681,5 +684,14 @@ td {
     width: 100vw;
     margin-left: 3rem;
     padding-right: 20vw;
+  }
+  .leading-9 {
+    line-height: normal;
+  }
+  .m-28 {
+    margin: 3rem;
+  }
+  .p-16 {
+    padding: 3rem;
   }
 }

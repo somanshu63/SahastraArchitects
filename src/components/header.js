@@ -26,8 +26,8 @@ function Header(props) {
         <div className="center flex">
           <IoSearch
             style={{
-              marginRight: "30px",
-              fontSize: "27px",
+              marginRight: `${window.innerWidth < 768 ? "15px" : "30px"}`,
+              fontSize: `${window.innerWidth < 768 ? "20px" : "27px"}`,
             }}
           />
           <IoMdMenu
@@ -35,7 +35,7 @@ function Header(props) {
             onClick={() => {
               props.setSidebar(true);
             }}
-            style={{ fontSize: "35px" }}
+            style={{ fontSize: `${window.innerWidth < 768 ? "27px" : "35px"}` }}
           />
         </div>
       </div>

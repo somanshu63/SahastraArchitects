@@ -80,7 +80,7 @@ const projectsArray = [
         size: "",
       },
       {
-        name: "Gym",
+        name: "The Volvarine Gym",
         alt: "commercial",
         location: "Dehradun",
         image: gym,

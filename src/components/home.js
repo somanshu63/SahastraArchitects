@@ -185,8 +185,8 @@ function Home(props) {
         <div className="w-355">
           <img src={tree} alt="blue tree" className="parallelImagesRight"></img>
           <div>
-            <p className="fs-13 mt-4 ">Hobbit Cafe </p>
-            <p className="fs-13 mt-6 gray">Rishikesh</p>
+            <p className="fs-13 mt-4 ">Rukkbay Cafe </p>
+            <p className="fs-13 mt-6 gray">Dehradun</p>
           </div>
         </div>
       </div>
@@ -328,8 +328,8 @@ function Home(props) {
             className="parallelImagesRight"
           ></img>
           <div>
-            <p className="fs-13 mt-4 ">5 Star Hotel </p>
-            <p className="fs-13 mt-6 gray">Mussoorie</p>
+            <p className="fs-13 mt-4 ">The Modern House </p>
+            <p className="fs-13 mt-6 gray">Dehradun</p>
           </div>
         </div>
         <div className="w-727 mt-72">
@@ -339,7 +339,7 @@ function Home(props) {
             className="parallelImagesLeft  mr-8"
           ></img>
           <div>
-            <p className="fs-13 mt-4 ">The Blue Haven Residence </p>
+            <p className="fs-13 mt-4 ">The Karma Retreat </p>
             <p className="fs-13 mt-6 gray">Dehradun</p>
           </div>
         </div>
@@ -348,7 +348,7 @@ function Home(props) {
         <div>
           <img src={gym} alt="haveli" className="bigImage"></img>
           <div>
-            <p className="fs-13 mt-4 ">Karma Retreat </p>
+            <p className="fs-13 mt-4 ">The Volvarine Gym </p>
             <p className="fs-13 mt-6 gray">Dehradun</p>
           </div>
         </div>

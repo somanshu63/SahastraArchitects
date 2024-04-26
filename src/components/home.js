@@ -99,8 +99,8 @@ function Home(props) {
   return (
     <div>
       <HeaderHome />
-      <div className="pL67 mt-32 flex">
-        <div className="w50 newsContent paddingRight75">
+      <div className="pL67 mt-32 mR3 flex column ">
+        <div className="w50 w100 newsContent paddingRight75">
           <span className="fs-12 mb-5">NEWS</span>
           <h3 className="fs-27 leading-10 mb-9">
             A new studio, deep in the heart of Dehradun
@@ -114,7 +114,7 @@ function Home(props) {
             .
           </p>
         </div>
-        <div className="w50">
+        <div className="w50 w100 mRT3 ">
           <img
             src={doonOfficePictures[currentPictureIndex]}
             className="news1Image"
@@ -146,15 +146,15 @@ function Home(props) {
           </div>
         </div>
       </div>
-      <div className="mt-32 flex pR67">
-        <div className="w50 text-right">
+      <div className="mt-32 mL3 flex column pR67">
+        <div className="w50 w100 text-right">
           <img src={earthImage} className="earthImage" alt="imagehome1"></img>
           <div>
             <p className="fs-13 mt-4 ">Sun n Soil Backpackers Hostel</p>
             <p className="fs-13 mt-6 gray">Dehradun</p>
           </div>
         </div>
-        <div className="w50 newsContent paddingLeft75">
+        <div className="w50 mRT3 w100 newsContent paddingLeft75">
           <span className="fs-12 mb-5">IT'S NOT A MOMENT, IT'S A MINDSET</span>
           <h3 className="fs-27 leading-10 mb-9">Celebrating Earth Month</h3>
           <p className="fs-17 leading-6 mb-9 pr-8">
@@ -170,8 +170,8 @@ function Home(props) {
           </p> */}
         </div>
       </div>
-      <div className="mt-32 flex pLR67  justify-between">
-        <div className="w-727 mt-72">
+      <div className="mt-32 flex pLR67 column justify-between">
+        <div className="w-727 w100 mt-72">
           <img
             src={monk}
             alt="Old Green Man"
@@ -182,7 +182,7 @@ function Home(props) {
             <p className="fs-13 mt-6 gray">Dehradun</p>
           </div>
         </div>
-        <div className="w-355">
+        <div className="w-355 w100 mRT3">
           <img src={tree} alt="blue tree" className="parallelImagesRight"></img>
           <div>
             <p className="fs-13 mt-4 ">Rukkbay Cafe </p>
@@ -244,8 +244,8 @@ function Home(props) {
           />
         </div>
       </div>
-      <div className="pL67 mt-52 flex">
-        <div className="w50 newsContent paddingRight75">
+      <div className="pL67 mt-52 column mR3 flex">
+        <div className="w50 w100 newsContent paddingRight75">
           <h3 className="fs-27 leading-10 mb-9">Designer Spotlight</h3>
           <p className="fs-17 leading-6">
             For the design director of our Dehradun studio,{" "}
@@ -256,7 +256,7 @@ function Home(props) {
             .
           </p>
         </div>
-        <div className="w50">
+        <div className="w50 w100 mRT3">
           <img
             src={spotlightPictures[currentSpotlightIndex]}
             className="news1Image"
@@ -288,15 +288,15 @@ function Home(props) {
           </div>
         </div>
       </div>
-      <div className="mt-32 flex pR67">
-        <div className="w50 text-right">
+      <div className="mt-32 column mL3 flex pR67">
+        <div className="w50 w100 text-right">
           <img
             src={gardenInDesert}
             className="earthImage"
             alt="imagehome1"
           ></img>
         </div>
-        <div className="w50 newsContent paddingLeft75">
+        <div className="w50 mRT3 w100 newsContent paddingLeft75">
           <span className="fs-12 mb-5">INSIGHTS</span>
           <h3 className="fs-27 leading-10 mb-9">Garden in the Desert</h3>
           <p className="fs-17 leading-6 pr-8">
@@ -308,7 +308,7 @@ function Home(props) {
           </p>
         </div>
       </div>
-      <div className="flex items-center justify-center">
+      <div className="flex mt-32 items-center justify-center">
         <div className=" m-28 greenbg p-16 pt-12">
           <p className="fs-27 white leading-9 mb-8">
             Every project is an opportunity to<br></br> make the world a better,
@@ -320,8 +320,8 @@ function Home(props) {
           </span>
         </div>
       </div>
-      <div className="flex pLR67  justify-between">
-        <div className="w-355">
+      <div className="flex mt-32 pLR67 column justify-between">
+        <div className="w-355 w100">
           <img
             src={house1}
             alt="interior"
@@ -332,7 +332,7 @@ function Home(props) {
             <p className="fs-13 mt-6 gray">Dehradun</p>
           </div>
         </div>
-        <div className="w-727 mt-72">
+        <div className="w-727 mt-72 w100 mRT3">
           <img
             src={landscape1}
             alt="villa"
@@ -344,7 +344,7 @@ function Home(props) {
           </div>
         </div>
       </div>
-      <div className="flex justify-end mt-32">
+      <div className="flex justify-end mR3 mL3 mt-32">
         <div>
           <img src={gym} alt="haveli" className="bigImage"></img>
           <div>
@@ -353,7 +353,7 @@ function Home(props) {
           </div>
         </div>
       </div>
-      <div className="flex justify-end mt-32">
+      <div className="flex justify-end w100 mt-32">
         <div className="insights">
           <span className="fs-12">INSIGHTS</span>
           <h3 className="fs-27 leading-10 mb-7 mt-7">

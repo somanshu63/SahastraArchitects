@@ -51,7 +51,7 @@ function Header(props) {
             />
           </div>
           <nav>
-            <ul>
+            <ul className="navList">
               <li className="navigationList">
                 <NavLink
                   to="/work"

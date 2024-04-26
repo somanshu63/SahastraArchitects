@@ -100,7 +100,7 @@ function Home(props) {
     <div>
       <HeaderHome />
       <div className="pL67 mt-32 flex">
-        <div className="w50 newsContent">
+        <div className="w50 newsContent paddingRight75">
           <span className="fs-12 mb-5">NEWS</span>
           <h3 className="fs-27 leading-10 mb-9">
             A new studio, deep in the heart of Dehradun
@@ -146,7 +146,7 @@ function Home(props) {
           </div>
         </div>
       </div>
-      <div className="mt-32 flex">
+      <div className="mt-32 flex pR67">
         <div className="w50 text-right">
           <img src={earthImage} className="earthImage" alt="imagehome1"></img>
           <div>
@@ -154,7 +154,7 @@ function Home(props) {
             <p className="fs-13 mt-6 gray">Dehradun</p>
           </div>
         </div>
-        <div className="w50 newsContent">
+        <div className="w50 newsContent paddingLeft75">
           <span className="fs-12 mb-5">IT'S NOT A MOMENT, IT'S A MINDSET</span>
           <h3 className="fs-27 leading-10 mb-9">Celebrating Earth Month</h3>
           <p className="fs-17 leading-6 mb-9 pr-8">
@@ -191,7 +191,7 @@ function Home(props) {
         </div>
       </div>
       <div className="mt-32 relative">
-        <h2 className="fs-30 mb-10 w-full text-center">
+        <h2 className="fs-30 mb-10 w-full text-center pLR67">
           Be inspired: Introducing{" "}
           <span className="underline">a new collection of client insights</span>
         </h2>
@@ -245,7 +245,7 @@ function Home(props) {
         </div>
       </div>
       <div className="pL67 mt-52 flex">
-        <div className="w50 newsContent">
+        <div className="w50 newsContent paddingRight75">
           <h3 className="fs-27 leading-10 mb-9">Designer Spotlight</h3>
           <p className="fs-17 leading-6">
             For the design director of our Dehradun studio,{" "}
@@ -288,7 +288,7 @@ function Home(props) {
           </div>
         </div>
       </div>
-      <div className="mt-32 flex">
+      <div className="mt-32 flex pR67">
         <div className="w50 text-right">
           <img
             src={gardenInDesert}
@@ -296,7 +296,7 @@ function Home(props) {
             alt="imagehome1"
           ></img>
         </div>
-        <div className="w50 newsContent">
+        <div className="w50 newsContent paddingLeft75">
           <span className="fs-12 mb-5">INSIGHTS</span>
           <h3 className="fs-27 leading-10 mb-9">Garden in the Desert</h3>
           <p className="fs-17 leading-6 pr-8">

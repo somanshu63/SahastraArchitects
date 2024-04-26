@@ -504,6 +504,18 @@ td {
   .container {
     max-width: 1140px;
   }
+  .paddingLeft75 {
+    padding: 0 0 0 7.5rem;
+  }
+  .paddingRight75 {
+    padding: 0 7.5rem 0 0;
+  }
+  .earthImage {
+    height: 50vh;
+  }
+  .bigImage {
+    height: 60vh;
+  }
 }
 @media screen and (max-width: 992px) {
   html {
@@ -512,7 +524,53 @@ td {
   .container {
     max-width: 960px;
   }
+  .earthImage {
+    height: 40vh;
+  }
+  .bigImage {
+    height: 50vh;
+  }
+  .paddingLeft75 {
+    padding: 0 0 0 6rem;
+  }
+  .paddingRight75 {
+    padding: 0 6rem 0 0;
+  }
 }
+@media screen and (max-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+  html {
+    font-size: 12px;
+  }
+  .pLR67 {
+    padding: 0 4rem;
+  }
+  .pL67 {
+    margin-left: 4rem;
+  }
+  .pR67 {
+    margin-right: 4rem;
+  }
+  .absoluteSidebar {
+    position: absolute;
+    top: 2.5rem;
+    left: 4rem;
+    right: 4rem;
+    z-index: 10;
+  }
+  .header {
+    padding: 2.5rem 4rem;
+  }
+  .paddingLeft75 {
+    padding: 0 0 0 5rem;
+  }
+  .paddingRight75 {
+    padding: 0 5rem 0 0;
+  }
+}
+
 @media screen and (max-width: 576px) {
   html {
     font-size: 10px;
@@ -520,12 +578,23 @@ td {
   .container {
     max-width: 540px;
   }
-}
-@media screen and (max-width: 768px) {
-  .container {
-    max-width: 720px;
+  /* .pLR67 {
+    padding: 0 4rem;
   }
-  html {
-    font-size: 12px;
+  .pL67 {
+    margin-left: 4rem;
   }
+  .pR67 {
+    margin-right: 4rem;
+  }
+  .absoluteSidebar {
+    position: absolute;
+    top: 2.5rem;
+    left: 4rem;
+    right: 4rem;
+    z-index: 10;
+  }
+  .header {
+    padding: 2.5rem 4rem;
+  } */
 }

@@ -25,7 +25,7 @@ function App() {
     };
   }, []);
   return (
-    <div className="App">
+    <div className="container">
       <Header sidebar={sidebar} setSidebar={setSidebar} />
       <Switch>
         <Route path="/" exact>

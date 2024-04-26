@@ -7,18 +7,22 @@ import haveli from "../images/home/haveliFront.jpg";
 
 import landscape from "../images/home/landscape1.jpg";
 import landscape2 from "../images/home/landscape2.jpg";
-
+import residential2 from "../images/work images/residential2.jpg";
+import residential4 from "../images/work images/residential4.jpg";
+import residential9 from "../images/work images/residential9.jpg";
+import negi from "../images/work images/negi.jpg";
+import house3 from "../images/home/house3.jpg";
 function HeaderHome(props) {
   const imagesArray = [
     {
-      image: haveli,
-      name: "Haveli",
-      artist: "Chandigarh",
+      image: residential2,
+      name: "The White Villa",
+      artist: "Dehradun",
     },
     {
-      image: landscape,
-      name: "The Karma Retreat",
-      artist: "Dehradun",
+      image: negi,
+      name: "The Bungalow",
+      artist: "New Delhi",
     },
 
     {
@@ -28,8 +32,8 @@ function HeaderHome(props) {
     },
 
     {
-      image: landscape2,
-      name: "The Karma Retreat",
+      image: house3,
+      name: "AIHTM",
       artist: "Dehradun",
     },
   ];

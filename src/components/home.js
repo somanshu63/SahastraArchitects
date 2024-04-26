@@ -12,7 +12,7 @@ import house1 from "../images/home/house1.jpg";
 import house3 from "../images/home/house3.jpg";
 import cycle from "../images/home/cycle.jpeg";
 import spotlight1 from "../images/home/spotlight1.jpeg";
-import spotlight2 from "../images/home/spotlight2.jpeg";
+// import spotlight2 from "../images/home/spotlight2.jpeg";
 import gardenInDesert from "../images/home/gardenInDesert.jpg";
 import showCase2 from "../images/home/2222.jpg";
 import showCase1 from "../images/home/showCase1.png";
@@ -21,6 +21,8 @@ import gym from "../images/purpose/gym.jpeg";
 import kitchen from "../images/home/kitchen.jpeg";
 import sns from "../images/home/sns.png";
 import { NavLink } from "react-router-dom/cjs/react-router-dom.min";
+import landscape1 from "../images/home/landscape1.jpg";
+import spotlight2 from "../images/home/spotlight1.jpg";
 
 const doonOfficePictures = [DoonOffice1, DoonOffice2];
 const spotlightPictures = [spotlight1, spotlight2];
@@ -321,7 +323,7 @@ function Home(props) {
       <div className="flex pLR67  justify-between">
         <div className="w-355">
           <img
-            src={showCase1}
+            src={house1}
             alt="interior"
             className="parallelImagesRight"
           ></img>
@@ -332,7 +334,7 @@ function Home(props) {
         </div>
         <div className="w-727 mt-72">
           <img
-            src={showCase2}
+            src={landscape1}
             alt="villa"
             className="parallelImagesLeft  mr-8"
           ></img>
@@ -344,7 +346,7 @@ function Home(props) {
       </div>
       <div className="flex justify-end mt-32">
         <div>
-          <img src={haveli} alt="haveli" className="bigImage"></img>
+          <img src={gym} alt="haveli" className="bigImage"></img>
           <div>
             <p className="fs-13 mt-4 ">Karma Retreat </p>
             <p className="fs-13 mt-6 gray">Dehradun</p>

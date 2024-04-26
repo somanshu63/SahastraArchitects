@@ -20,8 +20,8 @@ function Purpose() {
         <div className="w50 text-right">
           <img src={shiv} className="ourPurposeImage" alt="shiv wall"></img>
           <div>
-            <p className="fs-13 mt-4 ">The Hungry Hobbit Cafe </p>
-            <p className="fs-13 mt-6 gray">Rishikesh</p>
+            <p className="fs-13 mt-4 ">The Wooden Textured House </p>
+            <p className="fs-13 mt-6 gray">Dehradun</p>
           </div>
         </div>
         <div className="w50 newsContent">

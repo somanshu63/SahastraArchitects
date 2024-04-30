@@ -11,20 +11,27 @@ function Purpose() {
       <div className="pLR67 mt-8">
         <p className="mr-3 fw-700 ">Our Purpose</p>
 
-        <p className="ml-20 mt-28 mb-36 fs-36 fw-700 leading-tight">
-          Design has the power to inspire<br></br> joy, uplift lives, and
-          strengthen<br></br> the spirit of community.
-        </p>
+        {window.innerWidth < 550 ? (
+          <p className="ml-20 mt-28 mb-36 fs-36 fw-700 leading-tight">
+            Design has the power to inspire joy, uplift lives, and strengthen
+            the spirit of community.
+          </p>
+        ) : (
+          <p className="ml-20 mt-28 mb-36 fs-36 fw-700 leading-tight">
+            Design has the power to inspire<br></br> joy, uplift lives, and
+            strengthen<br></br> the spirit of community.
+          </p>
+        )}
       </div>
-      <div className="mt-32 flex">
-        <div className="w50 text-right">
+      <div className="mt-32 column flex">
+        <div className="w50 w100 pLR67 text-right">
           <img src={shiv} className="ourPurposeImage" alt="shiv wall"></img>
           <div>
             <p className="fs-13 mt-4 ">The Wooden Textured House </p>
             <p className="fs-13 mt-6 gray">Dehradun</p>
           </div>
         </div>
-        <div className="w50 newsContent">
+        <div className="w50 w100 mRT3 pLR67 newsContent">
           <h3 className="fs-27 leading-10 mb-9 ">
             We're in it for the greater good.
           </h3>
@@ -34,8 +41,8 @@ function Purpose() {
           </p>
         </div>
       </div>
-      <div className="mt-32 flex pLR67  justify-between">
-        <div className="w-355">
+      <div className="mt-32 column flex pLR67  justify-between">
+        <div className="w-355 w100">
           <img
             src={rukkbay}
             alt="rukkbay"
@@ -46,7 +53,7 @@ function Purpose() {
             <p className="fs-13 mt-6 gray">Dehradun</p>
           </div>
         </div>
-        <div className="w-727 mt-72">
+        <div className="w-727 mRT3 w100 mt-72">
           <img src={gym} alt="gym" className="parallelImagesLeft  mr-8"></img>
           <div>
             <p className="fs-13 mt-4 ">Volvarine Gym</p>
@@ -54,15 +61,15 @@ function Purpose() {
           </div>
         </div>
       </div>
-      <div className="mt-32 flex pLR67  justify-end">
-        <div className="mr-32">
+      <div className="mt-32 column flex pLR67  justify-end">
+        <div className="mr-32 w100">
           <img src={sns} alt="sun n soil farm" className="w-4x3"></img>
           <div>
             <p className="fs-13 mt-4 ">Sun n Soil Backpackers Hostel </p>
             <p className="fs-13 mt-6 gray">Jolly Grant</p>
           </div>
         </div>
-        <div className="mt-350">
+        <div className="mt-350 w100">
           <img src={twh} alt="the white house" className="w-4x3"></img>
           <div>
             <p className="fs-13 mt-4 ">The White House</p>
@@ -70,15 +77,15 @@ function Purpose() {
           </div>
         </div>
       </div>
-      <div className="mt-32 flex">
-        <div className="w50 text-right">
+      <div className="mt-32 column pLR67 flex">
+        <div className="w50 w100 text-right">
           <img src={sns2} className="ourPurposeImage" alt="sun n soil"></img>
           <div>
             <p className="fs-13 mt-4 ">Sun n Soil Backpackers Hostel </p>
             <p className="fs-13 mt-6 gray">Jolly Grant</p>
           </div>
         </div>
-        <div className="w50 newsContent">
+        <div className="w50 mRT3 w100 newsContent paddingRight75">
           <h3 className="fs-27 leading-10  mb-9">
             We create places with meaning.
           </h3>
@@ -91,7 +98,7 @@ function Purpose() {
         </div>
       </div>
 
-      <div className="px-44 mt-32 w-3/4">
+      <div className="px-44 mt-32 w-3/4 w100">
         <h3 className="fs-27 leading-10  mb-9">We design with purpose.</h3>
         <p className="fs-17 leading-6 pr-6 ">
           Several ideals ignite our passions and keep us focused on what

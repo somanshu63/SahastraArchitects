@@ -386,18 +386,18 @@ function Work() {
         </ul>
       </div>
       {work === "grid" && (
-        <ul className="flex projectsList justify-start float-left items-start mb-80">
+        <ul className="flex projectsList float-left items-start mb-80">
           {(selectedCategory !== "All"
             ? projectsArray.find(
                 (category) => category.name === selectedCategory
               )?.projects
             : allProjects
           ).map((project, id) => (
-            <li key={id} className="w-250 mb-12 project">
+            <li key={id} className="w-250O mb-12 project">
               <img
                 src={project.image}
                 alt={project.alt}
-                className="w-250 mb-6 h-48"
+                className="w-250I mb-6 h-48"
               />
               <p className="text-base mb-3 font-bold leading-7">
                 {project.name}

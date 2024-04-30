@@ -100,7 +100,7 @@ function Header(props) {
                   studios
                 </NavLink>
               </li>
-              <li className="navigationList">
+              {/* <li className="navigationList">
                 <NavLink
                   to="/news"
                   onClick={() => {
@@ -111,7 +111,7 @@ function Header(props) {
                 >
                   news
                 </NavLink>
-              </li>
+              </li> */}
               <li className="navigationList">
                 <NavLink
                   to="/career"

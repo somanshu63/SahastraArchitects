@@ -43,9 +43,9 @@ function App() {
         <Route path="/studios">
           <Studios />
         </Route>
-        <Route path="/news">
+        {/* <Route path="/news">
           <News />
-        </Route>
+        </Route> */}
         <Route path="/career">
           <Career />
         </Route>

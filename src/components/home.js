@@ -310,12 +310,18 @@ function Home(props) {
       </div>
       <div className="flex mt-32 items-center justify-center">
         <div className=" m-28 greenbg p-16 pt-12">
-          <p className="fs-27 white leading-9 mb-8">
-            Every project is an opportunity to
-            {`${window.innerWidth < 550 ? "" : <br></br>}`} make the world a
-            better, healthier{`${window.innerWidth < 550 ? "" : <br></br>}`}
-            place.
-          </p>
+          {window.innerWidth < 550 ? (
+            <p className="fs-27 white leading-9 mb-8">
+              Every project is an opportunity to make the world a better,
+              healthier place.
+            </p>
+          ) : (
+            <p className="fs-27 white leading-9 mb-8">
+              Every project is an opportunity to
+              <br></br> make the world a better, healthier<br></br>
+              place.
+            </p>
+          )}
           <span className="fs-17 white border-bottom-white leading-6">
             #Projects for a Better World.
           </span>

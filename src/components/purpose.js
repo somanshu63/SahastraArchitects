@@ -31,7 +31,7 @@ function Purpose() {
             <p className="fs-13 mt-6 gray">Dehradun</p>
           </div>
         </div>
-        <div className="w50 w100 mRT3 pLR67 newsContent">
+        <div className="w50 w100 mRT3 pLR67 newsContent paddingRight75">
           <h3 className="fs-27 leading-10 mb-9 ">
             We're in it for the greater good.
           </h3>
@@ -85,7 +85,7 @@ function Purpose() {
             <p className="fs-13 mt-6 gray">Jolly Grant</p>
           </div>
         </div>
-        <div className="w50 mRT3 w100 newsContent paddingRight75">
+        <div className="w50 mRT3 w100 newsContent paddingLeft75 pL0">
           <h3 className="fs-27 leading-10  mb-9">
             We create places with meaning.
           </h3>

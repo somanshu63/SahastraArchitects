@@ -149,49 +149,49 @@ body {
 }
 .fs-36 {
   font-weight: 600;
-  font-size: 36px;
+  font-size: 2.25rem;
 }
 
 .fs-42 {
   font-weight: 600;
-  font-size: 42px;
+  font-size: 2.625rem;
 }
 .fs-33 {
   font-weight: 500;
-  font-size: 33px;
+  font-size: 2.0625rem;
 }
 .fs-13 {
   font-weight: 600;
-  font-size: 13px;
+  font-size: 0.8125rem;
 }
 .fs-24 {
   font-weight: 600;
-  font-size: 24px;
+  font-size: 1.5rem;
 }
 .fs-20 {
   font-weight: 600;
-  font-size: 20px;
+  font-size: 1.25rem;
 }
 .fs-12 {
   font-weight: 600;
-  font-size: 11px;
+  font-size: 0.6875rem;
 }
 
 .fs-14 {
   font-weight: 600;
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 .fs-30 {
   font-weight: 500;
-  font-size: 30px;
+  font-size: 1.875rem;
 }
 .fs-27 {
   font-weight: 700;
-  font-size: 27px;
+  font-size: 1.6875rem;
 }
 .fs-17 {
   font-weight: 600;
-  font-size: 17px;
+  font-size: 1.0625rem;
 }
 .fw-700 {
   font-weight: 700;
@@ -277,7 +277,7 @@ img {
   letter-spacing: -2px;
   text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
   /* background-color: rgba(255, 255, 255, 0.5); */
-  font-size: 40px;
+  font-size: 2.5rem;
 }
 .absoluteSidebar {
   position: absolute;
@@ -585,9 +585,9 @@ td {
   .bigImage {
     height: 45vh;
   }
-  .brand {
+  /* .brand {
     font-size: 25px;
-  }
+  } */
 }
 
 @media screen and (max-width: 576px) {
@@ -617,9 +617,9 @@ td {
   .navigationList {
     margin-bottom: 1.5rem;
   }
-  .brand {
+  /* .brand {
     font-size: 20px;
-  }
+  } */
   .column {
     flex-direction: column;
   }
@@ -655,10 +655,10 @@ td {
     padding: 2rem 3rem;
   }
   .paddingLeft75 {
-    padding: 0;
+    padding-left: 3rem;
   }
   .paddingRight75 {
-    padding: 0;
+    padding-right: 3rem;
   }
   .leading-6 {
     line-height: normal;
@@ -693,12 +693,7 @@ td {
   .p-16 {
     padding: 3rem;
   }
-  .-bottom-12 {
-    bottom: -4rem;
-  }
-  .-bottom-9 {
-    bottom: -2.8rem;
-  }
+
   .w-250O {
     width: 31%;
   }
@@ -707,5 +702,103 @@ td {
   }
   .w-4x3 {
     width: 100%;
+  }
+  /* .ml-20 {
+    margin-left: 0;
+  } */
+  .fs-36 {
+    font-size: 26px;
+  }
+  .px-44 {
+    padding: 0 3rem;
+  }
+  .pL0 {
+    padding-left: 0;
+  }
+  .ml-20 {
+    margin-left: 0;
+  }
+  .px-20 {
+    padding: 3rem 0;
+  }
+  .collectionList {
+    width: 21%;
+    display: block;
+    flex: 0 0 auto;
+  }
+}
+
+@media screen and (max-width: 468px) {
+  html {
+    font-size: 10px;
+  }
+  .container {
+    max-width: 440px;
+  }
+
+  .pLR67 {
+    padding: 0 2rem;
+  }
+  .pL67 {
+    margin-left: 2rem;
+  }
+  .pR67 {
+    margin-right: 2rem;
+  }
+  .mRT3 {
+    margin-top: 2rem;
+  }
+  .mR3 {
+    margin-right: 2rem;
+  }
+  .mL3 {
+    margin-left: 2rem;
+  }
+  .absoluteSidebar {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    right: 2rem;
+    z-index: 10;
+  }
+  .header {
+    padding: 2rem 2rem;
+  }
+  .paddingLeft75 {
+    padding-left: 2rem;
+  }
+  .paddingRight75 {
+    padding-right: 2rem;
+  }
+
+  .mr-7 {
+    margin-right: 1rem;
+  }
+  .mt-72 {
+    margin-top: 2rem;
+  }
+  .insights {
+    width: 100vw;
+    margin-left: 2rem;
+    padding-right: 20vw;
+  }
+
+  .m-28 {
+    margin: 2rem;
+  }
+  .p-16 {
+    padding: 2rem;
+  }
+
+  .mt-350 {
+    margin-top: 2rem;
+  }
+
+  .px-44 {
+    padding: 0 2rem;
+  }
+
+  .px-20 {
+    padding: 2rem 0;
   }
 }

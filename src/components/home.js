@@ -100,7 +100,7 @@ function Home(props) {
     <div>
       <HeaderHome />
       <div className="pL67 mt-32 mR3 flex column ">
-        <div className="w50 w100 newsContent paddingRight75">
+        <div className="w50 w100 newsContent pL0 paddingRight75">
           <span className="fs-12 mb-5">NEWS</span>
           <h3 className="fs-27 leading-10 mb-9">
             A new studio, deep in the heart of Dehradun
@@ -154,7 +154,7 @@ function Home(props) {
             <p className="fs-13 mt-6 gray">Dehradun</p>
           </div>
         </div>
-        <div className="w50 mRT3 w100 newsContent paddingLeft75">
+        <div className="w50 mRT3 w100 newsContent pL0 paddingLeft75">
           <span className="fs-12 mb-5">IT'S NOT A MOMENT, IT'S A MINDSET</span>
           <h3 className="fs-27 leading-10 mb-9">Celebrating Earth Month</h3>
           <p className="fs-17 leading-6 mb-9 pr-8">
@@ -215,7 +215,13 @@ function Home(props) {
                   <p className="gray text-base font-semibold  leading-6">
                     {item.description}{" "}
                   </p>
-                  {id === 0 || id === 5 ? <div className="overlay"></div> : ""}
+                  {window.innerWidth > 550 && (id === 0 || id === 5) ? (
+                    <div className="overlay"></div>
+                  ) : window.innerWidth < 550 && (id === 0 || id === 4) ? (
+                    <div className="overlay"></div>
+                  ) : (
+                    ""
+                  )}
                 </div>
               );
             })}
@@ -245,7 +251,7 @@ function Home(props) {
         </div>
       </div>
       <div className="pL67 mt-52 column mR3 flex">
-        <div className="w50 w100 newsContent paddingRight75">
+        <div className="w50 w100 newsContent pL0 paddingRight75">
           <h3 className="fs-27 leading-10 mb-9">Designer Spotlight</h3>
           <p className="fs-17 leading-6">
             For the design director of our Dehradun studio,{" "}
@@ -296,7 +302,7 @@ function Home(props) {
             alt="imagehome1"
           ></img>
         </div>
-        <div className="w50 mRT3 w100 newsContent paddingLeft75">
+        <div className="w50 mRT3 w100 newsContent pL0 paddingLeft75">
           <span className="fs-12 mb-5">INSIGHTS</span>
           <h3 className="fs-27 leading-10 mb-9">Garden in the Desert</h3>
           <p className="fs-17 leading-6 pr-8">

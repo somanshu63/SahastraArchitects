@@ -6,7 +6,7 @@ import MapWithMarkers from "./map";
 class Studios extends Component {
   render() {
     return (
-      <div className="pLR67 ">
+      <div className="pLR67 mRT3">
         <MapWithMarkers />
 
         {window.innerWidth < 550 ? (

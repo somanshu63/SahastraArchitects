@@ -47,7 +47,7 @@ function Header(props) {
                 props.setSidebar(false);
               }}
               className=" pointer"
-              style={{ fontSize: "40px" }}
+              style={{ fontSize: "2.5rem" }}
             />
           </div>
           <nav>

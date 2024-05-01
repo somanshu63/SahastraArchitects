@@ -709,9 +709,7 @@ td {
   /* .ml-20 {
     margin-left: 0;
   } */
-  .fs-36 {
-    font-size: 26px;
-  }
+
   .px-44 {
     padding: 0 3rem;
   }
@@ -731,6 +729,12 @@ td {
   }
   .right-24 {
     right: 3rem;
+  }
+  .selectedProjectsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 8.5rem);
+    grid-template-rows: auto;
+    gap: 0.75rem 1.5rem;
   }
 }
 

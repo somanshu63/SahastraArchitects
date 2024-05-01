@@ -294,7 +294,7 @@ function Work() {
           className="absolute  -bottom-12 pointer left-0"
           style={{
             color: currectVideoIndex === 0 ? "gray" : "black",
-            fontSize: window.innerWidth < 550 ? "30px" : "40px",
+            fontSize: "2.5rem",
           }}
         />
         <RiArrowRightSLine
@@ -306,7 +306,7 @@ function Work() {
           className="absolute -bottom-12 pointer right-0"
           style={{
             color: currectVideoIndex === videos.length - 1 ? "gray" : "black",
-            fontSize: window.innerWidth < 550 ? "30px" : "40px",
+            fontSize: "2.5rem",
           }}
         />
       </div>

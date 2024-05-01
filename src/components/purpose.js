@@ -97,7 +97,6 @@ function Purpose() {
           </p>
         </div>
       </div>
-
       <div className="px-44 mt-32 w-3/4 w100">
         <h3 className="fs-27 leading-10  mb-9">We design with purpose.</h3>
         <p className="fs-17 leading-6 pr-6 ">

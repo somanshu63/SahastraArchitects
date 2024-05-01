@@ -1,15 +1,7 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
-
 import image4 from "../images/home/2.bmp.jpg";
-import petrolPump from "../images/home/petrolpump.png";
-import haveli from "../images/home/haveliFront.jpg";
-
-import landscape from "../images/home/landscape1.jpg";
-import landscape2 from "../images/home/landscape2.jpg";
 import residential2 from "../images/work images/residential2.jpg";
-import residential4 from "../images/work images/residential4.jpg";
-import residential9 from "../images/work images/residential9.jpg";
 import negi from "../images/work images/negi.jpg";
 import house3 from "../images/home/house3.jpg";
 function HeaderHome(props) {

@@ -5,18 +5,13 @@ import { RiArrowLeftSLine } from "react-icons/ri";
 import HeaderHome from "./headerHome";
 import DoonOffice1 from "../images/home/DoonOffice2.jpg";
 import DoonOffice2 from "../images/home/DoonOffice1.jpg";
-import recycled from "../images/home/recycled.jpg";
 import tree from "../images/home/tree.jpeg";
 import monk from "../images/home/monk.jpeg";
 import house1 from "../images/home/house1.jpg";
 import house3 from "../images/home/house3.jpg";
 import cycle from "../images/home/cycle.jpeg";
 import spotlight1 from "../images/home/spotlight1.jpeg";
-// import spotlight2 from "../images/home/spotlight2.jpeg";
 import gardenInDesert from "../images/home/gardenInDesert.jpg";
-import showCase2 from "../images/home/2222.jpg";
-import showCase1 from "../images/home/showCase1.png";
-import haveli from "../images/home/haveli.png";
 import gym from "../images/purpose/gym.jpeg";
 import kitchen from "../images/home/kitchen.jpeg";
 import sns from "../images/home/sns.png";
@@ -68,7 +63,6 @@ const collectionArray = [
 ];
 
 function Home(props) {
-  const containerRef = useRef(null);
   const [collection, setCollection] = useState(collectionArray);
   const [width, setWidth] = useState(window.innerWidth * 0.14);
   const [actualWidth, setActualWidth] = useState(window.innerWidth * 1.14);

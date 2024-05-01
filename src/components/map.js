@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Map, Marker, ZoomControl } from "pigeon-maps";
 
 export default function MapWithMarkers() {
-  const [hue, setHue] = useState(0);
   const color = `hsl(0deg 100% 50%)`;
 
   return (

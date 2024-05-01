@@ -2,8 +2,6 @@ import React, { useEffect } from "react";
 import { IoSearch } from "react-icons/io5";
 import { IoMdMenu } from "react-icons/io";
 import { IoClose } from "react-icons/io5";
-
-import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { useHistory } from "react-router-dom";
 

@@ -588,6 +588,9 @@ td {
   /* .brand {
     font-size: 25px;
   } */
+  .right-24 {
+    right: 4rem;
+  }
 }
 
 @media screen and (max-width: 576px) {
@@ -726,6 +729,9 @@ td {
     display: block;
     flex: 0 0 auto;
   }
+  .right-24 {
+    right: 3rem;
+  }
 }
 
 @media screen and (max-width: 468px) {
@@ -800,5 +806,14 @@ td {
 
   .px-20 {
     padding: 2rem 0;
+  }
+  .pL0 {
+    padding-left: 0;
+  }
+  .ml-20 {
+    margin-left: 0;
+  }
+  .right-24 {
+    right: 2rem;
   }
 }

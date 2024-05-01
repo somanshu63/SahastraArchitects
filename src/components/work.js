@@ -432,7 +432,7 @@ function Work() {
         </Map>
       )}
       {work === "list" && (
-        <table className="w100 w90 table pLR67">
+        <table className="w100 table pLR67">
           <tr className="text-left">
             <th className="gray underline decoration-2 fs-17 fw-700 w-1/2">
               Title

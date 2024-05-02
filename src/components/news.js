@@ -1,43 +1,6 @@
 import fachade from "../images/news/fachade.jpg";
 import earth from "../images/news/earth.jpg";
-import imola from "../images/news/imola.jpg";
-import shanghai from "../images/news/shanghai.jpg";
-import yokohama from "../images/news/yokohama.jpg";
-import mini from "../images/news/mini.jpg";
-import soho from "../images/news/soho.jpg";
-import soil from "../images/news/soil.jpg";
-import biomimicry from "../images/news/biomimicry.jpg";
-
-const news = [
-  {
-    name: "Urban Bloom / AIM Architecture + Urban Matters Installations & Structures",
-    image: shanghai,
-  },
-  {
-    name: "7 Architects Create 7 New Community Spaces Beneath a Disused Japanese Overpass",
-    image: yokohama,
-  },
-  {
-    name: "MINI LIVING's First Permanent Building Will Transform a Paint Factory into a Co-living Hotspot in Shanghai",
-    image: mini,
-  },
-  {
-    name: "SO-IL and MINI LIVING Develop Housing Prototype for Resource-Conscious Shared Living",
-    image: soil,
-  },
-  {
-    name: "SOHO China Property Mogul Zhang Xin on the Chinese Economy and Her Changing Business Model",
-    image: soho,
-  },
-  {
-    name: "Financial Times Article Details How Biomimicry Can be Applied to Architecture",
-    image: biomimicry,
-  },
-  {
-    name: "CityLab Article Details da Vinci's Technically Astounding Map of Imola",
-    image: imola,
-  },
-];
+import { news } from "../data";
 
 function News() {
   return (

@@ -4,6 +4,7 @@ import gym from "../images/purpose/gym.jpeg";
 import sns from "../images/purpose/sns.jpg";
 import twh from "../images/purpose/twh.jpg";
 import sns2 from "../images/purpose/sns2.jpg";
+import { NavLink } from "react-router-dom/cjs/react-router-dom.min";
 
 function Purpose() {
   return (
@@ -25,9 +26,11 @@ function Purpose() {
       </div>
       <div className="mt-32 column flex">
         <div className="w50 w100 pLR67 text-right">
-          <img src={shiv} className="ourPurposeImage" alt="shiv wall"></img>
+          <NavLink to="/projects/the-wooden-brown-house">
+            <img src={shiv} className="ourPurposeImage" alt="shiv wall"></img>
+          </NavLink>
           <div>
-            <p className="fs-13 mt-4 ">The Wooden Textured House </p>
+            <p className="fs-13 mt-4 ">The Wooden Brown House </p>
             <p className="fs-13 mt-6 gray">Dehradun</p>
           </div>
         </div>
@@ -43,18 +46,22 @@ function Purpose() {
       </div>
       <div className="mt-32 column flex pLR67  justify-between">
         <div className="w-355 w100">
-          <img
-            src={rukkbay}
-            alt="rukkbay"
-            className="parallelImagesRight"
-          ></img>
+          <NavLink to="/projects/rukkbay-cafe">
+            <img
+              src={rukkbay}
+              alt="rukkbay"
+              className="parallelImagesRight"
+            ></img>
+          </NavLink>
           <div>
             <p className="fs-13 mt-4 ">The Rukkbay Cafe </p>
             <p className="fs-13 mt-6 gray">Dehradun</p>
           </div>
         </div>
         <div className="w-727 mRT3 w100 mt-72">
-          <img src={gym} alt="gym" className="parallelImagesLeft  mr-8"></img>
+          <NavLink to="/projects/the-volvarine-gym">
+            <img src={gym} alt="gym" className="parallelImagesLeft  mr-8"></img>
+          </NavLink>
           <div>
             <p className="fs-13 mt-4 ">Volvarine Gym</p>
             <p className="fs-13 mt-6 gray">Dehradun</p>
@@ -63,23 +70,29 @@ function Purpose() {
       </div>
       <div className="mt-32 column flex pLR67  justify-end">
         <div className="mr-32 w100">
-          <img src={sns} alt="sun n soil farm" className="w-4x3"></img>
+          <NavLink to="/projects/sun-n-soil-backpackers-hostel">
+            <img src={sns} alt="sun n soil farm" className="w-4x3"></img>
+          </NavLink>
           <div>
             <p className="fs-13 mt-4 ">Sun n Soil Backpackers Hostel </p>
             <p className="fs-13 mt-6 gray">Jolly Grant</p>
           </div>
         </div>
         <div className="mt-350 w100">
-          <img src={twh} alt="the white house" className="w-4x3"></img>
+          <NavLink to="/projects/the-white-villa">
+            <img src={twh} alt="the white house" className="w-4x3"></img>
+          </NavLink>
           <div>
-            <p className="fs-13 mt-4 ">The White House</p>
+            <p className="fs-13 mt-4 ">The White Villa</p>
             <p className="fs-13 mt-6 gray">Dehradun</p>
           </div>
         </div>
       </div>
       <div className="mt-32 column pLR67 flex">
         <div className="w50 w100 text-right">
-          <img src={sns2} className="ourPurposeImage" alt="sun n soil"></img>
+          <NavLink to="/projects/sun-n-soil-backpackers-hostel">
+            <img src={sns2} className="ourPurposeImage" alt="sun n soil"></img>
+          </NavLink>
           <div>
             <p className="fs-13 mt-4 ">Sun n Soil Backpackers Hostel </p>
             <p className="fs-13 mt-6 gray">Jolly Grant</p>

@@ -10,6 +10,7 @@ import Studios from "./studios";
 import News from "./news";
 import Career from "./career";
 import { FaArrowUp } from "react-icons/fa6";
+import SingleProject from "./singleProject";
 
 function App() {
   const [sidebar, setSidebar] = useState(false);
@@ -34,6 +35,7 @@ function App() {
         <Route path="/work">
           <Work />
         </Route>
+        <Route path="/projects/:slug" component={SingleProject}></Route>
         <Route path="/purpose">
           <Purpose />
         </Route>

@@ -1,5 +1,5 @@
 import react, { useState, useRef, useEffect } from "react";
-import earthImage from "../images/home/earthImage.JPG";
+import earthImage from "../images/home/earthImage.jpeg";
 import { RiArrowRightSLine } from "react-icons/ri";
 import { RiArrowLeftSLine } from "react-icons/ri";
 import HeaderHome from "./headerHome";
@@ -7,60 +7,17 @@ import DoonOffice1 from "../images/home/DoonOffice2.jpg";
 import DoonOffice2 from "../images/home/DoonOffice1.jpg";
 import tree from "../images/home/tree.jpeg";
 import monk from "../images/home/monk.jpeg";
-import house1 from "../images/home/house1.jpg";
-import house3 from "../images/home/house3.jpg";
-import cycle from "../images/home/cycle.jpeg";
+import house1 from "../images/work images/the wooden white house.jpg";
 import spotlight1 from "../images/home/spotlight1.jpeg";
 import gardenInDesert from "../images/home/gardenInDesert.jpg";
 import gym from "../images/purpose/gym.jpeg";
-import kitchen from "../images/home/kitchen.jpeg";
-import sns from "../images/home/sns.png";
 import { NavLink } from "react-router-dom/cjs/react-router-dom.min";
 import landscape1 from "../images/home/landscape1.jpg";
 import spotlight2 from "../images/home/spotlight1.jpg";
+import { collectionArray } from "../data";
 
 const doonOfficePictures = [DoonOffice1, DoonOffice2];
 const spotlightPictures = [spotlight1, spotlight2];
-
-const collectionArray = [
-  {
-    image: house1,
-    alt: "house",
-    description:
-      "Modern Living, Timeless Charm: Balconies, Sleek Design, and Tranquil Surroundings.",
-  },
-  {
-    image: cycle,
-    alt: "cycle",
-    description:
-      "Yellow bicycle in store with man at counter. Casual, urban scene.",
-  },
-  {
-    image: house3,
-    alt: "house",
-    description:
-      "Modern apartment with clock, white exterior, fenced property, tree, blue sky, and birds.",
-  },
-
-  {
-    image: gym,
-    alt: "gym",
-    description:
-      "Let's work together to achieve your goals and elevate your wellbeing.",
-  },
-  {
-    image: kitchen,
-    alt: "kitchen",
-    description:
-      "Elevate cooking with us! Top appliances, expert guidance, culinary delights.",
-  },
-  {
-    image: sns,
-    alt: "sns",
-    description:
-      "Adventure at Sun n Soil Hostel: Comfort, community, unforgettable experiences!",
-  },
-];
 
 function Home(props) {
   const [collection, setCollection] = useState(collectionArray);
@@ -109,11 +66,13 @@ function Home(props) {
           </p>
         </div>
         <div className="w50 w100 mRT3 ">
-          <img
-            src={doonOfficePictures[currentPictureIndex]}
-            className="news1Image"
-            alt="imagehome1"
-          ></img>
+          <NavLink to="/studios" className="border-bottom pointer">
+            <img
+              src={doonOfficePictures[currentPictureIndex]}
+              className="news1Image"
+              alt="imagehome1"
+            ></img>
+          </NavLink>
           <div className="flex mt-6">
             <RiArrowLeftSLine
               className={`${currentPictureIndex === 1 ? "pointer" : ""}`}
@@ -122,7 +81,7 @@ function Home(props) {
               }}
               style={{
                 color: currentPictureIndex === 0 ? "gray" : "black",
-                fontSize: "30px",
+                fontSize: "1.875rem",
                 marginRight: "10px",
                 marginLeft: "-8px",
               }}
@@ -134,7 +93,7 @@ function Home(props) {
               }}
               style={{
                 color: currentPictureIndex === 1 ? "gray" : "black",
-                fontSize: "30px",
+                fontSize: "1.875rem",
               }}
             />
           </div>
@@ -142,7 +101,9 @@ function Home(props) {
       </div>
       <div className="mt-32 mL3 flex column pR67">
         <div className="w50 w100 text-right">
-          <img src={earthImage} className="earthImage" alt="imagehome1"></img>
+          <NavLink to="/projects/sun-n-soil-backpackers-hostel">
+            <img src={earthImage} className="earthImage" alt="imagehome1"></img>
+          </NavLink>
           <div>
             <p className="fs-13 mt-4 ">Sun n Soil Backpackers Hostel</p>
             <p className="fs-13 mt-6 gray">Dehradun</p>
@@ -166,18 +127,26 @@ function Home(props) {
       </div>
       <div className="mt-32 flex pLR67 column justify-between">
         <div className="w-727 w100 mt-72">
-          <img
-            src={monk}
-            alt="Old Green Man"
-            className="parallelImagesLeft  mr-8"
-          ></img>
+          <NavLink to="/projects/rukkbay-cafe">
+            <img
+              src={monk}
+              alt="Old Green Man"
+              className="parallelImagesLeft  mr-8"
+            ></img>
+          </NavLink>
           <div>
             <p className="fs-13 mt-4 ">Rukkbay Cafe </p>
             <p className="fs-13 mt-6 gray">Dehradun</p>
           </div>
         </div>
         <div className="w-355 w100 mRT3">
-          <img src={tree} alt="blue tree" className="parallelImagesRight"></img>
+          <NavLink to="/projects/rukkbay-cafe">
+            <img
+              src={tree}
+              alt="blue tree"
+              className="parallelImagesRight"
+            ></img>
+          </NavLink>
           <div>
             <p className="fs-13 mt-4 ">Rukkbay Cafe </p>
             <p className="fs-13 mt-6 gray">Dehradun</p>
@@ -201,11 +170,14 @@ function Home(props) {
             {collection.map((item, id) => {
               return (
                 <div key={id} className="collectionList relative mr-7">
-                  <img
-                    src={item.image}
-                    alt={item.alt}
-                    className="collectionImage"
-                  ></img>
+                  <NavLink className="w-full" to={`projects/${item.slug}`}>
+                    <img
+                      src={item.image}
+                      alt={item.alt}
+                      className="collectionImage"
+                    ></img>
+                  </NavLink>
+
                   <p className="gray text-base font-semibold  leading-6">
                     {item.description}{" "}
                   </p>
@@ -260,7 +232,7 @@ function Home(props) {
           <img
             src={spotlightPictures[currentSpotlightIndex]}
             className="news1Image"
-            alt="imagehome1"
+            alt="spotlight"
           ></img>
           <div className="flex mt-6">
             <RiArrowLeftSLine
@@ -290,11 +262,7 @@ function Home(props) {
       </div>
       <div className="mt-32 column mL3 flex pR67">
         <div className="w50 w100 text-right">
-          <img
-            src={gardenInDesert}
-            className="earthImage"
-            alt="imagehome1"
-          ></img>
+          <img src={gardenInDesert} className="earthImage" alt="desert"></img>
         </div>
         <div className="w50 mRT3 w100 newsContent pL0 paddingLeft75">
           <span className="fs-12 mb-5">INSIGHTS</span>
@@ -329,22 +297,26 @@ function Home(props) {
       </div>
       <div className="flex mt-32 pLR67 column justify-between">
         <div className="w-355 w100">
-          <img
-            src={house1}
-            alt="interior"
-            className="parallelImagesRight"
-          ></img>
+          <NavLink to="/projects/the-wooden-white-house">
+            <img
+              src={house1}
+              alt="The Wooden White House"
+              className="parallelImagesRight"
+            ></img>
+          </NavLink>
           <div>
-            <p className="fs-13 mt-4 ">The Modern House </p>
+            <p className="fs-13 mt-4 ">The Wooden White House </p>
             <p className="fs-13 mt-6 gray">Dehradun</p>
           </div>
         </div>
         <div className="w-727 mt-72 w100 mRT3">
-          <img
-            src={landscape1}
-            alt="villa"
-            className="parallelImagesLeft  mr-8"
-          ></img>
+          <NavLink to="/projects/karma-retreat">
+            <img
+              src={landscape1}
+              alt="the karma retreat"
+              className="parallelImagesLeft  mr-8"
+            ></img>
+          </NavLink>
           <div>
             <p className="fs-13 mt-4 ">The Karma Retreat </p>
             <p className="fs-13 mt-6 gray">Dehradun</p>
@@ -353,7 +325,9 @@ function Home(props) {
       </div>
       <div className="flex justify-end mR3 mL3 mt-32">
         <div>
-          <img src={gym} alt="haveli" className="bigImage"></img>
+          <NavLink to="/projects/the-volvarine-gym">
+            <img src={gym} alt="gym" className="bigImage"></img>
+          </NavLink>
           <div>
             <p className="fs-13 mt-4 ">The Volvarine Gym </p>
             <p className="fs-13 mt-6 gray">Dehradun</p>

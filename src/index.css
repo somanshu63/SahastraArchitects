@@ -363,7 +363,7 @@ img {
   align-items: start;
   justify-content: center;
   flex-direction: column;
-  padding: 0 7.5rem;
+  padding: 0;
 }
 .border-bottom {
   border-bottom: 3px solid black;
@@ -532,6 +532,9 @@ td {
 }
 .h-60 {
   height: 80vh;
+}
+.w48 {
+  width: 48%;
 }
 
 /* mobile screen */

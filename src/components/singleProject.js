@@ -33,35 +33,39 @@ function SingleProject(props) {
             className="w-full h-60 "
             alt={project.alt}
           ></img>
-          <div className="flex mt-4 float-right">
-            <RiArrowLeftSLine
-              className="pointer"
-              onClick={() => {
-                setCurrentImageIndex(
-                  currentImageIndex === 0
-                    ? project.image.length - 1
-                    : currentImageIndex - 1
-                );
-              }}
-              style={{
-                fontSize: "1.875rem",
-                marginRight: "10px",
-              }}
-            />
-            <RiArrowRightSLine
-              className="pointer"
-              onClick={() => {
-                setCurrentImageIndex(
-                  project.image.length - 1 === currentImageIndex
-                    ? 0
-                    : currentImageIndex + 1
-                );
-              }}
-              style={{
-                fontSize: "1.875rem",
-              }}
-            />
-          </div>
+          {project?.image.length > 1 ? (
+            <div className="flex mt-4 float-right">
+              <RiArrowLeftSLine
+                className="pointer"
+                onClick={() => {
+                  setCurrentImageIndex(
+                    currentImageIndex === 0
+                      ? project.image.length - 1
+                      : currentImageIndex - 1
+                  );
+                }}
+                style={{
+                  fontSize: "1.875rem",
+                  marginRight: "10px",
+                }}
+              />
+              <RiArrowRightSLine
+                className="pointer"
+                onClick={() => {
+                  setCurrentImageIndex(
+                    project.image.length - 1 === currentImageIndex
+                      ? 0
+                      : currentImageIndex + 1
+                  );
+                }}
+                style={{
+                  fontSize: "1.875rem",
+                }}
+              />
+            </div>
+          ) : (
+            ""
+          )}
           <h3 className="mt-32 fs-27">{project?.name}</h3>
           <p className="fs-17 mt-8 gray">{project.location}</p>
           <p className="fs-17 mt-8 gray">{project.size}</p>

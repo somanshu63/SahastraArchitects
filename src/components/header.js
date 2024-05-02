@@ -52,6 +52,19 @@ function Header(props) {
             <ul className="navList">
               <li className="navigationList">
                 <NavLink
+                  to="/"
+                  exact
+                  onClick={() => {
+                    props.setSidebar(false);
+                  }}
+                  className="navLink"
+                  activeClassName="active"
+                >
+                  Home
+                </NavLink>
+              </li>
+              <li className="navigationList">
+                <NavLink
                   to="/work"
                   onClick={() => {
                     props.setSidebar(false);
@@ -59,7 +72,7 @@ function Header(props) {
                   className="navLink"
                   activeClassName="active"
                 >
-                  work
+                  Work
                 </NavLink>
               </li>
               <li className="navigationList">

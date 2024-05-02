@@ -25,7 +25,7 @@ function SingleProject(props) {
   console.log(project);
 
   return (
-    <div className="pLR67">
+    <div className="pLR67 mRT3">
       {loading ? (
         <div class="load"></div>
       ) : (

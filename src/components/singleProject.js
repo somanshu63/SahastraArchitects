@@ -10,6 +10,7 @@ function SingleProject(props) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [loading, setLoading] = useState(true);
   useEffect(() => {
+    window.scrollTo(0, 0);
     projectsArray.filter((project) => {
       project.projects.filter(
         (project) => project.slug === projectSlug && setProject(project)

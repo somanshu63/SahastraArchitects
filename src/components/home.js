@@ -170,7 +170,7 @@ function Home(props) {
                     ></img>
                   </NavLink>
 
-                  <p className="gray text-base font-semibold  leading-6">
+                  <p className="gray text-base text-justify font-semibold  leading-6">
                     {item.description}{" "}
                   </p>
                   {window.innerWidth > 550 && (id === 0 || id === 5) ? (
@@ -287,7 +287,7 @@ function Home(props) {
           </span>
         </div>
       </div>
-      <div className="flex mt-32 pLR67 column justify-between">
+      {/* <div className="flex mt-32 pLR67 column justify-between">
         <div className="w48 w100">
           <NavLink to="/projects/the-wooden-white-house">
             <img
@@ -325,7 +325,7 @@ function Home(props) {
             <p className="fs-13 mt-6 gray">Dehradun</p>
           </div>
         </div>
-      </div>
+      </div> */}
       <div className="flex justify-end w100 mt-32 ">
         <div className="insights">
           <span className="fs-12">INSIGHTS</span>

@@ -16,7 +16,7 @@ function Header(props) {
       <div className="brand flex items-center">
         <a href="/" className={`no-underline flex items-center`}>
           <img src={logo} className="logo" alt="logo"></img>
-          <span>Sahastra Architects</span>
+          <span className="uppercase">Sahastra Architects</span>
         </a>
       </div>
 
@@ -39,7 +39,7 @@ function Header(props) {
               onClick={() => {
                 props.setSidebar(false);
               }}
-              className="navLink  ml-3"
+              className="navLink uppercase ml-3"
               activeClassName="active"
             >
               Home
@@ -51,7 +51,7 @@ function Header(props) {
               onClick={() => {
                 props.setSidebar(false);
               }}
-              className="navLink  ml-3"
+              className="navLink uppercase ml-3"
               activeClassName="active"
             >
               Work
@@ -63,7 +63,7 @@ function Header(props) {
               onClick={() => {
                 props.setSidebar(false);
               }}
-              className="navLink  ml-3"
+              className="navLink uppercase ml-3"
               activeClassName="active"
             >
               purpose
@@ -75,7 +75,7 @@ function Header(props) {
               onClick={() => {
                 props.setSidebar(false);
               }}
-              className="navLink  ml-3"
+              className="navLink uppercase ml-3"
               activeClassName="active"
             >
               people
@@ -87,7 +87,7 @@ function Header(props) {
               onClick={() => {
                 props.setSidebar(false);
               }}
-              className="navLink  ml-3"
+              className="navLink uppercase ml-3"
               activeClassName="active"
             >
               studios
@@ -99,7 +99,7 @@ function Header(props) {
               onClick={() => {
                 props.setSidebar(false);
               }}
-              className="navLink  ml-3"
+              className="navLink uppercase ml-3"
               activeClassName="active"
             >
               career
@@ -127,7 +127,7 @@ function Header(props) {
                 onClick={() => {
                   props.setSidebar(false);
                 }}
-                className="navLink font-bold ml-3"
+                className="navLink font-bold uppercase ml-3"
                 activeClassName="active"
               >
                 Home
@@ -139,7 +139,7 @@ function Header(props) {
                 onClick={() => {
                   props.setSidebar(false);
                 }}
-                className="navLink font-bold ml-3"
+                className="navLink font-bold uppercase ml-3"
                 activeClassName="active"
               >
                 Work
@@ -151,7 +151,7 @@ function Header(props) {
                 onClick={() => {
                   props.setSidebar(false);
                 }}
-                className="navLink font-bold ml-3"
+                className="navLink font-bold uppercase ml-3"
                 activeClassName="active"
               >
                 purpose
@@ -163,7 +163,7 @@ function Header(props) {
                 onClick={() => {
                   props.setSidebar(false);
                 }}
-                className="navLink font-bold ml-3"
+                className="navLink font-bold uppercase ml-3"
                 activeClassName="active"
               >
                 people
@@ -175,7 +175,7 @@ function Header(props) {
                 onClick={() => {
                   props.setSidebar(false);
                 }}
-                className="navLink font-bold ml-3"
+                className="navLink font-bold uppercase ml-3"
                 activeClassName="active"
               >
                 studios
@@ -187,7 +187,7 @@ function Header(props) {
                 onClick={() => {
                   props.setSidebar(false);
                 }}
-                className="navLink font-bold ml-3"
+                className="navLink font-bold uppercase ml-3"
                 activeClassName="active"
               >
                 career

@@ -129,7 +129,7 @@ function Purpose() {
       <div className=" mt-32 flex justify-center w100">
         <div className="w-1/2">
           <h3 className="fs-27 leading-10  mb-9">We design with purpose.</h3>
-          <p className="fs-17 leading-6 pr-6 ">
+          <p className="fs-17 leading-6 pr-6 text-justify">
             Several ideals ignite our passions and keep us focused on what
             matters. These core values are the building blocks of who we are and
             what we stand for. They give us purpose. We invite you to learn more

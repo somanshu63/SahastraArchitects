@@ -139,9 +139,9 @@ export const headerImagesArray = [
     artist: "Dehradun",
   },
   {
-    image: theNegisHouse1,
-    name: "The Bungalow",
-    artist: "New Delhi",
+    image: karma,
+    name: "The Karma Retreat",
+    artist: "Dehradun",
   },
 
   {
@@ -153,6 +153,11 @@ export const headerImagesArray = [
   {
     image: aihtm,
     name: "AIHTM",
+    artist: "Dehradun",
+  },
+  {
+    image: haveli,
+    name: "Haveli",
     artist: "Dehradun",
   },
 ];

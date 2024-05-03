@@ -100,7 +100,7 @@ function Home(props) {
         </div>
       </div>
       <div className="mt-32 mL3 flex column pLR67 justify-between">
-        <div className=" mRT3 w100 newsContent pL0 paddingLeft75">
+        <div className=" mRT3 w100 newsContent pL0 ">
           <span className="fs-12 mb-5">IT'S NOT A MOMENT, IT'S A MINDSET</span>
           <h3 className="fs-27 leading-10 mb-9">Celebrating Earth Month</h3>
           <p className="fs-17 leading-6 mb-9 ">
@@ -257,7 +257,7 @@ function Home(props) {
         </div>
       </div>
       <div className="mt-32 column mL3 flex pLR67 justify-between">
-        <div className=" mRT3 w100 newsContent pL0 paddingLeft75">
+        <div className=" mRT3 w100 newsContent pL0 ">
           <span className="fs-12 mb-5">INSIGHTS</span>
           <h3 className="fs-27 leading-10 mb-9">Garden in the Desert</h3>
           <p className="fs-17 leading-6 ">

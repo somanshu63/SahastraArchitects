@@ -282,11 +282,11 @@ img {
 }
 .brand {
   color: rgb(0, 0, 0);
-  font-weight: 400;
-  letter-spacing: -2px;
+  font-weight: 500;
+
   /* text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5); */
   /* background-color: rgba(255, 255, 255, 0.5); */
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 .absoluteSidebar {
   position: absolute;
@@ -601,7 +601,10 @@ td {
     left: 78%;
   }
   .h-60 {
-    height: 75vh;
+    height: 45vh;
+  }
+  .video {
+    height: 45vh;
   }
 }
 @media screen and (max-width: 768px) {
@@ -648,7 +651,7 @@ td {
     z-index: 10;
   }
   .header {
-    padding: 2.5rem 4rem;
+    padding: 1rem 4rem;
   }
   .paddingLeft75 {
     padding: 0 0 0 5rem;
@@ -669,7 +672,10 @@ td {
     right: 4rem;
   }
   .h-60 {
-    height: 70vh;
+    height: 45vh;
+  }
+  .video {
+    height: 45vh;
   }
 }
 
@@ -742,7 +748,7 @@ td {
     z-index: 10;
   }
   .header {
-    padding: 2rem 3rem;
+    padding: 1rem 3rem;
   }
   .paddingLeft75 {
     padding-left: 3rem;
@@ -830,7 +836,10 @@ td {
     margin-bottom: 1.25rem;
   } */
   .h-60 {
-    height: 60vh;
+    height: 45vh;
+  }
+  .video {
+    height: 45vh;
   }
 }
 
@@ -885,7 +894,7 @@ td {
     z-index: 10;
   }
   .header {
-    padding: 2rem 2rem;
+    padding: 1rem 2rem;
   }
   .paddingLeft75 {
     padding-left: 2rem;
@@ -936,6 +945,6 @@ td {
     right: 2rem;
   }
   .h-60 {
-    height: 50vh;
+    height: 45vh;
   }
 }

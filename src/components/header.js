@@ -27,7 +27,7 @@ function Header(props) {
             onClick={() => {
               props.setSidebar(true);
             }}
-            style={{ fontSize: "2.1875rem" }}
+            style={{ fontSize: "1.5rem" }}
           />
         </div>
       ) : (
@@ -127,7 +127,7 @@ function Header(props) {
                 onClick={() => {
                   props.setSidebar(false);
                 }}
-                className="navLink  ml-3"
+                className="navLink font-bold ml-3"
                 activeClassName="active"
               >
                 Home
@@ -139,7 +139,7 @@ function Header(props) {
                 onClick={() => {
                   props.setSidebar(false);
                 }}
-                className="navLink  ml-3"
+                className="navLink font-bold ml-3"
                 activeClassName="active"
               >
                 Work
@@ -151,7 +151,7 @@ function Header(props) {
                 onClick={() => {
                   props.setSidebar(false);
                 }}
-                className="navLink  ml-3"
+                className="navLink font-bold ml-3"
                 activeClassName="active"
               >
                 purpose
@@ -163,7 +163,7 @@ function Header(props) {
                 onClick={() => {
                   props.setSidebar(false);
                 }}
-                className="navLink  ml-3"
+                className="navLink font-bold ml-3"
                 activeClassName="active"
               >
                 people
@@ -175,7 +175,7 @@ function Header(props) {
                 onClick={() => {
                   props.setSidebar(false);
                 }}
-                className="navLink  ml-3"
+                className="navLink font-bold ml-3"
                 activeClassName="active"
               >
                 studios
@@ -187,7 +187,7 @@ function Header(props) {
                 onClick={() => {
                   props.setSidebar(false);
                 }}
-                className="navLink  ml-3"
+                className="navLink font-bold ml-3"
                 activeClassName="active"
               >
                 career

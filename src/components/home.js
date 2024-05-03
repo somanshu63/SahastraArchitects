@@ -329,7 +329,7 @@ function Home(props) {
       <div className="flex justify-end w100 mt-32 ">
         <div className="insights">
           <span className="fs-12">INSIGHTS</span>
-          <h3 className="fs-27 leading-10 mb-7 mt-7">
+          <h3 className="fs-27  leading-10 mb-7 mt-7">
             {" "}
             A new higher education building inspires wonder and learning
           </h3>

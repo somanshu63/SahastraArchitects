@@ -12,17 +12,10 @@ function Purpose() {
       <div className="pLR67 ">
         <p className="mr-3 fw-700 ">Our Purpose</p>
 
-        {window.innerWidth < 550 ? (
-          <p className="ml-20 mt-28 mb-36 fs-36 fw-700 leading-tight">
-            Design has the power to inspire joy, uplift lives, and strengthen
-            the spirit of community.
-          </p>
-        ) : (
-          <p className="ml-20 mt-28 mb-36 fs-36 fw-700 leading-tight">
-            Design has the power to inspire<br></br> joy, uplift lives, and
-            strengthen<br></br> the spirit of community.
-          </p>
-        )}
+        <p className="mx-20 mt-28 mb-36 fs-36 text-justify fw-700 leading-tight">
+          Design has the power to inspire joy, uplift lives, and strengthen the
+          spirit of community.
+        </p>
       </div>
       <div className="mt-32 column justify-between pLR67 flex">
         <div className=" w100 mRT3 newsContent ">

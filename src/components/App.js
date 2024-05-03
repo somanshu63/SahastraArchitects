@@ -1,5 +1,5 @@
 import Home from "./home";
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, withRouter } from "react-router-dom";
 import Work from "./work";
 import { useState, useRef, useEffect } from "react";
 import Header from "./header";
@@ -12,10 +12,9 @@ import Career from "./career";
 import { FaArrowUp } from "react-icons/fa6";
 import SingleProject from "./singleProject";
 
-function App() {
+function App(props) {
   const [sidebar, setSidebar] = useState(false);
   const [scrollY, setScrollY] = useState(0);
-
   useEffect(() => {
     const handleScroll = () => {
       setScrollY(window.scrollY);
@@ -52,7 +51,9 @@ function App() {
           <Career />
         </Route>
       </Switch>
+
       <Footer />
+
       {scrollY > 300 ? (
         <div
           onClick={() => {

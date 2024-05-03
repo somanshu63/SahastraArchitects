@@ -51,7 +51,7 @@ function Home(props) {
     <div>
       <HeaderHome />
       <div className="pLR67 justify-between mt-32 mR3 flex column ">
-        <div className=" w100 newsContent pL0 paddingRight75">
+        <div className=" w100 newsContent pL0 ">
           <span className="fs-12 mb-5">NEWS</span>
           <h3 className="fs-27 leading-10 mb-9">
             A new studio, deep in the heart of Dehradun
@@ -128,11 +128,7 @@ function Home(props) {
       <div className="mt-32 flex pLR67 column justify-between">
         <div className="w48 w100 ">
           <NavLink to="/projects/rukkbay-cafe">
-            <img
-              src={monk}
-              alt="Old Green Man"
-              className="news1Image  mr-8"
-            ></img>
+            <img src={monk} alt="Old Green Man" className="news1Image"></img>
           </NavLink>
           <div>
             <p className="fs-13 mt-4 ">Rukkbay Cafe </p>
@@ -213,7 +209,7 @@ function Home(props) {
         </div>
       </div>
       <div className="pLR67 justify-between mt-52 column mR3 flex">
-        <div className=" w100 newsContent pL0 paddingRight75">
+        <div className=" w100 newsContent pL0 ">
           <h3 className="fs-27 leading-10 mb-9">Designer Spotlight</h3>
           <p className="fs-17 leading-6">
             For the design director of our Dehradun studio,{" "}
@@ -310,7 +306,7 @@ function Home(props) {
             <img
               src={landscape1}
               alt="the karma retreat"
-              className="news1Image  mr-8"
+              className="news1Image"
             ></img>
           </NavLink>
           <div>
@@ -320,7 +316,7 @@ function Home(props) {
         </div>
       </div>
       <div className="flex justify-center w100 pLR67 mR3 mL3 mt-32">
-        <div className="w100">
+        <div className="w100 w48">
           <NavLink to="/projects/the-volvarine-gym">
             <img src={gym} alt="gym" className="news1Image"></img>
           </NavLink>
@@ -330,7 +326,7 @@ function Home(props) {
           </div>
         </div>
       </div>
-      <div className="flex justify-end w100 mt-32">
+      <div className="flex justify-end w100 mt-32 ">
         <div className="insights">
           <span className="fs-12">INSIGHTS</span>
           <h3 className="fs-27 leading-10 mb-7 mt-7">

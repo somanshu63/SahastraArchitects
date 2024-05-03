@@ -9,7 +9,7 @@ import { NavLink } from "react-router-dom/cjs/react-router-dom.min";
 function Purpose() {
   return (
     <div>
-      <div className="pLR67 mt-8">
+      <div className="pLR67 ">
         <p className="mr-3 fw-700 ">Our Purpose</p>
 
         {window.innerWidth < 550 ? (
@@ -24,17 +24,8 @@ function Purpose() {
           </p>
         )}
       </div>
-      <div className="mt-32 column flex">
-        <div className="w50 w100 pLR67 text-right">
-          <NavLink to="/projects/the-wooden-brown-house">
-            <img src={shiv} className="ourPurposeImage" alt="shiv wall"></img>
-          </NavLink>
-          <div>
-            <p className="fs-13 mt-4 ">The Wooden Brown House </p>
-            <p className="fs-13 mt-6 gray">Dehradun</p>
-          </div>
-        </div>
-        <div className="w50 w100 mRT3 pLR67 newsContent paddingRight75">
+      <div className="mt-32 column justify-between pLR67 flex">
+        <div className=" w100 mRT3 newsContent ">
           <h3 className="fs-27 leading-10 mb-9 ">
             We're in it for the greater good.
           </h3>
@@ -43,9 +34,22 @@ function Purpose() {
             world. That’s why people are at the heart of everything we do.
           </p>
         </div>
+        <div className="w48 w100 mRT3 text-right">
+          <NavLink to="/projects/the-wooden-brown-house">
+            <img
+              src={shiv}
+              className="parallelImagesRight"
+              alt="shiv wall"
+            ></img>
+          </NavLink>
+          <div>
+            <p className="fs-13 mt-4 ">The Wooden Brown House </p>
+            <p className="fs-13 mt-6 gray">Dehradun</p>
+          </div>
+        </div>
       </div>
       <div className="mt-32 column flex pLR67  justify-between">
-        <div className="w-355 w100">
+        <div className="w48 w100">
           <NavLink to="/projects/rukkbay-cafe">
             <img
               src={rukkbay}
@@ -58,7 +62,7 @@ function Purpose() {
             <p className="fs-13 mt-6 gray">Dehradun</p>
           </div>
         </div>
-        <div className="w-727 mRT3 w100 mt-72">
+        <div className="w48 mRT3 w100 ">
           <NavLink to="/projects/the-volvarine-gym">
             <img src={gym} alt="gym" className="parallelImagesLeft  mr-8"></img>
           </NavLink>
@@ -68,19 +72,27 @@ function Purpose() {
           </div>
         </div>
       </div>
-      <div className="mt-32 column flex pLR67  justify-end">
-        <div className="mr-32 w100">
+      <div className="mt-32 column flex pLR67  justify-between">
+        <div className="w48 w100">
           <NavLink to="/projects/sun-n-soil-backpackers-hostel">
-            <img src={sns} alt="sun n soil farm" className="w-4x3"></img>
+            <img
+              src={sns}
+              alt="sun n soil farm"
+              className="parallelImagesRight"
+            ></img>
           </NavLink>
           <div>
             <p className="fs-13 mt-4 ">Sun n Soil Backpackers Hostel </p>
             <p className="fs-13 mt-6 gray">Jolly Grant</p>
           </div>
         </div>
-        <div className="mt-350 w100">
+        <div className="w48 mRT3 w100">
           <NavLink to="/projects/the-white-villa">
-            <img src={twh} alt="the white house" className="w-4x3"></img>
+            <img
+              src={twh}
+              alt="the white house"
+              className="parallelImagesRight"
+            ></img>
           </NavLink>
           <div>
             <p className="fs-13 mt-4 ">The White Villa</p>
@@ -88,17 +100,8 @@ function Purpose() {
           </div>
         </div>
       </div>
-      <div className="mt-32 column pLR67 flex">
-        <div className="w50 w100 text-right">
-          <NavLink to="/projects/sun-n-soil-backpackers-hostel">
-            <img src={sns2} className="ourPurposeImage" alt="sun n soil"></img>
-          </NavLink>
-          <div>
-            <p className="fs-13 mt-4 ">Sun n Soil Backpackers Hostel </p>
-            <p className="fs-13 mt-6 gray">Jolly Grant</p>
-          </div>
-        </div>
-        <div className="w50 mRT3 w100 newsContent paddingLeft75 pL0">
+      <div className="mt-32 column pLR67 flex justify-between">
+        <div className=" mRT3 w100 newsContent  pL0">
           <h3 className="fs-27 leading-10  mb-9">
             We create places with meaning.
           </h3>
@@ -109,15 +112,30 @@ function Purpose() {
             and respects and protects our planet.
           </p>
         </div>
+        <div className="w48 w100 mRT3 text-right">
+          <NavLink to="/projects/sun-n-soil-backpackers-hostel">
+            <img
+              src={sns2}
+              className="parallelImagesRight"
+              alt="sun n soil"
+            ></img>
+          </NavLink>
+          <div>
+            <p className="fs-13 mt-4 ">Sun n Soil Backpackers Hostel </p>
+            <p className="fs-13 mt-6 gray">Jolly Grant</p>
+          </div>
+        </div>
       </div>
-      <div className="px-44 mt-32 w-3/4 w100">
-        <h3 className="fs-27 leading-10  mb-9">We design with purpose.</h3>
-        <p className="fs-17 leading-6 pr-6 ">
-          Several ideals ignite our passions and keep us focused on what
-          matters. These core values are the building blocks of who we are and
-          what we stand for. They give us purpose. We invite you to learn more
-          about them, as well as our legacy, below:
-        </p>
+      <div className=" mt-32 flex justify-center w100">
+        <div className="w-1/2">
+          <h3 className="fs-27 leading-10  mb-9">We design with purpose.</h3>
+          <p className="fs-17 leading-6 pr-6 ">
+            Several ideals ignite our passions and keep us focused on what
+            matters. These core values are the building blocks of who we are and
+            what we stand for. They give us purpose. We invite you to learn more
+            about them, as well as our legacy, below:
+          </p>
+        </div>
       </div>
     </div>
   );

@@ -6,7 +6,7 @@ export default function MapWithMarkers() {
 
   return (
     <Map
-      height={"37.5rem"}
+      height={"30rem"}
       width={"100%"}
       defaultCenter={[30.316496, 78.032188]}
       defaultZoom={8}

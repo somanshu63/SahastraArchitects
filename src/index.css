@@ -146,6 +146,7 @@ body {
   max-width: 1380px;
   width: 100%;
   margin: 0 auto;
+  margin-top: 75px;
 }
 .fs-36 {
   font-weight: 600;
@@ -229,7 +230,8 @@ body {
 
 /* common */
 .header {
-  padding: 3.4375rem 5.875rem;
+  padding: 1rem 5.875rem;
+  box-shadow: 0px 1px 20px 0 rgba(0, 0, 0, 0.59);
 }
 .pLR67 {
   padding: 0 5.875rem;
@@ -259,7 +261,8 @@ body {
 /* header */
 .home {
   position: relative;
-  height: 90vh;
+  height: 80vh;
+  margin: 0 5.875rem;
 }
 .image {
   width: 100%;
@@ -271,13 +274,19 @@ body {
 img {
   object-fit: cover;
 }
+.logo {
+  width: 30px;
+  height: 30px;
+  margin-right: 6px;
+  border-radius: 50%;
+}
 .brand {
   color: rgb(0, 0, 0);
-  font-weight: 600;
+  font-weight: 400;
   letter-spacing: -2px;
-  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+  /* text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5); */
   /* background-color: rgba(255, 255, 255, 0.5); */
-  font-size: 2.5rem;
+  font-size: 1.5rem;
 }
 .absoluteSidebar {
   position: absolute;
@@ -286,23 +295,13 @@ img {
   right: 5.875rem;
   z-index: 10;
 }
-.sidebar {
-  box-shadow: 0px 1px 20px 0 rgba(0, 0, 0, 0.59);
-  position: absolute;
-  top: 0px;
-  left: 80%;
-  height: 100vh;
-  width: 20%;
-  background-color: white;
-  padding: 1.875rem;
-  z-index: 10;
-  margin-right: 5%;
-}
+
 .navigationList {
-  margin-top: 2.1875rem;
-  font-size: 1.5rem;
+  /* margin-top: 2.1875rem; */
+  font-size: 0.9rem;
   font-weight: 500;
   text-transform: capitalize;
+  color: white;
 }
 .close {
   display: flex;
@@ -313,7 +312,6 @@ img {
   cursor: pointer;
 }
 .navLink {
-  font-weight: 700;
   text-decoration: none;
   color: black;
 }
@@ -341,6 +339,22 @@ img {
 }
 
 /* home */
+/* .homeOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+} */
+.fixedBar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: white;
+  z-index: 100;
+}
 .pL67 {
   margin-left: 5.875rem;
 }
@@ -354,14 +368,14 @@ img {
   margin-top: 9rem;
 }
 .news1Image {
-  height: 26.875rem;
+  height: 20rem;
   width: 100%;
 }
 .newsContent {
   width: 50%;
   display: flex;
   align-items: start;
-  justify-content: center;
+  justify-content: start;
   flex-direction: column;
   padding: 0;
 }
@@ -369,17 +383,17 @@ img {
   border-bottom: 3px solid black;
 }
 .earthImage {
-  height: 90vh;
+  height: 20rem;
   width: 100%;
 }
 .parallelImagesRight {
   width: 100%;
-  height: 26.875rem;
+  height: 20rem;
 }
 
 .parallelImagesLeft {
   width: 100%;
-  height: 30rem;
+  height: 20rem;
 }
 .w-727 {
   width: 57%;
@@ -423,7 +437,7 @@ img {
 }
 .bigImage {
   width: 76vw;
-  height: 89vh;
+  height: 20rem;
 }
 .insights {
   width: 70vw;
@@ -483,6 +497,7 @@ img {
 }
 .video {
   width: 100%;
+  height: 80vh;
 }
 #map {
   height: 400px;
@@ -534,7 +549,7 @@ td {
   height: 80vh;
 }
 .w48 {
-  width: 48%;
+  width: 40%;
 }
 
 /* mobile screen */
@@ -554,13 +569,17 @@ td {
   .bigImage {
     height: 60vh;
   }
+  .home,
+  .video {
+    height: 45vh;
+  }
 }
 @media screen and (max-width: 992px) {
   html {
     font-size: 14px;
   }
   .home {
-    height: 85vh;
+    height: 45vh;
   }
   .container {
     max-width: 960px;
@@ -596,6 +615,10 @@ td {
     width: 24%;
     left: 76%;
   }
+  .home {
+    height: 45vh;
+    margin: 0 4rem;
+  }
   .pLR67 {
     padding: 0 4rem;
   }
@@ -604,6 +627,18 @@ td {
   }
   .pR67 {
     margin-right: 4rem;
+  }
+  .sidebar {
+    box-shadow: 0px 1px 20px 0 rgba(0, 0, 0, 0.59);
+    position: absolute;
+    top: 3.75rem;
+    right: 1.5rem;
+    height: 100vh;
+    width: 20%;
+    background-color: white;
+    padding: 1.875rem;
+    z-index: 10;
+    margin-right: 5%;
   }
   .absoluteSidebar {
     position: absolute;
@@ -674,6 +709,10 @@ td {
   .w100 {
     width: 100%;
   }
+  .home {
+    height: 45vh;
+    margin: 0 3rem;
+  }
   .pLR67 {
     padding: 0 3rem;
   }
@@ -686,12 +725,15 @@ td {
   .mRT3 {
     margin-top: 3rem;
   }
-  .mR3 {
+  .m3 {
+    margin: 8rem 3rem 0 3rem;
+  }
+  /* .mR3 {
     margin-right: 3rem;
-  }
-  .mL3 {
+  } */
+  /* .mL3 {
     margin-left: 3rem;
-  }
+  } */
   .absoluteSidebar {
     position: absolute;
     top: 2rem;
@@ -799,7 +841,24 @@ td {
   .container {
     max-width: 440px;
   }
-
+  .sidebar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100vh;
+    width: 100%;
+    padding: 3rem;
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+  .home {
+    height: 40vh;
+    margin: 0 2rem;
+  }
+  .video {
+    height: 40vh;
+  }
   .pLR67 {
     padding: 0 2rem;
   }
@@ -812,12 +871,12 @@ td {
   .mRT3 {
     margin-top: 2rem;
   }
-  .mR3 {
+  /* .mR3 {
     margin-right: 2rem;
   }
   .mL3 {
     margin-left: 2rem;
-  }
+  } */
   .absoluteSidebar {
     position: absolute;
     top: 2rem;
@@ -853,7 +912,9 @@ td {
   .p-16 {
     padding: 2rem;
   }
-
+  .m3 {
+    margin: 8rem 2rem 0 2rem;
+  }
   .mt-350 {
     margin-top: 2rem;
   }

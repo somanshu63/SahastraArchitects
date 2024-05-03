@@ -51,7 +51,7 @@ function Home(props) {
     <div>
       <HeaderHome />
       <div className="pLR67 justify-between mt-32 mR3 flex column ">
-        <div className="w48 w100 newsContent pL0 paddingRight75">
+        <div className=" w100 newsContent pL0 paddingRight75">
           <span className="fs-12 mb-5">NEWS</span>
           <h3 className="fs-27 leading-10 mb-9">
             A new studio, deep in the heart of Dehradun
@@ -100,16 +100,7 @@ function Home(props) {
         </div>
       </div>
       <div className="mt-32 mL3 flex column pLR67 justify-between">
-        <div className="w48 w100 text-right">
-          <NavLink to="/projects/sun-n-soil-backpackers-hostel">
-            <img src={earthImage} className="news1Image" alt="imagehome1"></img>
-          </NavLink>
-          <div>
-            <p className="fs-13 mt-4 ">Sun n Soil Backpackers Hostel</p>
-            <p className="fs-13 mt-6 gray">Dehradun</p>
-          </div>
-        </div>
-        <div className="w48 mRT3 w100 newsContent pL0 paddingLeft75">
+        <div className=" mRT3 w100 newsContent pL0 paddingLeft75">
           <span className="fs-12 mb-5">IT'S NOT A MOMENT, IT'S A MINDSET</span>
           <h3 className="fs-27 leading-10 mb-9">Celebrating Earth Month</h3>
           <p className="fs-17 leading-6 mb-9 ">
@@ -123,6 +114,15 @@ function Home(props) {
             </span>
             .
           </p> */}
+        </div>
+        <div className="w48 w100 text-right">
+          <NavLink to="/projects/sun-n-soil-backpackers-hostel">
+            <img src={earthImage} className="news1Image" alt="imagehome1"></img>
+          </NavLink>
+          <div>
+            <p className="fs-13 mt-4 ">Sun n Soil Backpackers Hostel</p>
+            <p className="fs-13 mt-6 gray">Dehradun</p>
+          </div>
         </div>
       </div>
       <div className="mt-32 flex pLR67 column justify-between">
@@ -213,7 +213,7 @@ function Home(props) {
         </div>
       </div>
       <div className="pLR67 justify-between mt-52 column mR3 flex">
-        <div className="w48 w100 newsContent pL0 paddingRight75">
+        <div className=" w100 newsContent pL0 paddingRight75">
           <h3 className="fs-27 leading-10 mb-9">Designer Spotlight</h3>
           <p className="fs-17 leading-6">
             For the design director of our Dehradun studio,{" "}
@@ -257,10 +257,7 @@ function Home(props) {
         </div>
       </div>
       <div className="mt-32 column mL3 flex pLR67 justify-between">
-        <div className="w48 w100 text-right">
-          <img src={gardenInDesert} className="news1Image" alt="desert"></img>
-        </div>
-        <div className="w48 mRT3 w100 newsContent pL0 paddingLeft75">
+        <div className=" mRT3 w100 newsContent pL0 paddingLeft75">
           <span className="fs-12 mb-5">INSIGHTS</span>
           <h3 className="fs-27 leading-10 mb-9">Garden in the Desert</h3>
           <p className="fs-17 leading-6 ">
@@ -271,9 +268,12 @@ function Home(props) {
             {/* </span> */}.
           </p>
         </div>
+        <div className="w48 w100 mRT3 text-right">
+          <img src={gardenInDesert} className="news1Image" alt="desert"></img>
+        </div>
       </div>
-      <div className="flex mt-32 items-center justify-center">
-        <div className=" m-28 greenbg p-16 pt-12">
+      <div className="flex m3 mt-32 items-center justify-center">
+        <div className="  greenbg p-16 pt-12">
           {window.innerWidth < 550 ? (
             <p className="fs-27 white leading-9 mb-8">
               Every project is an opportunity to make the world a better,
@@ -319,8 +319,8 @@ function Home(props) {
           </div>
         </div>
       </div>
-      <div className="flex justify-center mR3 mL3 mt-32">
-        <div>
+      <div className="flex justify-center w100 pLR67 mR3 mL3 mt-32">
+        <div className="w100">
           <NavLink to="/projects/the-volvarine-gym">
             <img src={gym} alt="gym" className="news1Image"></img>
           </NavLink>

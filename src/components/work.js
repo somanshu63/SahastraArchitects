@@ -27,6 +27,7 @@ function Work() {
   const [work, setWork] = useState("grid");
   const color = `hsl(0deg 100% 50%)`;
   const [loading, setLoading] = useState(true);
+  const height = window.innerWidth < 550 ? 400 : 600;
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
@@ -34,7 +35,7 @@ function Work() {
   }, []);
 
   return (
-    <div className="pLR67 mt-8 workContainer">
+    <div className="pLR67 workContainer">
       <div className="relative">
         {currectVideoIndex === 0 ? (
           <video className="video" controls>
@@ -191,27 +192,29 @@ function Work() {
       )}
 
       {!loading && work === "map" && (
-        <Map
-          height={600}
-          width={"100%"}
-          defaultCenter={[30.316496, 78.032188]}
-          defaultZoom={7}
-        >
-          <ZoomControl />
-          {(selectedCategory !== "All"
-            ? projectsArray.find(
-                (category) => category.name === selectedCategory
-              )?.projects
-            : allProjects
-          ).map((project, id) => (
-            <Marker
-              key={id}
-              width={30}
-              anchor={[project.latitude, project.longitude]}
-              color={color}
-            />
-          ))}
-        </Map>
+        <div className="mapContainer">
+          <Map
+            height={height}
+            width={"100%"}
+            defaultCenter={[30.316496, 78.032188]}
+            defaultZoom={7}
+          >
+            <ZoomControl />
+            {(selectedCategory !== "All"
+              ? projectsArray.find(
+                  (category) => category.name === selectedCategory
+                )?.projects
+              : allProjects
+            ).map((project, id) => (
+              <Marker
+                key={id}
+                width={30}
+                anchor={[project.latitude, project.longitude]}
+                color={color}
+              />
+            ))}
+          </Map>
+        </div>
       )}
       {!loading && work === "list" && (
         <table className="w-full table pLR67">

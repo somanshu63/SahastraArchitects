@@ -1,7 +1,7 @@
 import AbhinavGupta from "../images/home/AbhinavGupta.jpeg";
 function People() {
   return (
-    <div className="pLR67">
+    <div className="pLR67 mt-52">
       {window.innerWidth < 550 ? (
         <p className="fs-36 fw-700 px-20 leading-tight mt-32">
           We're creative thinkers with a passion for design and compassion for

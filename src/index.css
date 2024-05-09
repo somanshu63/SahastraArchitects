@@ -324,7 +324,7 @@ img {
 }
 .navLink {
   text-decoration: none;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
 }
 .fixedBar {
   position: fixed;
@@ -792,6 +792,10 @@ td {
 
   .mT {
     margin-top: 1.5rem;
+  }
+  .navLink {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
   }
 }
 @media screen and (max-width: 468px) {

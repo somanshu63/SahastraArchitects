@@ -170,7 +170,7 @@ function Work() {
         {loading ? <div class="load"></div> : ""}
         {!loading && work === "grid" && (
           <div className="blockC">
-            <ul className="flex projectsList items-start mb-80">
+            <ul className="flex projectsList items-start ">
               {(selectedCategory !== "All"
                 ? projectsArray.find(
                     (category) => category.name === selectedCategory

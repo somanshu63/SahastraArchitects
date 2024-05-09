@@ -21,7 +21,7 @@ function Studios() {
         <p className="ml-7 fs-27  ">Our Studios</p>
       </div>
       <ul className="flex items-start">
-        <li className="w-250O mb-12 mr-8">
+        <li className="w-250O mr-8">
           <img
             src={DoonOffice2}
             alt="projects"
@@ -29,7 +29,7 @@ function Studios() {
           ></img>
           <p className="text-base font-bold mb-3  leading-7">Dehradun</p>
         </li>
-        <li className="w-250O mb-12 ">
+        <li className="w-250O ">
           <img
             src={haridwarOffice}
             alt="projects"

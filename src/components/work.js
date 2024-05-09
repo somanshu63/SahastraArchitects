@@ -166,96 +166,100 @@ function Work() {
           </li>
         </ul>
       </div>
-      {loading ? <div class="load"></div> : ""}
-      {!loading && work === "grid" && (
-        <div className="block">
-          <ul className="flex projectsList float-left items-start mb-80">
-            {(selectedCategory !== "All"
-              ? projectsArray.find(
-                  (category) => category.name === selectedCategory
-                )?.projects
-              : allProjects
-            ).map((project, id) => (
-              <li key={id} className="w-250O mb-12 project">
-                <div className="projectHover">
-                  <div className="imageHoverBox">
-                    View Project{" "}
-                    <FaArrowUpRightFromSquare
-                      style={{ fontSize: "12px", marginLeft: "4px" }}
-                    />
+      <div>
+        {loading ? <div class="load"></div> : ""}
+        {!loading && work === "grid" && (
+          <div className="blockC">
+            <ul className="flex projectsList items-start mb-80">
+              {(selectedCategory !== "All"
+                ? projectsArray.find(
+                    (category) => category.name === selectedCategory
+                  )?.projects
+                : allProjects
+              ).map((project, id) => (
+                <li key={id} className="w-250O mb-12 project">
+                  <div className="projectHover">
+                    <div className="imageHoverBox">
+                      View Project{" "}
+                      <FaArrowUpRightFromSquare
+                        style={{ fontSize: "12px", marginLeft: "4px" }}
+                      />
+                    </div>
+                    <NavLink to={`/projects/${project.slug}`}>
+                      <img
+                        src={project.image[0]}
+                        alt={project.alt}
+                        className="w-250I mb-6 h-48"
+                      />
+                    </NavLink>
                   </div>
-                  <NavLink to={`/projects/${project.slug}`}>
-                    <img
-                      src={project.image[0]}
-                      alt={project.alt}
-                      className="w-250I mb-6 h-48"
-                    />
-                  </NavLink>
-                </div>
-                <p className="text-base mb-3 font-bold leading-7">
-                  {project.name}
-                </p>
-                <p className="text-xs font-bold gray">{project.location}</p>
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
+                  <p className="text-base mb-3 font-bold leading-7">
+                    {project.name}
+                  </p>
+                  <p className="text-xs font-bold gray">{project.location}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
 
-      {!loading && work === "map" && (
-        <div className="mapContainer">
-          <Map
-            height={height}
-            width={"100%"}
-            defaultCenter={[30.316496, 78.032188]}
-            defaultZoom={7}
-          >
-            <ZoomControl />
+        {!loading && work === "map" && (
+          <div className="mapContainer">
+            <Map
+              height={height}
+              width={"100%"}
+              defaultCenter={[30.316496, 78.032188]}
+              defaultZoom={7}
+            >
+              <ZoomControl />
+              {(selectedCategory !== "All"
+                ? projectsArray.find(
+                    (category) => category.name === selectedCategory
+                  )?.projects
+                : allProjects
+              ).map((project, id) => (
+                <Marker
+                  key={id}
+                  width={30}
+                  anchor={[project.latitude, project.longitude]}
+                  color={color}
+                />
+              ))}
+            </Map>
+          </div>
+        )}
+        {!loading && work === "list" && (
+          <table className="w-full table pLR67">
+            <tr className="text-left">
+              <th className="gray underline decoration-2 fs-17 fw-700 w-1/2">
+                Title
+              </th>
+              <th className="gray underline decoration-2 fs-17 fw-700 w-1/5">
+                Location
+              </th>
+              <th className="gray underline decoration-2 fs-17 fw-700 ">
+                Year
+              </th>
+              <th className="gray underline decoration-2 fs-17 fw-700 w-22">
+                Size
+              </th>
+            </tr>
             {(selectedCategory !== "All"
               ? projectsArray.find(
                   (category) => category.name === selectedCategory
                 )?.projects
               : allProjects
             ).map((project, id) => (
-              <Marker
-                key={id}
-                width={30}
-                anchor={[project.latitude, project.longitude]}
-                color={color}
-              />
+              <tr>
+                <td className="fs-17 fw-700">{project.name}</td>
+                <td className="fs-17 gray ">{project.location}</td>
+                <td className="fs-17 gray ">{project.year}</td>
+                <td className="fs-17 gray ">{project.size}</td>
+              </tr>
             ))}
-          </Map>
-        </div>
-      )}
-      {!loading && work === "list" && (
-        <table className="w-full table pLR67">
-          <tr className="text-left">
-            <th className="gray underline decoration-2 fs-17 fw-700 w-1/2">
-              Title
-            </th>
-            <th className="gray underline decoration-2 fs-17 fw-700 w-1/5">
-              Location
-            </th>
-            <th className="gray underline decoration-2 fs-17 fw-700 ">Year</th>
-            <th className="gray underline decoration-2 fs-17 fw-700 w-22">
-              Size
-            </th>
-          </tr>
-          {(selectedCategory !== "All"
-            ? projectsArray.find(
-                (category) => category.name === selectedCategory
-              )?.projects
-            : allProjects
-          ).map((project, id) => (
-            <tr>
-              <td className="fs-17 fw-700">{project.name}</td>
-              <td className="fs-17 gray ">{project.location}</td>
-              <td className="fs-17 gray ">{project.year}</td>
-              <td className="fs-17 gray ">{project.size}</td>
-            </tr>
-          ))}
-        </table>
-      )}
+          </table>
+        )}
+      </div>
     </div>
   );
 }

@@ -11,18 +11,11 @@ function Studios() {
     <div className="pLR67 mRT3">
       <MapWithMarkers />
 
-      {window.innerWidth < 550 ? (
-        <p className="fs-36 fw-700 px-20 leading-tight mt-32">
-          With studio cultures unique to their place and people, we’re the
-          smallest “big firm” out there.
-        </p>
-      ) : (
-        <p className="fs-36 fw-700 px-20 leading-tight mt-32">
-          With studio cultures unique to <br></br> their place and people, we’re{" "}
-          <br></br> the smallest “big firm” out <br></br>
-          there.
-        </p>
-      )}
+      <p className="fs-36 fw-700 px-20  leading-tight mt-32">
+        With studio cultures unique to their place and people, we’re the
+        smallest “big firm” out there.
+      </p>
+
       <div className="flex items-center mt-32 mb-16">
         <div className="line"></div>
         <p className="ml-7 fs-27  ">Our Studios</p>

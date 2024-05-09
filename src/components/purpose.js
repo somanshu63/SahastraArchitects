@@ -4,7 +4,8 @@ import gym from "../images/purpose/gym.jpeg";
 import sns from "../images/purpose/sns.jpg";
 import twh from "../images/purpose/twh.jpg";
 import sns2 from "../images/purpose/sns2.jpg";
-import { NavLink } from "react-router-dom/cjs/react-router-dom.min";
+import { NavLink } from "react-router-dom";
+import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 
 function Purpose() {
   return (
@@ -28,13 +29,21 @@ function Purpose() {
           </p>
         </div>
         <div className="w48 w100 mRT3 text-right">
-          <NavLink to="/projects/the-wooden-brown-house">
-            <img
-              src={shiv}
-              className="parallelImagesRight"
-              alt="shiv wall"
-            ></img>
-          </NavLink>
+          <div className="imageHover">
+            <div className="imageHoverBox">
+              View Project{" "}
+              <FaArrowUpRightFromSquare
+                style={{ fontSize: "12px", marginLeft: "4px" }}
+              />
+            </div>
+            <NavLink to="/projects/the-wooden-brown-house">
+              <img
+                src={shiv}
+                className="parallelImagesRight"
+                alt="shiv wall"
+              ></img>
+            </NavLink>
+          </div>
           <div>
             <p className="fs-13 mt-4 ">The Wooden Brown House </p>
             <p className="fs-13 mt-6 gray">Dehradun</p>
@@ -43,22 +52,42 @@ function Purpose() {
       </div>
       <div className="mt-32 column flex pLR67  justify-between">
         <div className="w48 w100">
-          <NavLink to="/projects/rukkbay-cafe">
-            <img
-              src={rukkbay}
-              alt="rukkbay"
-              className="parallelImagesRight"
-            ></img>
-          </NavLink>
+          <div className="imageHover">
+            <div className="imageHoverBox">
+              View Project{" "}
+              <FaArrowUpRightFromSquare
+                style={{ fontSize: "12px", marginLeft: "4px" }}
+              />
+            </div>
+            <NavLink to="/projects/rukkbay-cafe">
+              <img
+                src={rukkbay}
+                alt="rukkbay"
+                className="parallelImagesRight"
+              ></img>
+            </NavLink>
+          </div>
           <div>
             <p className="fs-13 mt-4 ">The Rukkbay Cafe </p>
             <p className="fs-13 mt-6 gray">Dehradun</p>
           </div>
         </div>
         <div className="w48 mRT3 w100 ">
-          <NavLink to="/projects/the-volvarine-gym">
-            <img src={gym} alt="gym" className="parallelImagesLeft  mr-8"></img>
-          </NavLink>
+          <div className="imageHover">
+            <div className="imageHoverBox">
+              View Project{" "}
+              <FaArrowUpRightFromSquare
+                style={{ fontSize: "12px", marginLeft: "4px" }}
+              />
+            </div>
+            <NavLink to="/projects/the-volvarine-gym">
+              <img
+                src={gym}
+                alt="gym"
+                className="parallelImagesLeft  mr-8"
+              ></img>
+            </NavLink>
+          </div>
           <div>
             <p className="fs-13 mt-4 ">Volvarine Gym</p>
             <p className="fs-13 mt-6 gray">Dehradun</p>
@@ -67,26 +96,42 @@ function Purpose() {
       </div>
       <div className="mt-32 column flex pLR67  justify-between">
         <div className="w48 w100">
-          <NavLink to="/projects/sun-n-soil-backpackers-hostel">
-            <img
-              src={sns}
-              alt="sun n soil farm"
-              className="parallelImagesRight"
-            ></img>
-          </NavLink>
+          <div className="imageHover">
+            <div className="imageHoverBox">
+              View Project{" "}
+              <FaArrowUpRightFromSquare
+                style={{ fontSize: "12px", marginLeft: "4px" }}
+              />
+            </div>
+            <NavLink to="/projects/sun-n-soil-backpackers-hostel">
+              <img
+                src={sns}
+                alt="sun n soil farm"
+                className="parallelImagesRight"
+              ></img>
+            </NavLink>
+          </div>
           <div>
             <p className="fs-13 mt-4 ">Sun n Soil Backpackers Hostel </p>
             <p className="fs-13 mt-6 gray">Jolly Grant</p>
           </div>
         </div>
         <div className="w48 mRT3 w100">
-          <NavLink to="/projects/the-white-villa">
-            <img
-              src={twh}
-              alt="the white house"
-              className="parallelImagesRight"
-            ></img>
-          </NavLink>
+          <div className="imageHover">
+            <div className="imageHoverBox">
+              View Project{" "}
+              <FaArrowUpRightFromSquare
+                style={{ fontSize: "12px", marginLeft: "4px" }}
+              />
+            </div>
+            <NavLink to="/projects/the-white-villa">
+              <img
+                src={twh}
+                alt="the white house"
+                className="parallelImagesRight"
+              ></img>
+            </NavLink>
+          </div>
           <div>
             <p className="fs-13 mt-4 ">The White Villa</p>
             <p className="fs-13 mt-6 gray">Dehradun</p>
@@ -106,13 +151,21 @@ function Purpose() {
           </p>
         </div>
         <div className="w48 w100 mRT3 text-right">
-          <NavLink to="/projects/sun-n-soil-backpackers-hostel">
-            <img
-              src={sns2}
-              className="parallelImagesRight"
-              alt="sun n soil"
-            ></img>
-          </NavLink>
+          <div className="imageHover">
+            <div className="imageHoverBox">
+              View Project{" "}
+              <FaArrowUpRightFromSquare
+                style={{ fontSize: "12px", marginLeft: "4px" }}
+              />
+            </div>
+            <NavLink to="/projects/sun-n-soil-backpackers-hostel">
+              <img
+                src={sns2}
+                className="parallelImagesRight"
+                alt="sun n soil"
+              ></img>
+            </NavLink>
+          </div>
           <div>
             <p className="fs-13 mt-4 ">Sun n Soil Backpackers Hostel </p>
             <p className="fs-13 mt-6 gray">Jolly Grant</p>

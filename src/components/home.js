@@ -7,14 +7,12 @@ import DoonOffice1 from "../images/home/DoonOffice2.jpg";
 import DoonOffice2 from "../images/home/DoonOffice1.jpg";
 import tree from "../images/home/tree.jpeg";
 import monk from "../images/home/monk.jpeg";
-import house1 from "../images/work images/the wooden white house.jpg";
 import spotlight1 from "../images/home/spotlight1.jpeg";
 import gardenInDesert from "../images/home/gardenInDesert.jpg";
-import gym from "../images/purpose/gym.jpeg";
 import { NavLink } from "react-router-dom/cjs/react-router-dom.min";
-import landscape1 from "../images/home/landscape1.jpg";
 import spotlight2 from "../images/home/spotlight1.jpg";
 import { collectionArray } from "../data";
+import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 
 const doonOfficePictures = [DoonOffice1, DoonOffice2];
 const spotlightPictures = [spotlight1, spotlight2];
@@ -65,14 +63,22 @@ function Home(props) {
             .
           </p>
         </div>
-        <div className="w48 w100 mRT3 ">
-          <NavLink to="/studios" className="border-bottom pointer">
-            <img
-              src={doonOfficePictures[currentPictureIndex]}
-              className="news1Image"
-              alt="imagehome1"
-            ></img>
-          </NavLink>
+        <div className="w48 w100  mRT3 ">
+          <div className="imageHover">
+            <div className="imageHoverBox">
+              View Studio{" "}
+              <FaArrowUpRightFromSquare
+                style={{ fontSize: "12px", marginLeft: "4px" }}
+              />
+            </div>
+            <NavLink to="/studios" className="border-bottom pointer">
+              <img
+                src={doonOfficePictures[currentPictureIndex]}
+                className="news1Image"
+                alt="imagehome1"
+              ></img>
+            </NavLink>
+          </div>
           <div className="flex mt-6">
             <RiArrowLeftSLine
               className={`${currentPictureIndex === 1 ? "pointer" : ""}`}
@@ -115,10 +121,22 @@ function Home(props) {
             .
           </p> */}
         </div>
-        <div className="w48 w100 text-right">
-          <NavLink to="/projects/sun-n-soil-backpackers-hostel">
-            <img src={earthImage} className="news1Image" alt="imagehome1"></img>
-          </NavLink>
+        <div className="w48 w100 text-right ">
+          <div className="imageHover">
+            <div className="imageHoverBox">
+              View Project{" "}
+              <FaArrowUpRightFromSquare
+                style={{ fontSize: "12px", marginLeft: "4px" }}
+              />
+            </div>
+            <NavLink to="/projects/sun-n-soil-backpackers-hostel">
+              <img
+                src={earthImage}
+                className="news1Image"
+                alt="imagehome1"
+              ></img>
+            </NavLink>
+          </div>
           <div>
             <p className="fs-13 mt-4 ">Sun n Soil Backpackers Hostel</p>
             <p className="fs-13 mt-6 gray">Dehradun</p>
@@ -127,18 +145,34 @@ function Home(props) {
       </div>
       <div className="mt-32 flex pLR67 column justify-between">
         <div className="w48 w100 ">
-          <NavLink to="/projects/rukkbay-cafe">
-            <img src={monk} alt="Old Green Man" className="news1Image"></img>
-          </NavLink>
+          <div className="imageHover">
+            <div className="imageHoverBox">
+              View Project{" "}
+              <FaArrowUpRightFromSquare
+                style={{ fontSize: "12px", marginLeft: "4px" }}
+              />
+            </div>
+            <NavLink to="/projects/rukkbay-cafe">
+              <img src={monk} alt="Old Green Man" className="news1Image"></img>
+            </NavLink>
+          </div>
           <div>
             <p className="fs-13 mt-4 ">Rukkbay Cafe </p>
             <p className="fs-13 mt-6 gray">Dehradun</p>
           </div>
         </div>
         <div className="w48 w100 mRT3">
-          <NavLink to="/projects/rukkbay-cafe">
-            <img src={tree} alt="blue tree" className="news1Image"></img>
-          </NavLink>
+          <div className="imageHover">
+            <div className="imageHoverBox">
+              View Project{" "}
+              <FaArrowUpRightFromSquare
+                style={{ fontSize: "12px", marginLeft: "4px" }}
+              />
+            </div>
+            <NavLink to="/projects/rukkbay-cafe">
+              <img src={tree} alt="blue tree" className="news1Image"></img>
+            </NavLink>
+          </div>
           <div>
             <p className="fs-13 mt-4 ">Rukkbay Cafe </p>
             <p className="fs-13 mt-6 gray">Dehradun</p>
@@ -162,6 +196,12 @@ function Home(props) {
             {collection.map((item, id) => {
               return (
                 <div key={id} className="collectionList relative mr-7">
+                  <div className="imageHoverBox">
+                    View Project{" "}
+                    <FaArrowUpRightFromSquare
+                      style={{ fontSize: "12px", marginLeft: "4px" }}
+                    />
+                  </div>
                   <NavLink className="w-full" to={`projects/${item.slug}`}>
                     <img
                       src={item.image}

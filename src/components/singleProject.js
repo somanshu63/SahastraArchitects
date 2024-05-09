@@ -22,8 +22,6 @@ function SingleProject(props) {
     project && setLoading(false);
   }, [project]);
 
-  console.log(project);
-
   return (
     <div className="pLR67 mRT3">
       {loading ? (
@@ -36,7 +34,7 @@ function SingleProject(props) {
               className="w-full h-60 "
               alt={project.alt}
             ></img>
-            {project?.image.length > 1 ? (
+            {/* {project?.image.length > 1 ? (
               <div className="flex mt-4 float-right">
                 <RiArrowLeftSLine
                   className="pointer"
@@ -68,13 +66,16 @@ function SingleProject(props) {
               </div>
             ) : (
               ""
-            )}
+            )} */}
           </div>
-          <div>
-            <h3 className="mt-32 fs-27">{project?.name}</h3>
-            <p className="fs-17 mt-8 gray">{project.location}</p>
-            <p className="fs-17 mt-8 gray">{project.size}</p>
-            <p className="fs-17 mt-8 gray">{project.year}</p>
+          <div className="flex column">
+            <div className="">
+              <h3 className="mt-32 fs-27">{project?.name}</h3>
+              <p className="fs-17 mt-8 gray">{project.location}</p>
+              <p className="fs-17 mt-8 gray">{project.size}</p>
+              <p className="fs-17 mt-8 gray">{project.year}</p>
+            </div>
+            <div className="w48 w100"></div>
           </div>
         </div>
       )}

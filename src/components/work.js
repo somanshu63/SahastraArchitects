@@ -9,6 +9,7 @@ import { RiArrowRightSLine } from "react-icons/ri";
 import { RiArrowLeftSLine } from "react-icons/ri";
 import { Map, Marker, ZoomControl } from "pigeon-maps";
 import { projectsArray } from "../data";
+import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 
 const videos = [
   { video: Star5Hotel, name: "5 Star Hotel", location: "Mussoorie" },
@@ -35,7 +36,7 @@ function Work() {
   }, []);
 
   return (
-    <div className="pLR67 workContainer">
+    <div className="pLR67 workContainer h-full">
       <div className="relative">
         {currectVideoIndex === 0 ? (
           <video className="video" controls>
@@ -167,28 +168,38 @@ function Work() {
       </div>
       {loading ? <div class="load"></div> : ""}
       {!loading && work === "grid" && (
-        <ul className="flex projectsList float-left items-start mb-80">
-          {(selectedCategory !== "All"
-            ? projectsArray.find(
-                (category) => category.name === selectedCategory
-              )?.projects
-            : allProjects
-          ).map((project, id) => (
-            <li key={id} className="w-250O mb-12 project">
-              <NavLink to={`/projects/${project.slug}`}>
-                <img
-                  src={project.image[0]}
-                  alt={project.alt}
-                  className="w-250I mb-6 h-48"
-                />
-              </NavLink>
-              <p className="text-base mb-3 font-bold leading-7">
-                {project.name}
-              </p>
-              <p className="text-xs font-bold gray">{project.location}</p>
-            </li>
-          ))}
-        </ul>
+        <div className="block">
+          <ul className="flex projectsList float-left items-start mb-80">
+            {(selectedCategory !== "All"
+              ? projectsArray.find(
+                  (category) => category.name === selectedCategory
+                )?.projects
+              : allProjects
+            ).map((project, id) => (
+              <li key={id} className="w-250O mb-12 project">
+                <div className="projectHover">
+                  <div className="imageHoverBox">
+                    View Project{" "}
+                    <FaArrowUpRightFromSquare
+                      style={{ fontSize: "12px", marginLeft: "4px" }}
+                    />
+                  </div>
+                  <NavLink to={`/projects/${project.slug}`}>
+                    <img
+                      src={project.image[0]}
+                      alt={project.alt}
+                      className="w-250I mb-6 h-48"
+                    />
+                  </NavLink>
+                </div>
+                <p className="text-base mb-3 font-bold leading-7">
+                  {project.name}
+                </p>
+                <p className="text-xs font-bold gray">{project.location}</p>
+              </li>
+            ))}
+          </ul>
+        </div>
       )}
 
       {!loading && work === "map" && (

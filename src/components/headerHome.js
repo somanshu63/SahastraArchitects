@@ -7,7 +7,7 @@ function HeaderHome(props) {
   useEffect(() => {
     const intervalId = setInterval(() => {
       setIndex((prevIndex) => (prevIndex + 1) % headerImagesArray.length);
-    }, 5000);
+    }, 3000);
 
     return () => clearInterval(intervalId);
   }, []);

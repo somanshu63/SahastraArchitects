@@ -27,7 +27,7 @@ function Header(props) {
             onClick={() => {
               props.setSidebar(true);
             }}
-            style={{ fontSize: "1.5rem" }}
+            style={{ fontSize: "1.5rem", color: "white" }}
           />
         </div>
       ) : (

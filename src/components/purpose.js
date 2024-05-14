@@ -1,6 +1,6 @@
 import shiv from "../images/purpose/shiv.jpg";
 import rukkbay from "../images/purpose/rukkbay.jpeg";
-import gym from "../images/purpose/gym.jpeg";
+import gym from "../images/singleProject/the volvarine gym.jpg";
 import sns from "../images/purpose/sns.jpg";
 import twh from "../images/purpose/twh.jpg";
 import sns2 from "../images/purpose/sns2.jpg";

@@ -381,8 +381,8 @@ img {
   height: 90vh;
 }
 .hutBorder {
-  width: 350px;
-  height: 15px;
+  width: 21.875rem;
+  height: 0.9375rem;
   background-color: black;
   position: absolute;
   z-index: 10;
@@ -413,20 +413,20 @@ img {
 }
 .right {
   transform: rotate(90deg);
-  width: 130px;
+  width: 8.125rem;
   right: 10%;
   bottom: 28%;
 }
 .hangingFlowerPot {
-  width: 100px;
-  height: 150px;
+  width: 6.25rem;
+  height: 9.375rem;
   position: absolute;
   right: 0;
   top: 20%;
 }
 .flowerPot {
-  width: 150px;
-  height: 120px;
+  width: 9.375rem;
+  height: 7.5rem;
   position: absolute;
   right: -4%;
   bottom: 18%;
@@ -445,8 +445,8 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 60px;
-  height: 60px;
+  width: 3.75rem;
+  height: 3.75rem;
   border: 3px solid rgb(147, 32, 255);
 }
 
@@ -481,8 +481,8 @@ img {
   font-size: 9px;
 }
 .desk {
-  width: 250px;
-  height: 180px;
+  width: 15.625rem;
+  height: 11.25rem;
   bottom: 18.5%;
   left: 25%;
   object-fit: cover;
@@ -773,6 +773,11 @@ td {
   .h-80 {
     height: 18rem;
   }
+  .hutContainer {
+    width: 66.8%;
+    margin: 8rem auto 0 auto;
+    height: 41vh;
+  }
 }
 @media screen and (max-width: 992px) {
   html {
@@ -796,6 +801,11 @@ td {
   }
   .h-80 {
     height: 17rem;
+  }
+  .hutContainer {
+    width: 73.3%;
+    margin: 8rem auto 0 auto;
+    height: 41.5vh;
   }
   .pLR67 {
     padding: 0 4.5rem;
@@ -867,6 +877,11 @@ td {
   }
   .h-44 {
     height: 8rem;
+  }
+  .hutContainer {
+    width: 66%;
+    margin: 8rem auto 0 auto;
+    height: 40.8vh;
   }
 }
 @media screen and (max-width: 576px) {
@@ -1010,6 +1025,11 @@ td {
   .navLink {
     color: rgb(0, 0, 0);
   }
+  .hutContainer {
+    width: 78%;
+    margin: 8rem auto 0 auto;
+    height: 49vh;
+  }
 }
 @media screen and (max-width: 468px) {
   html {
@@ -1107,5 +1127,22 @@ td {
 
   .mT {
     margin-top: 1.5rem;
+  }
+  .hutBorder {
+    width: 19.475rem;
+  }
+  .hutContainer {
+    width: 90%;
+    margin: 8rem auto 0 auto;
+    height: 35vh;
+  }
+  .bottom {
+    width: 97.5%;
+  }
+  .right {
+    transform: rotate(90deg);
+    width: 8.125rem;
+    right: 10%;
+    bottom: 28%;
   }
 }

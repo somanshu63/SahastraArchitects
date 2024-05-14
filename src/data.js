@@ -81,7 +81,7 @@ import worksns from "../src/images/work images/sns.png";
 export const collectionArray = [
   {
     slug: "the-wooden-white-house",
-    image: theWoodenWhiteHouse1,
+    image: worktheWoodenWhiteHouse1,
     alt: "house",
     description:
       "Modern Living, Timeless Charm: Balconies, Sleek Design, and Tranquil Surroundings.",
@@ -95,7 +95,7 @@ export const collectionArray = [
   },
   {
     slug: "aihtm",
-    image: aihtm,
+    image: workaihtm,
     alt: "house",
     description:
       "Modern apartment with clock, white exterior, fenced property, tree, blue sky, and birds.",
@@ -103,7 +103,7 @@ export const collectionArray = [
 
   {
     slug: "the-volvarine-gym",
-    image: gym,
+    image: workgym,
     alt: "gym",
     description:
       "Let's work together to achieve your goals and elevate your wellbeing.",
@@ -117,7 +117,7 @@ export const collectionArray = [
   },
   {
     slug: "sns",
-    image: sns,
+    image: worksns,
     alt: "sns",
     description:
       "Adventure at Sun n Soil Hostel: Comfort, community, unforgettable experiences!",

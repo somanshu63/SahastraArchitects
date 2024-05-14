@@ -294,22 +294,7 @@ function Home(props) {
           </div>
         </div>
       </div>
-      <div className="mt-32 column mL3 flex pLR67 justify-between">
-        <div className=" mRT3 w100 newsContent pL0 ">
-          <span className="fs-12 mb-5">INSIGHTS</span>
-          <h3 className="fs-27 leading-10 mb-9">Garden in the Desert</h3>
-          <p className="fs-17 leading-6 ">
-            {/* <span className="border-bottom"> */}
-            In the desert, a green oasis blooms, a vibrant contrast to the sandy
-            surroundings. This lush garden offers a serene escape, showcasing
-            nature's resilience
-            {/* </span> */}.
-          </p>
-        </div>
-        <div className="w48 w100 mRT3 text-right">
-          <img src={gardenInDesert} className="news1Image" alt="desert"></img>
-        </div>
-      </div>
+
       <div className="flex m3 mt-32 items-center justify-center">
         <div className="  greenbg p-16 pt-12">
           {window.innerWidth < 550 ? (
@@ -327,58 +312,6 @@ function Home(props) {
           <span className="fs-17 white border-bottom-white leading-6">
             #Projects for a Better World.
           </span>
-        </div>
-      </div>
-      {/* <div className="flex mt-32 pLR67 column justify-between">
-        <div className="w48 w100">
-          <NavLink to="/projects/the-wooden-white-house">
-            <img
-              src={house1}
-              alt="The Wooden White House"
-              className="news1Image"
-            ></img>
-          </NavLink>
-          <div>
-            <p className="fs-13 mt-4 ">The Wooden White House </p>
-            <p className="fs-13 mt-6 gray">Dehradun</p>
-          </div>
-        </div>
-        <div className="w48 w100 mRT3">
-          <NavLink to="/projects/karma-retreat">
-            <img
-              src={landscape1}
-              alt="the karma retreat"
-              className="news1Image"
-            ></img>
-          </NavLink>
-          <div>
-            <p className="fs-13 mt-4 ">The Karma Retreat </p>
-            <p className="fs-13 mt-6 gray">Dehradun</p>
-          </div>
-        </div>
-      </div>
-      <div className="flex justify-center w100 pLR67 mR3 mL3 mt-32">
-        <div className="w100 w48">
-          <NavLink to="/projects/the-volvarine-gym">
-            <img src={gym} alt="gym" className="news1Image"></img>
-          </NavLink>
-          <div>
-            <p className="fs-13 mt-4 ">The Volvarine Gym </p>
-            <p className="fs-13 mt-6 gray">Dehradun</p>
-          </div>
-        </div>
-      </div> */}
-      <div className="flex justify-end w100 mt-32 ">
-        <div className="insights">
-          <span className="fs-12">INSIGHTS</span>
-          <h3 className="fs-27  leading-10 mb-7 mt-7">
-            {" "}
-            A new higher education building inspires wonder and learning
-          </h3>
-
-          <p className="fs-17 leading-6 ">
-            <span className="border-bottom">#InspiringEdifice</span>
-          </p>
         </div>
       </div>
     </div>

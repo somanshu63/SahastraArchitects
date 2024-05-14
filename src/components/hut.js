@@ -27,21 +27,12 @@ function Hut() {
       <div className="flowerLabel">Landscape</div>
       <div className="vastuContainer">
         <div className="vastu left">
-          {/* <div className="triangle">
-            <div className="triangleI"></div>
-          </div> */}
           <img src={vastu1} alt="vastu" className="w-full h-full"></img>
         </div>
         <div className="vastu bottom">
-          {/* <div className="circle">
-            <div className="circleI"></div>
-          </div> */}
           <img src={vastu2} alt="vastu" className="w-full h-full"></img>
         </div>
         <div className="vastu right">
-          {/* <div className="square">
-            <div className="squareI"></div>
-          </div> */}
           <img src={vastu3} alt="vastu" className="w-full h-full"></img>
         </div>
         <div className="vastuLabel">Vastu</div>

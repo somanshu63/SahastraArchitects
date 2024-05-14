@@ -9,51 +9,74 @@ import mini from "../src/images/news/mini.jpg";
 import soho from "../src/images/news/soho.jpg";
 import soil from "../src/images/news/soil.jpg";
 import biomimicry from "../src/images/news/biomimicry.jpg";
-// work
-import hobbit1 from "../src/images/work images/hobbit cafe1.jpeg";
-import hobbit2 from "../src/images/work images/hobbit cafe2.jpeg";
-import hobbit3 from "../src/images/work images/hobbit cafe01.jpeg";
-import hobbit4 from "../src/images/work images/hobbit cafe02.jpeg";
-import star5 from "../src/images/work images/5star.jpg";
-import star51 from "../src/images/work images/5 star hotel 2.jpg";
-import star52 from "../src/images/work images/5 star hotel 3.jpg";
-import rukkbay1 from "../src/images/work images/rukkbay cafe1.jpeg";
-import rukkbay2 from "../src/images/work images/rukkbay cafe2.jpeg";
+// singleProject
+import hobbit1 from "../src/images/singleProject/hobbit cafe1.jpeg";
+import hobbit2 from "../src/images/singleProject/hobbit cafe2.jpeg";
+import hobbit3 from "../src/images/singleProject/hobbit cafe01.jpeg";
+import hobbit4 from "../src/images/singleProject/hobbit cafe02.jpeg";
+import star5 from "../src/images/singleProject/5star.jpg";
+import star51 from "../src/images/singleProject/5 star hotel 2.jpg";
+import star52 from "../src/images/singleProject/5 star hotel 3.jpg";
+import rukkbay1 from "../src/images/singleProject/rukkbay cafe1.jpeg";
+import rukkbay2 from "../src/images/singleProject/rukkbay cafe2.jpeg";
 import rukkbay3 from "../src/images/home/cycle.jpeg";
 import rukkbay4 from "../src/images/home/tree.jpeg";
 import rukkbay5 from "../src/images/home/spotlight1.jpeg";
-import gym from "../src/images/work images/the volvarine gym.JPG";
-import gati1 from "../src/images/work images/gati1.jpg";
-import gati2 from "../src/images/work images/gati2.jpg";
+import gym from "../src/images/singleProject/the volvarine gym.jpg";
+import gati1 from "../src/images/singleProject/gati1.jpg";
+import gati2 from "../src/images/singleProject/gati2.jpg";
 import karma from "../src/images/home/haveli.png";
 import haveli2 from "../src/images/home/landscape1.jpg";
 import karma2 from "../src/images/home/landscape2.jpg";
 import haveli from "../src/images/home/haveliFront.jpg";
-import theWoodenWhiteHouse1 from "../src/images/work images/the wooden white house.jpg";
-import theWhiteVilla1 from "../src/images/work images/the white villa 1.jpg";
-import theWhiteVilla2 from "../src/images/work images/the white villa 2.jpg";
-import theLakeViewVilla from "../src/images/work images/the lake view villa.jpg";
-import theBlueHeavenResidence1 from "../src/images/work images/the blue heaven residence1.jpg";
-import theBlueHeavenResidence2 from "../src/images/work images/the blue heaven residence2.jpg";
-import theGreeneryVilla1 from "../src/images/work images/the greenery villa 1.jpg";
-import theGreeneryVilla2 from "../src/images/work images/the greenery villa 2.jpg";
-import theLuxuriousHouse from "../src/images/work images/the luxurious house.jpg";
-import apartment from "../src/images/work images/apartment.jpg";
-import theRedHouse1 from "../src/images/work images/the red house1.jpeg";
-import theRedHouse2 from "../src/images/work images/the red house2.jpeg";
-import theNegisHouse1 from "../src/images/work images/the negi house1.jpg";
-import theNegisHouse2 from "../src/images/work images/the negi house1.jpg";
-import theGuptasHome1 from "../src/images/work images/the gupta's home1.jpg";
-import theGuptasHome2 from "../src/images/work images/the gupta's home2.jpg";
-import theBackpackersStay1 from "../src/images/work images/backpackers stay1.jpg";
-import theBackpackersStay2 from "../src/images/work images/backpackers stay2.jpg";
-import aihtm from "../src/images/work images/aihtm.jpg";
+import theWoodenWhiteHouse1 from "../src/images/singleProject/the wooden white house.jpg";
+import theWhiteVilla1 from "../src/images/singleProject/the white villa 1.jpg";
+import theWhiteVilla2 from "../src/images/singleProject/the white villa 2.jpg";
+import theLakeViewVilla from "../src/images/singleProject/the lake view villa.jpg";
+import theBlueHeavenResidence1 from "../src/images/singleProject/the blue heaven residence1.jpg";
+import theBlueHeavenResidence2 from "../src/images/singleProject/the blue heaven residence2.jpg";
+import theGreeneryVilla1 from "../src/images/singleProject/the greenery villa 1.jpg";
+import theGreeneryVilla2 from "../src/images/singleProject/the greenery villa 2.jpg";
+import theLuxuriousHouse from "../src/images/singleProject/the luxurious house.jpg";
+import apartment from "../src/images/singleProject/apartment.jpg";
+import theRedHouse1 from "../src/images/singleProject/the red house1.jpeg";
+import theRedHouse2 from "../src/images/singleProject/the red house2.jpeg";
+import theNegisHouse1 from "../src/images/singleProject/the negi house1.jpg";
+import theNegisHouse2 from "../src/images/singleProject/the negi house1.jpg";
+import theGuptasHome1 from "../src/images/singleProject/the gupta's home1.jpg";
+import theGuptasHome2 from "../src/images/singleProject/the gupta's home2.jpg";
+import theBackpackersStay1 from "../src/images/singleProject/backpackers stay1.jpg";
+import theBackpackersStay2 from "../src/images/singleProject/backpackers stay2.jpg";
+import aihtm from "../src/images/singleProject/aihtm.jpg";
 import sns2 from "../src/images/purpose/sns.jpg";
 import sns3 from "../src/images/purpose/sns2.jpg";
-import sns4 from "../src/images/work images/sns4.jpg";
+import sns4 from "../src/images/singleProject/sns4.jpg";
 import sns5 from "../src/images/home/spotlight1.jpg";
 import sns6 from "../src/images/home/earthImage.jpeg";
-import theWoodenBrownHouse from "../src/images/work images/the wooden brown house.jpg";
+import theWoodenBrownHouse from "../src/images/singleProject/the wooden brown house.jpg";
+
+// work
+import workhobbit1 from "../src/images/work images/hobbit cafe1.jpeg";
+import workstar5 from "../src/images/work images/5star.jpg";
+import workrukkbay1 from "../src/images/work images/rukkbay cafe1.jpeg";
+import workgym from "../src/images/work images/the volvarine gym.jpg";
+import workgati1 from "../src/images/work images/gati1.jpg";
+import workkarma from "../src/images/work images/haveli.png";
+import workhaveli from "../src/images/work images/haveliFront.jpg";
+import worktheWoodenWhiteHouse1 from "../src/images/work images/the wooden white house.jpg";
+import worktheWhiteVilla1 from "../src/images/work images/the white villa 1.jpg";
+import worktheLakeViewVilla from "../src/images/work images/the lake view villa.jpg";
+import worktheBlueHeavenResidence1 from "../src/images/work images/the blue heaven residence1.jpg";
+import worktheGreeneryVilla1 from "../src/images/work images/the greenery villa 1.jpg";
+import worktheLuxuriousHouse from "../src/images/work images/the luxurious house.jpg";
+import workapartment from "../src/images/work images/apartment.jpg";
+import worktheRedHouse1 from "../src/images/work images/the red house1.jpeg";
+import worktheNegisHouse1 from "../src/images/work images/the negi house1.jpg";
+import worktheGuptasHome1 from "../src/images/work images/the gupta's home1.jpg";
+import worktheBackpackersStay1 from "../src/images/work images/backpackers stay1.jpg";
+import workaihtm from "../src/images/work images/aihtm.jpg";
+import worktheWoodenBrownHouse from "../src/images/work images/the wooden brown house.jpg";
+import worksns from "../src/images/work images/sns.png";
 
 export const collectionArray = [
   {
@@ -172,6 +195,7 @@ export const projectsArray = [
         slug: "5-star-hotel",
         alt: "5 Star Hotel",
         location: "Mussoorie",
+        workImage: workstar5,
         image: [star5, star51, star52],
         latitude: 30.4598,
         longitude: 78.0644,
@@ -184,6 +208,7 @@ export const projectsArray = [
         slug: "haveli",
         alt: "Haveli",
         location: "Dehradun",
+        workImage: workhaveli,
         image: [haveli, haveli2],
         latitude: 30.316496,
         longitude: 78.032188,
@@ -195,6 +220,7 @@ export const projectsArray = [
         slug: "hobbit-cafe",
         alt: "Hobbit Cafe",
         location: "Rishikesh",
+        workImage: workhobbit1,
         image: [hobbit1, hobbit2, hobbit3, hobbit4],
         latitude: 30.0869,
         longitude: 78.2676,
@@ -206,6 +232,7 @@ export const projectsArray = [
         slug: "rukkbay-cafe",
         alt: "Rukkbay Cafe",
         location: "Dehradun",
+        workImage: workrukkbay1,
         image: [rukkbay1, rukkbay2, rukkbay3, rukkbay4, rukkbay5],
         latitude: 30.316496,
         longitude: 78.032188,
@@ -217,6 +244,7 @@ export const projectsArray = [
         slug: "the-volvarine-gym",
         alt: "The Volvarine Gym",
         location: "Dehradun",
+        workImage: workgym,
         image: [gym],
         latitude: 30.316496,
         longitude: 78.032188,
@@ -228,6 +256,7 @@ export const projectsArray = [
         slug: "aihtm",
         alt: "AIHTM",
         location: "Dehradun",
+        workImage: workaihtm,
         image: [aihtm],
         latitude: 30.316496,
         longitude: 78.032188,
@@ -244,6 +273,7 @@ export const projectsArray = [
         slug: "gati-office",
         alt: "Gati Office",
         location: "New Delhi",
+        workImage: workgati1,
         image: [gati1, gati2],
         latitude: 28.6139,
         longitude: 77.2088,
@@ -260,6 +290,7 @@ export const projectsArray = [
         slug: "karma-retreat",
         alt: "Karma Retreat",
         location: "Dehradun",
+        workImage: workkarma,
         image: [karma, karma2],
         latitude: 30.316496,
         longitude: 78.032188,
@@ -277,6 +308,7 @@ export const projectsArray = [
         slug: "the-wooden-white-house",
         alt: "The Wooden White House",
         location: "Dehradun",
+        workImage: worktheWoodenWhiteHouse1,
         image: [theWoodenWhiteHouse1, theWoodenWhiteHouse1],
         latitude: 30.316496,
         longitude: 78.032188,
@@ -288,6 +320,7 @@ export const projectsArray = [
         slug: "the-white-villa",
         alt: "The White Villa",
         location: "Dehradun",
+        workImage: worktheWhiteVilla1,
         image: [theWhiteVilla1, theWhiteVilla2],
         latitude: 30.316496,
         longitude: 78.032188,
@@ -300,6 +333,7 @@ export const projectsArray = [
         slug: "the-lakeview-villa",
         alt: "The Lakeview Villa",
         location: "New Tehri",
+        workImage: worktheLakeViewVilla,
         image: [theLakeViewVilla],
         latitude: 30.3739,
         longitude: 78.4325,
@@ -311,6 +345,7 @@ export const projectsArray = [
         slug: "the-blue-heaven-residence",
         alt: "The Blue Heaven Residence",
         location: "Dehradun",
+        workImage: worktheBlueHeavenResidence1,
         image: [theBlueHeavenResidence1, theBlueHeavenResidence2],
         latitude: 30.316496,
         longitude: 78.032188,
@@ -322,6 +357,7 @@ export const projectsArray = [
         slug: "the-greenery-villa",
         alt: "The Greenery Villa",
         location: "Dehradun",
+        workImage: worktheGreeneryVilla1,
         image: [theGreeneryVilla1, theGreeneryVilla2],
         latitude: 30.316496,
         longitude: 78.032188,
@@ -334,6 +370,7 @@ export const projectsArray = [
         slug: "the-luxurious-house",
         alt: "The Luxurious House",
         location: "New Delhi",
+        workImage: worktheLuxuriousHouse,
         image: [theLuxuriousHouse],
         latitude: 28.6139,
         longitude: 77.2088,
@@ -345,6 +382,7 @@ export const projectsArray = [
         slug: "apartment",
         alt: "Apartment",
         location: "Haridwar",
+        workImage: workapartment,
         image: [apartment],
         latitude: 29.9457,
         longitude: 78.1642,
@@ -356,6 +394,7 @@ export const projectsArray = [
         slug: "the-red-house",
         alt: "The Red House",
         location: "Ludhiana",
+        workImage: worktheRedHouse1,
         image: [theRedHouse1, theRedHouse2],
         latitude: 30.901,
         longitude: 75.8573,
@@ -367,6 +406,7 @@ export const projectsArray = [
         slug: "backpackers-stay",
         alt: "Backpackers Stay",
         location: "New Tehri",
+        workImage: worktheBackpackersStay1,
         image: [theBackpackersStay1, theBackpackersStay2],
         latitude: 30.3739,
         longitude: 78.4325,
@@ -378,6 +418,7 @@ export const projectsArray = [
         slug: "the-negi's-house",
         alt: "The Negi's House",
         location: "New Delhi",
+        workImage: worktheNegisHouse1,
         image: [theNegisHouse1, theNegisHouse2],
         latitude: 28.6139,
         longitude: 77.2088,
@@ -389,6 +430,7 @@ export const projectsArray = [
         slug: "the-gupta's-home",
         alt: "The Gupta's Home",
         location: "Dehradun",
+        workImage: worktheGuptasHome1,
         image: [theGuptasHome1, theGuptasHome2],
         latitude: 30.316496,
         longitude: 78.032188,
@@ -400,6 +442,7 @@ export const projectsArray = [
         slug: "sun-n-soil-backpackers-hostel",
         alt: "Sun n Soil Backpackers Hostel",
         location: "Jollygrant",
+        workImage: worksns,
         image: [sns2, sns3, sns4, sns5, sns6],
         latitude: 30.1951,
         longitude: 78.1921,
@@ -411,6 +454,7 @@ export const projectsArray = [
         slug: "the-wooden-brown-house",
         alt: "The Wooden Brown House",
         location: "Dehradun",
+        workImage: worktheWoodenBrownHouse,
         image: [theWoodenBrownHouse],
         latitude: 30.316496,
         longitude: 78.032188,

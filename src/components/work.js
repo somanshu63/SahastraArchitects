@@ -12,9 +12,9 @@ import { projectsArray } from "../data";
 import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 
 const videos = [
-  { video: Star5Hotel, name: "5 Star Hotel", location: "Mussoorie" },
   { video: kcCcafe, name: "KC Cafe", location: "Dehradun" },
   { video: petrolpump, name: "Petrol Pump", location: "Dehradun" },
+  { video: Star5Hotel, name: "5 Star Hotel", location: "Mussoorie" },
 ];
 
 const allProjects = projectsArray.reduce((acc, category) => {
@@ -39,21 +39,21 @@ function Work() {
     <div className="pLR67 workContainer h-full">
       <div className="relative">
         {currectVideoIndex === 0 ? (
-          <video className="video" controls>
+          <video className="video" autoPlay controls>
             <source src={videos[0].video} type="video/mp4" />
           </video>
         ) : (
           ""
         )}
         {currectVideoIndex === 1 ? (
-          <video className="video" controls>
+          <video className="video" autoPlay controls>
             <source src={videos[1].video} type="video/mp4" />
           </video>
         ) : (
           ""
         )}
         {currectVideoIndex === 2 ? (
-          <video className="video" controls>
+          <video className="video" autoPlay controls>
             <source src={videos[2].video} type="video/mp4" />
           </video>
         ) : (
@@ -189,7 +189,7 @@ function Work() {
                       <img
                         src={project.image[0]}
                         alt={project.alt}
-                        className="w-250I mb-6 h-48"
+                        className="w-250I mb-6 h-44"
                       />
                     </NavLink>
                   </div>
@@ -251,7 +251,9 @@ function Work() {
               : allProjects
             ).map((project, id) => (
               <tr>
-                <td className="fs-17 fw-700">{project.name}</td>
+                <NavLink to={`/projects/${project.slug}`}>
+                  <td className="fs-17 fw-700">{project.name}</td>
+                </NavLink>
                 <td className="fs-17 gray ">{project.location}</td>
                 <td className="fs-17 gray ">{project.year}</td>
                 <td className="fs-17 gray ">{project.size}</td>

@@ -33,11 +33,11 @@ function SingleProject(props) {
         <div>
           <div>
             <img
-              src={project?.image[currentImageIndex]}
+              src={project?.image[0]}
               className="w-full h-60 "
               alt={project.alt}
             ></img>
-            {project?.image.length > 1 ? (
+            {/* {project?.image.length > 1 ? (
               <div className="flex mt-4 float-right">
                 <RiArrowLeftSLine
                   className="pointer"
@@ -69,26 +69,51 @@ function SingleProject(props) {
               </div>
             ) : (
               ""
-            )}
+            )} */}
           </div>
-          <div className="flex column">
-            <div className="">
-              <h3 className="mt-32 fs-27">{project?.name}</h3>
-              <p className="fs-17 mt-8 gray flex items-center">
-                <FaLocationDot style={{ marginRight: "12px" }} />
-                {project.location}
-              </p>
-              <p className="fs-17 mt-8 gray flex items-center">
-                <HiHome style={{ marginRight: "12px" }} />
-                {project.size}
-              </p>
-              <p className="fs-17 mt-8 gray flex items-center">
-                <SlCalender style={{ marginRight: "12px" }} />
+          <div className="flex mt-32 justify-between ">
+            <div className="mb-32">
+              <h3 className=" fs-27">{project?.name}</h3>
+              {project?.name ? (
+                <p className="fs-17 mt-8 gray flex items-center">
+                  <FaLocationDot style={{ marginRight: "12px" }} />
+                  {project.location}
+                </p>
+              ) : (
+                ""
+              )}
+              {project?.size ? (
+                <p className="fs-17 mt-8 gray flex items-center">
+                  <HiHome style={{ marginRight: "12px" }} />
+                  {project.size}
+                </p>
+              ) : (
+                ""
+              )}
+              {project?.year ? (
+                <p className="fs-17 mt-8 gray flex items-center">
+                  <SlCalender style={{ marginRight: "12px" }} />
 
-                {project.year}
-              </p>
+                  {project.year}
+                </p>
+              ) : (
+                ""
+              )}
             </div>
-            <div className="w48 w100"></div>
+            <div className="w48">
+              {project?.image.map((image, i) => {
+                return i !== 0 ? (
+                  <img
+                    src={image}
+                    alt={image}
+                    key={i}
+                    className="w-full  mb-16  h-80"
+                  ></img>
+                ) : (
+                  ""
+                );
+              })}
+            </div>
           </div>
         </div>
       )}

@@ -14,7 +14,7 @@ function HeaderHome(props) {
 
   return (
     <>
-      <div className="home relative">
+      <div className="home relative mb-32">
         <div className="homeOverlay"></div>
         <img
           src={headerImagesArray[index].image}

@@ -375,7 +375,239 @@ img {
 }
 
 /* home */
+.hutContainer {
+  width: 52.6%;
+  margin: 8rem auto 0 auto;
+  height: 90vh;
+}
+.hutBorder {
+  width: 350px;
+  height: 15px;
+  background-color: black;
+  position: absolute;
+  z-index: 10;
+}
 
+.hutContainer:hover > .hutBorder {
+  background: url("../src/images/home/woodenTexture.webp");
+}
+.topLeft {
+  transform: rotate(-20deg);
+  left: 0;
+  top: 10%;
+}
+.topRight {
+  transform: rotate(20deg);
+  right: 0;
+  top: 10%;
+}
+.left {
+  transform: rotate(90deg);
+  left: -23.7%;
+  top: 51%;
+}
+.bottom {
+  bottom: 16%;
+  left: 1.3%;
+  width: 97.5%;
+}
+.right {
+  transform: rotate(90deg);
+  width: 130px;
+  right: 10%;
+  bottom: 28%;
+}
+.hangingFlowerPot {
+  width: 100px;
+  height: 150px;
+  position: absolute;
+  right: 0;
+  top: 20%;
+}
+.flowerPot {
+  width: 150px;
+  height: 120px;
+  position: absolute;
+  right: -4%;
+  bottom: 18%;
+  background-color: white;
+}
+.vastuContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 50%;
+  position: absolute;
+  top: 22%;
+  left: 17%;
+}
+.vastu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border: 3px solid rgb(147, 32, 255);
+}
+
+.vastuLabel::after {
+  content: "";
+  position: absolute;
+  bottom: -102%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 45px solid transparent;
+  border-right: 45px solid transparent;
+  border-top: 30px solid rgb(147, 32, 255); /* Color of the arrow */
+}
+.vastu:hover ~ .vastuLabel {
+  display: block;
+  position: absolute;
+  top: -150%;
+  left: 40%;
+  color: white;
+  text-align: center;
+  background-color: rgb(147, 32, 255);
+  padding: 6px 9px;
+  z-index: 100;
+}
+.vastu:hover {
+  transform: scale(1.2);
+}
+.triangle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgb(147, 32, 255);
+  transform: rotate(45deg);
+}
+.triangleI {
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgb(147, 32, 255);
+}
+.circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 3px solid rgb(147, 32, 255);
+}
+.circleI {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 3px solid rgb(147, 32, 255);
+}
+.square {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgb(147, 32, 255);
+}
+.squareI {
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgb(147, 32, 255);
+}
+.fs-8 {
+  font-size: 9px;
+}
+.desk {
+  width: 250px;
+  height: 180px;
+  bottom: 18.5%;
+  left: 25%;
+  object-fit: cover;
+  position: absolute;
+}
+.deskContainer:hover > .deskLabel {
+  display: block;
+  position: absolute;
+  bottom: 50%;
+  right: 15%;
+  background-color: rgb(255, 136, 0);
+  color: white;
+  padding: 6px 9px;
+}
+.deskLabel::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -20px; /* Adjust distance from the left side */
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-top: 22px solid transparent;
+  border-bottom: 22px solid transparent;
+  border-right: 20px solid rgb(255, 136, 0); /* Color of the triangle */
+}
+.flowerHover:hover ~ .flowerLabel {
+  display: block;
+  position: absolute;
+  bottom: 50%;
+  right: -25%;
+  background-color: rgb(64, 141, 41);
+  color: white;
+  padding: 6px 9px;
+}
+.flowerLabel::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -20px; /* Adjust distance from the left side */
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-top: 22px solid transparent;
+  border-bottom: 22px solid transparent;
+  border-right: 20px solid rgb(64, 141, 41); /* Color of the triangle */
+}
+.exterior,
+.flowerLabel,
+.deskLabel,
+.vastuLabel {
+  display: none;
+  font-size: 18px;
+  text-align: center;
+}
+.exterior::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -12.5%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-top: 30px solid transparent;
+  border-image: url("../src/images/home/woodenTexture.webp") 30 stretch; /* Adjust height and color as needed */
+  border-left: 30px solid transparent;
+  transform: rotate(45deg);
+  z-index: -1;
+}
+.hutBorder:hover ~ .exterior {
+  display: block;
+  position: absolute;
+  top: 30%;
+  left: -20%;
+  background: url("../src/images/home/woodenTexture.webp");
+  color: white;
+  padding: 6px 9px;
+}
+
+.desk:hover,
+.flowerPot:hover,
+.hangingFlowerPot:hover {
+  transform: scale(1.1);
+}
 .pL67 {
   margin-left: 5.875rem;
 }

@@ -13,6 +13,7 @@ import { NavLink } from "react-router-dom/cjs/react-router-dom.min";
 import spotlight2 from "../images/home/spotlight1.jpg";
 import { collectionArray } from "../data";
 import { FaArrowUpRightFromSquare } from "react-icons/fa6";
+import Hut from "./hut";
 
 const doonOfficePictures = [DoonOffice1, DoonOffice2];
 const spotlightPictures = [spotlight1, spotlight2];
@@ -48,6 +49,7 @@ function Home(props) {
   return (
     <div>
       <HeaderHome />
+      <Hut />
       <div className="pLR67 justify-between mt-32 mR3 flex column ">
         <div className=" w100 newsContent pL0 ">
           <span className="fs-12 mb-5">NEWS</span>

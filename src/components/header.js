@@ -45,6 +45,63 @@ function Header(props) {
               Home
             </NavLink>
           </li>
+          <li className="navigationList iDS relative">
+            <NavLink
+              to="/integrated-design-solutions"
+              className="uppercase"
+              activeClassName="active"
+            >
+              <div
+                onClick={() => {
+                  props.setSidebar(false);
+                }}
+                className="navLink uppercase pointer ml-3 "
+              >
+                Integrated Design Solutions
+              </div>
+            </NavLink>
+            <div className="iDSList">
+              <ul>
+                <li className="blackContainer"></li>
+                <li>
+                  <NavLink
+                    to="/facade-designs"
+                    className="uppercase iDSLinks"
+                    activeClassName="active"
+                  >
+                    Facade Designs
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink
+                    to="/interior-designs"
+                    className="uppercase iDSLinks"
+                    activeClassName="active"
+                  >
+                    Interior Designs
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink
+                    to="/vastu-solutions"
+                    className="uppercase iDSLinks"
+                    activeClassName="active"
+                  >
+                    Vastu Solutions
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink
+                    to="/landscape-designs"
+                    className="uppercase iDSLinks"
+                    activeClassName="active"
+                  >
+                    Landscape Designs
+                  </NavLink>
+                </li>
+              </ul>
+            </div>
+          </li>
           <li className="navigationList">
             <NavLink
               to="/work"

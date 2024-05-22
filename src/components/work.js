@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { NavLink } from "react-router-dom";
 import { RiArrowDownSLine } from "react-icons/ri";
 import { RiArrowUpSLine } from "react-icons/ri";
@@ -29,6 +29,54 @@ function Work() {
   const color = `hsl(0deg 100% 50%)`;
   const [loading, setLoading] = useState(true);
   const height = window.innerWidth < 550 ? 400 : 600;
+  const divRefs = useRef([]);
+  const [inView, setInView] = useState(null);
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
+  const typingEffect = (event) => {
+    const updateContent = event;
+
+    const contentDescription = updateContent.target?.innerText;
+    updateContent.targetinnerText = "";
+    updateContent.target.innerText = "";
+
+    for (let i = 0; i <= contentDescription.length; i++) {
+      setTimeout(() => {
+        updateContent.target.innerText = contentDescription.substring(0, i);
+      }, i * 15);
+    }
+  };
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setInView(entry.target.id);
+            if (entry.target.id === "div1") {
+              typingEffect(entry);
+            }
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    divRefs.current.forEach((div) => {
+      if (div) {
+        observer.observe(div);
+      }
+    });
+
+    return () => {
+      divRefs.current.forEach((div) => {
+        if (div) {
+          observer.unobserve(div);
+        }
+      });
+    };
+  }, []);
+
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
@@ -119,7 +167,11 @@ function Work() {
       ) : (
         ""
       )}
-      <p className="ml-20 mt-36 mb-36 fw-700 fs-36">
+      <p
+        id="div1"
+        ref={(el) => (divRefs.current[0] = el)}
+        className="ml-20 mt-36 mb-36 fw-700 fs-36"
+      >
         Places that honor humanity.
       </p>
       <div className="flex items-center justify-between mb-14">

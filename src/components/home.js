@@ -8,13 +8,12 @@ import DoonOffice2 from "../images/home/DoonOffice1.jpg";
 import tree from "../images/home/tree.jpeg";
 import monk from "../images/home/monk.jpeg";
 import spotlight1 from "../images/home/spotlight1.jpeg";
-import gardenInDesert from "../images/home/gardenInDesert.jpg";
 import { NavLink } from "react-router-dom/cjs/react-router-dom.min";
 import spotlight2 from "../images/home/spotlight1.jpg";
 import { collectionArray } from "../data";
 import { FaArrowUpRightFromSquare } from "react-icons/fa6";
-import Hut from "./hut";
-
+import IDSImage from "./IDSImage";
+const div7 = [...document.getElementsByClassName("div7")];
 const doonOfficePictures = [DoonOffice1, DoonOffice2];
 const spotlightPictures = [spotlight1, spotlight2];
 
@@ -46,11 +45,131 @@ function Home(props) {
       window.removeEventListener("resize", handleWidth);
     };
   }, []);
+
+  const divRefs = useRef([]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            if (entry.target.id === "div1") {
+              typingEffect(entry);
+              entry.target.children[1].classList.add("animateRight");
+              setTimeout(() => {
+                entry.target.children[1].classList.remove("animateRight");
+              }, 2000);
+            }
+            if (entry.target.id === "div2") {
+              typingEffect(entry);
+              entry.target.children[1].classList.add("animateRight");
+              setTimeout(() => {
+                entry.target.children[1].classList.remove("animateRight");
+              }, 2000);
+            }
+            if (entry.target.id === "div3") {
+              entry.target.children[0].classList.add("animateLeft");
+              entry.target.children[1].classList.add("animateRight");
+              setTimeout(() => {
+                entry.target.children[0].classList.remove("animateLeft");
+              }, 2000);
+              setTimeout(() => {
+                entry.target.children[1].classList.remove("animateRight");
+              }, 3000);
+            }
+            if (entry.target.id === "div4") {
+              typingEffect2(entry);
+            }
+            if (entry.target.id === "div5") {
+              typingEffect(entry);
+              entry.target.children[1].classList.add("animateRight");
+              setTimeout(() => {
+                entry.target.children[1].classList.remove("animateRight");
+              }, 2000);
+            }
+            if (entry.target.id === "div6") {
+              typingEffect(entry);
+              entry.target.children[1].classList.add("animateRight");
+              setTimeout(() => {
+                entry.target.children[1].classList.remove("animateRight");
+              }, 2000);
+            }
+            if (entry.target.id === "div4") {
+              div7?.map((div) => {
+                typingEffect3(div);
+              });
+            }
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    divRefs.current.forEach((div) => {
+      if (div) {
+        observer.observe(div);
+      }
+    });
+
+    return () => {
+      divRefs.current.forEach((div) => {
+        if (div) {
+          observer.unobserve(div);
+        }
+      });
+    };
+  }, []);
+
+  const typingEffect = (event) => {
+    const updateContent = event;
+    const contentHeading =
+      updateContent.target?.children[0]?.children[1]?.innerText;
+    const contentDescription =
+      updateContent.target?.children[0]?.children[2]?.innerText;
+    updateContent.target.children[0].children[1].innerText = "";
+    updateContent.target.children[0].children[2].innerText = "";
+    for (let i = 0; i <= contentHeading.length; i++) {
+      setTimeout(() => {
+        updateContent.target.children[0].children[1].innerText =
+          contentHeading.substring(0, i);
+      }, i * 15);
+    }
+    for (let i = 0; i <= contentDescription.length; i++) {
+      setTimeout(() => {
+        updateContent.target.children[0].children[2].innerText =
+          contentDescription.substring(0, i);
+      }, i * 15);
+    }
+  };
+  const typingEffect2 = (event) => {
+    console.log(event);
+    const updateContent = event;
+    const contentDescription = updateContent.target?.innerText;
+    for (let i = 0; i <= contentDescription.length; i++) {
+      setTimeout(() => {
+        updateContent.target.innerText = contentDescription.substring(0, i);
+      }, i * 15);
+    }
+  };
+  const typingEffect3 = (event) => {
+    const updateContent = event;
+    const contentDescription = updateContent.innerText;
+    for (let i = 0; i <= contentDescription.length; i++) {
+      setTimeout(() => {
+        updateContent.innerText = contentDescription.substring(0, i);
+      }, i * 15);
+    }
+  };
+
   return (
     <div>
       <HeaderHome />
-      <Hut />
-      <div className="pLR67 justify-between mt-32 mR3 flex column ">
+      <IDSImage />
+      <div
+        id="div1"
+        ref={(el) => (divRefs.current[0] = el)}
+        className="pLR67 justify-between mt-32 mR3 flex column "
+      >
         <div className=" w100 newsContent pL0 ">
           <span className="fs-12 mb-5">NEWS</span>
           <h3 className="fs-27 leading-10 mb-9">
@@ -62,7 +181,8 @@ function Home(props) {
             <NavLink to="/studios" className="border-bottom pointer">
               expanding our presence with a new studio in Dehradun City
             </NavLink>
-            .
+            . This expansion underscores our commitment to innovative
+            architecture and serving the Dehradun community with excellence.
           </p>
         </div>
         <div className="w48 w100  mRT3 ">
@@ -107,14 +227,21 @@ function Home(props) {
           </div>
         </div>
       </div>
-      <div className="mt-32 mL3 flex column pLR67 justify-between">
+      <div
+        id="div2"
+        ref={(el) => (divRefs.current[1] = el)}
+        className="mt-32 mL3 flex column pLR67 justify-between"
+      >
         <div className=" mRT3 w100 newsContent pL0 ">
           <span className="fs-12 mb-5">IT'S NOT A MOMENT, IT'S A MINDSET</span>
           <h3 className="fs-27 leading-10 mb-9">Celebrating Earth Month</h3>
-          <p className="fs-17 leading-6 mb-9 ">
-            As designers, we feel a deep responsibility to our fellow humans and
-            the planet we call home. We take respecting and restoring the
-            environment as our mandate to ensure a future where all can thrive.{" "}
+          <p className="fs-17 leading-6 mb-9">
+            As a leader in sustainable architecture, Sahastra Architects is
+            dedicated to promoting eco-friendly designs and practices. This
+            Earth Month, we reaffirm our commitment to creating a greener, more
+            sustainable future for our planet. Join us in our mission to protect
+            and preserve the environment through innovative and responsible
+            architecture.
           </p>
           {/* <p className="fs-17 leading-6 ">
             <span className="border-bottom">
@@ -145,7 +272,11 @@ function Home(props) {
           </div>
         </div>
       </div>
-      <div className="mt-32 flex pLR67 column justify-between">
+      <div
+        id="div3"
+        ref={(el) => (divRefs.current[2] = el)}
+        className="mt-32 flex pLR67 column justify-between"
+      >
         <div className="w48 w100 ">
           <div className="imageHover">
             <div className="imageHoverBox">
@@ -175,14 +306,18 @@ function Home(props) {
               <img src={tree} alt="blue tree" className="news1Image"></img>
             </NavLink>
           </div>
-          <div>
+          <div className="text-right">
             <p className="fs-13 mt-4 ">Rukkbay Cafe </p>
             <p className="fs-13 mt-6 gray">Dehradun</p>
           </div>
         </div>
       </div>
       <div className="mt-32 relative">
-        <h2 className="fs-30 mb-10 w-full text-center pLR67">
+        <h2
+          id="div4"
+          ref={(el) => (divRefs.current[3] = el)}
+          className="fs-30 mb-10 w-full text-center pLR67"
+        >
           Be inspired: Introducing{" "}
           <span className="underline">a new collection of client insights</span>
         </h2>
@@ -212,7 +347,11 @@ function Home(props) {
                     ></img>
                   </NavLink>
 
-                  <p className="gray text-base text-justify font-semibold  leading-6">
+                  <p
+                    id="div7"
+                    ref={(el) => (divRefs.current[6] = el)}
+                    className="gray text-base text-justify font-semibold div7 leading-6"
+                  >
                     {item.description}{" "}
                   </p>
                   {window.innerWidth > 550 && (id === 0 || id === 5) ? (
@@ -250,8 +389,13 @@ function Home(props) {
           />
         </div>
       </div>
-      <div className="pLR67 justify-between mt-52 column mR3 flex">
+      <div
+        id="div5"
+        ref={(el) => (divRefs.current[4] = el)}
+        className="pLR67 justify-between mt-52 column mR3 flex"
+      >
         <div className=" w100 newsContent pL0 ">
+          <div></div>
           <h3 className="fs-27 leading-10 mb-9">Designer Spotlight</h3>
           <p className="fs-17 leading-6">
             For the design director of our Dehradun studio,{" "}
@@ -259,7 +403,9 @@ function Home(props) {
               the design process is always an opportunity for exploration (and
               fun){" "}
             </span>
-            .
+            . Discover the visionary designs of Abhinav Gupta, CEO of Sahastra
+            Architects. Explore how his innovative approach transforms spaces
+            into timeless masterpieces.
           </p>
         </div>
         <div className="w48 w100 mRT3">
@@ -295,8 +441,13 @@ function Home(props) {
         </div>
       </div>
 
-      <div className="flex m3 mt-32 items-center justify-center">
-        <div className="  greenbg p-16 pt-12">
+      <div
+        id="div6"
+        ref={(el) => (divRefs.current[5] = el)}
+        className="flex m3 mt-32 items-center justify-center"
+      >
+        <div className="greenbg p-16 pt-12">
+          <div></div>
           {window.innerWidth < 550 ? (
             <p className="fs-27 white leading-9 mb-8">
               Every project is an opportunity to make the world a better,
@@ -313,6 +464,7 @@ function Home(props) {
             #Projects for a Better World.
           </span>
         </div>
+        <div></div>
       </div>
     </div>
   );

@@ -4,6 +4,53 @@ import haridwarOffice from "../images/home/DoonOffice3.jpg";
 import MapWithMarkers from "./map";
 
 function Studios() {
+  const divRefs = useRef([]);
+  const [inView, setInView] = useState(null);
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
+  const typingEffect = (event) => {
+    const updateContent = event;
+
+    const contentDescription = updateContent.target?.innerText;
+    updateContent.targetinnerText = "";
+    updateContent.target.innerText = "";
+
+    for (let i = 0; i <= contentDescription.length; i++) {
+      setTimeout(() => {
+        updateContent.target.innerText = contentDescription.substring(0, i);
+      }, i * 15);
+    }
+  };
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setInView(entry.target.id);
+            if (entry.target.id === "div1") {
+              typingEffect(entry);
+            }
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    divRefs.current.forEach((div) => {
+      if (div) {
+        observer.observe(div);
+      }
+    });
+
+    return () => {
+      divRefs.current.forEach((div) => {
+        if (div) {
+          observer.unobserve(div);
+        }
+      });
+    };
+  }, []);
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
@@ -11,7 +58,11 @@ function Studios() {
     <div className="pLR67 mRT3">
       <MapWithMarkers />
 
-      <p className="fs-36 fw-700 px-20  leading-tight mt-32">
+      <p
+        id="div1"
+        ref={(el) => (divRefs.current[0] = el)}
+        className="fs-36 fw-700 px-20  leading-tight mt-32"
+      >
         With studio cultures unique to their place and people, we’re the
         smallest “big firm” out there.
       </p>

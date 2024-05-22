@@ -308,8 +308,8 @@ img {
   background-size: cover;
 }
 .logo {
-  width: 35px;
-  height: 35px;
+  width: 30px;
+  height: 30px;
   margin-right: 6px;
   border-radius: 50%;
 }
@@ -320,7 +320,7 @@ img {
 .brand {
   color: white;
   font-weight: 500;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
 }
 .navLink {
   text-decoration: none;
@@ -335,8 +335,9 @@ img {
   z-index: 100;
 }
 .navigationList {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   font-weight: 500;
+  margin-left: 12px;
   text-transform: capitalize;
   color: white;
 }
@@ -373,22 +374,53 @@ img {
 .w48 {
   width: 40%;
 }
+.iDSList {
+  display: none;
+}
+.blackContainer {
+  width: 100%;
+  height: 25px;
+  background-color: rgba(17, 17, 17);
+}
+.iDSList:hover {
+  display: block;
+}
+.iDSLinks {
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin: 18px;
+  display: block;
+  color: white;
+}
+.iDSLinks:hover {
+  text-decoration: underline;
+}
+.iDS:hover > .iDSList {
+  display: block;
+  background-color: #009b77;
+  position: absolute;
+  top: 100%;
+  left: 6%;
+  right: 0;
+}
 
 /* home */
 .hutContainer {
-  width: 52.6%;
+  width: 32%;
   margin: 8rem auto 0 auto;
-  height: 90vh;
+  height: 80vh;
 }
+
 .hutBorder {
-  width: 21.875rem;
-  height: 0.9375rem;
+  width: 15rem;
+  height: 1rem;
   background-color: black;
   position: absolute;
   z-index: 10;
 }
 
-.hutContainer:hover > .hutBorder {
+.hutContainer:hover > .hutBorder,
+.hutContainer:hover > .chimney > .chimneyWall {
   background: url("../src/images/home/woodenTexture.webp");
 }
 .topLeft {
@@ -403,33 +435,64 @@ img {
 }
 .left {
   transform: rotate(90deg);
-  left: -23.7%;
-  top: 51%;
+  left: -29%;
+  top: 41%;
+  width: 19rem;
 }
 .bottom {
-  bottom: 16%;
+  bottom: 30%;
   left: 1.3%;
   width: 97.5%;
 }
 .right {
   transform: rotate(90deg);
-  width: 8.125rem;
-  right: 10%;
-  bottom: 28%;
+  width: 5rem;
+  right: 14%;
+  bottom: 38%;
 }
-.hangingFlowerPot {
-  width: 6.25rem;
-  height: 9.375rem;
+.chimney {
   position: absolute;
+  top: -1%;
+  right: 10%;
+  height: 4rem;
+  width: 16%;
+}
+.chimneyWall {
+  width: 1rem;
+  height: 4.5rem;
+  background-color: black;
+  z-index: 10;
+}
+.chimneyRight {
+  position: absolute;
+  height: 5.5rem;
   right: 0;
-  top: 20%;
+  top: 0%;
+}
+.chimneyTop {
+  position: absolute;
+  height: 5.5rem;
+  right: 38%;
+  top: -42%;
+  transform: rotate(90deg);
+}
+
+.hangingFlowerPot {
+  width: 4rem;
+  height: 6rem;
+  position: absolute;
+  right: 5%;
+  top: 15%;
+  filter: grayscale(100);
 }
 .flowerPot {
-  width: 9.375rem;
-  height: 7.5rem;
+  width: 6rem;
+  height: 6rem;
   position: absolute;
-  right: -4%;
-  bottom: 18%;
+  right: -1.8%;
+  bottom: 32%;
+  filter: grayscale(100);
+
   background-color: white;
 }
 .vastuContainer {
@@ -439,33 +502,33 @@ img {
   width: 50%;
   position: absolute;
   top: 22%;
-  left: 17%;
+  left: 20%;
 }
 .vastu {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 3.75rem;
-  height: 3.75rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  filter: grayscale(100);
   border: 3px solid rgb(147, 32, 255);
 }
-
 .vastuLabel::after {
   content: "";
   position: absolute;
-  bottom: -102%;
+  bottom: -70%;
   left: 50%;
   transform: translateX(-50%);
   width: 0;
   height: 0;
-  border-left: 45px solid transparent;
-  border-right: 45px solid transparent;
-  border-top: 30px solid rgb(147, 32, 255); /* Color of the arrow */
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+  border-top: 20px solid rgb(147, 32, 255); /* Color of the arrow */
 }
 .vastu:hover ~ .vastuLabel {
   display: block;
   position: absolute;
-  top: -150%;
+  top: -180%;
   left: 40%;
   color: white;
   text-align: center;
@@ -475,19 +538,22 @@ img {
 }
 .vastu:hover {
   transform: scale(1.2);
+  filter: grayscale(0);
 }
-
 .fs-8 {
   font-size: 9px;
 }
 .desk {
-  width: 15.625rem;
-  height: 11.25rem;
-  bottom: 18.5%;
+  width: 10rem;
+  height: 7rem;
+  bottom: 32%;
   left: 25%;
   object-fit: cover;
+  filter: grayscale(100);
+
   position: absolute;
 }
+
 .deskContainer:hover > .deskLabel {
   display: block;
   position: absolute;
@@ -505,15 +571,16 @@ img {
   transform: translateY(-50%);
   width: 0;
   height: 0;
-  border-top: 22px solid transparent;
-  border-bottom: 22px solid transparent;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
   border-right: 20px solid rgb(255, 136, 0); /* Color of the triangle */
 }
 .flowerHover:hover ~ .flowerLabel {
   display: block;
   position: absolute;
-  bottom: 50%;
-  right: -25%;
+  bottom: 55%;
+  z-index: 100;
+  right: 25%;
   background-color: rgb(64, 141, 41);
   color: white;
   padding: 6px 9px;
@@ -521,34 +588,40 @@ img {
 .flowerLabel::after {
   content: "";
   position: absolute;
-  top: 50%;
-  left: -20px; /* Adjust distance from the left side */
+  top: -20%;
+  right: -18px; /* Adjust distance from the left side */
   transform: translateY(-50%);
+  transform: rotate(180deg);
   width: 0;
   height: 0;
-  border-top: 22px solid transparent;
-  border-bottom: 22px solid transparent;
-  border-right: 20px solid rgb(64, 141, 41); /* Color of the triangle */
+  border-top: 19px solid transparent;
+  border-bottom: 19px solid transparent;
+  border-right: 19px solid rgb(64, 141, 41); /* Color of the triangle */
+}
+.flowerPot:hover,
+.hangingFlowerPot:hover,
+.desk:hover {
+  filter: grayscale(0);
 }
 .exterior,
 .flowerLabel,
 .deskLabel,
 .vastuLabel {
   display: none;
-  font-size: 18px;
+  font-size: 15px;
   text-align: center;
 }
-.exterior::after {
+.exterior::before {
   content: "";
   position: absolute;
   top: 0;
-  right: -12.5%;
-  transform: translateY(-50%);
+  left: -15%;
+  transform: translateY(50%);
   width: 0;
   height: 0;
-  border-top: 30px solid transparent;
+  border-top: 26px solid transparent;
   border-image: url("../src/images/home/woodenTexture.webp") 30 stretch; /* Adjust height and color as needed */
-  border-left: 30px solid transparent;
+  border-left: 26px solid transparent;
   transform: rotate(45deg);
   z-index: -1;
 }
@@ -556,16 +629,151 @@ img {
   display: block;
   position: absolute;
   top: 30%;
-  left: -20%;
+  left: 20%;
   background: url("../src/images/home/woodenTexture.webp");
   color: white;
   padding: 6px 9px;
+  z-index: 1;
 }
-
 .desk:hover,
 .flowerPot:hover,
 .hangingFlowerPot:hover {
   transform: scale(1.1);
+}
+.structure {
+  height: 92vh;
+  width: 98.7vw;
+}
+.structureImage {
+  filter: grayscale(100);
+}
+.structureVastu {
+  position: absolute;
+  top: 5%;
+  left: 6%;
+  bottom: 42%;
+  z-index: 10;
+  right: 78.8%;
+  background: url("../src/images/home/lamp.jpg");
+  background-size: cover;
+  filter: grayscale(100);
+}
+.structureVastu:hover,
+.structureLandscape:hover,
+.structureInterior:hover,
+.structureInterior:hover + .structureInterior2 {
+  filter: grayscale(0);
+  cursor: pointer;
+}
+.structureLandscape {
+  position: absolute;
+  top: 42%;
+  left: 86%;
+  bottom: 0%;
+  z-index: 10;
+  right: 0%;
+  background: url("../src/images/home/landscape.jpg");
+  background-size: cover;
+  filter: grayscale(100);
+}
+
+.structureInterior {
+  position: absolute;
+  top: 58%;
+  left: 15.35%;
+  bottom: 0%;
+  z-index: 10;
+  right: 40.7%;
+  background: url("../src/images/home/interior.jpg");
+  background-size: cover;
+  filter: grayscale(100);
+}
+
+.structureInterior2 {
+  position: absolute;
+  top: 54.5%;
+  left: 33.2%;
+  bottom: 42%;
+  z-index: 10;
+  right: 59.4%;
+  background: url("../src/images/home/interior2.jpg");
+  background-size: cover;
+  filter: grayscale(100);
+}
+.label {
+  position: absolute;
+  padding: 6px 9px;
+  z-index: 10;
+  display: none;
+}
+.structureVastu:hover ~ .vastuLabelStructure {
+  display: block;
+  background-color: yellow;
+  color: black;
+  top: 30%;
+  left: 25%;
+}
+.vastuLabelStructure::before {
+  content: "";
+  position: absolute;
+  bottom: -25%;
+  left: -50%;
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-right: 30px solid yellow;
+  border-bottom: 20px solid transparent;
+}
+.structureLandscape:hover ~ .landscapeLabelStructure {
+  display: block;
+  bottom: 30%;
+  right: 20%;
+  background-color: green;
+  color: black;
+}
+.landscapeLabelStructure::after {
+  content: "";
+  position: absolute;
+  bottom: -25%;
+  right: -30%;
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-left: 30px solid green;
+  border-bottom: 20px solid transparent;
+}
+.structureInterior:hover ~ .interiorLabelStructure {
+  display: block;
+  bottom: 30%;
+  right: 32%;
+  background-color: rgb(248, 142, 3);
+  color: black;
+}
+.interiorLabelStructure::before {
+  content: "";
+  position: absolute;
+  bottom: -25%;
+  left: -40%;
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-right: 30px solid rgb(248, 142, 3);
+  border-bottom: 20px solid transparent;
+}
+.hoverText {
+  position: absolute;
+  top: 5%;
+  left: 40%;
+  z-index: 10;
+  color: rgb(0, 0, 0);
+  text-shadow: 3px 3px 3px rgb(255, 255, 255);
+}
+.hutHoverText {
+  position: absolute;
+  top: -7%;
+  left: 15%;
+  z-index: 10;
+  color: rgb(0, 0, 0);
 }
 .pL67 {
   margin-left: 5.875rem;
@@ -602,6 +810,7 @@ img {
   height: 21rem;
   width: 100%;
 }
+
 .collection-container {
   display: flex;
   justify-content: center;
@@ -736,6 +945,59 @@ td {
   margin: 3rem 0;
 }
 
+/* vastu solutions */
+.vastuBannerContainer {
+  width: 100%;
+  height: 12rem;
+}
+.vastuBannerOverlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 2.25rem;
+}
+.dot {
+  list-style: circle;
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+@keyframes imageAnimationRight {
+  0% {
+    margin-right: -50%;
+  }
+
+  100% {
+    margin-right: 0%;
+  }
+}
+.animateRight {
+  animation-name: imageAnimationRight;
+  animation-duration: 2s;
+}
+@keyframes imageAnimationLeft {
+  0% {
+    margin-left: -50%;
+  }
+
+  100% {
+    margin-left: 0%;
+  }
+}
+.animateLeft {
+  animation-name: imageAnimationLeft;
+  animation-duration: 2s;
+}
+
 /* mobile screen */
 @media screen and (max-width: 1200px) {
   .container {
@@ -774,9 +1036,9 @@ td {
     height: 18rem;
   }
   .hutContainer {
-    width: 66.8%;
+    width: 68%;
     margin: 8rem auto 0 auto;
-    height: 41vh;
+    height: 45vh;
   }
 }
 @media screen and (max-width: 992px) {
@@ -803,9 +1065,9 @@ td {
     height: 17rem;
   }
   .hutContainer {
-    width: 73.3%;
+    width: 75%;
     margin: 8rem auto 0 auto;
-    height: 41.5vh;
+    height: 45vh;
   }
   .pLR67 {
     padding: 0 4.5rem;
@@ -879,9 +1141,9 @@ td {
     height: 8rem;
   }
   .hutContainer {
-    width: 66%;
+    width: 68%;
     margin: 8rem auto 0 auto;
-    height: 40.8vh;
+    height: 44vh;
   }
 }
 @media screen and (max-width: 576px) {
@@ -1026,9 +1288,9 @@ td {
     color: rgb(0, 0, 0);
   }
   .hutContainer {
-    width: 78%;
+    width: 81%;
     margin: 8rem auto 0 auto;
-    height: 49vh;
+    height: 52vh;
   }
 }
 @media screen and (max-width: 468px) {
@@ -1132,9 +1394,9 @@ td {
     width: 19.475rem;
   }
   .hutContainer {
-    width: 90%;
+    width: 80%;
     margin: 8rem auto 0 auto;
-    height: 35vh;
+    height: 40vh;
   }
   .bottom {
     width: 97.5%;
@@ -1142,7 +1404,15 @@ td {
   .right {
     transform: rotate(90deg);
     width: 8.125rem;
-    right: 10%;
+    right: 11%;
     bottom: 28%;
+  }
+  .desk {
+    left: 20%;
+  }
+  .left {
+    left: -32.7%;
+    top: 50%;
+    width: 27rem;
   }
 }

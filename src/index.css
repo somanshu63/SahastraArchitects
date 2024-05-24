@@ -295,6 +295,24 @@ img {
 .pointer {
   cursor: pointer;
 }
+.content-right {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  text-align: right;
+}
+.mt-12 {
+  margin-top: 12px;
+}
+.mt-6 {
+  margin-top: 6px;
+}
+.h-60 {
+  height: 80vh;
+}
+.w48 {
+  width: 40%;
+}
 
 /* header */
 .home {
@@ -315,7 +333,7 @@ img {
   border-radius: 50%;
 }
 .header {
-  padding: 1rem 5.875rem;
+  padding: 0.4rem 5.875rem;
   box-shadow: 0px 1px 20px 0 rgba(0, 0, 0, 0.59);
 }
 .brand {
@@ -326,6 +344,9 @@ img {
 .navLink {
   text-decoration: none;
   color: rgb(255, 255, 255);
+  padding: 18px 0;
+  display: inline-flex;
+  z-index: 10;
 }
 .fixedBar {
   position: fixed;
@@ -347,42 +368,50 @@ img {
   justify-content: flex-end;
   width: 100%;
 }
+@keyframes navlinkAnimation {
+  0% {
+    transform: scale(1);
+  }
 
-.navLink:hover {
-  text-decoration: underline;
+  /* 14% {
+    transform: scale(1.2);
+  }
+
+  28% {
+    transform: scale(1);
+  }
+
+  42% {
+    transform: scale(1.2);
+  } */
+
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.navLink:hover,
+.iDSLinks:hover {
+  border-bottom: 2px solid white;
+  animation: navlinkAnimation 0.5s;
+}
+.brand:hover {
+  animation: navlinkAnimation 0.5s;
 }
 .active {
-  text-decoration: underline;
+  border-bottom: 2px solid white;
 }
 .no-underline {
   text-decoration: none;
 }
-.content-right {
-  display: flex;
-  justify-content: flex-end;
-  width: 100%;
-  text-align: right;
-}
-.mt-12 {
-  margin-top: 12px;
-}
-.mt-6 {
-  margin-top: 6px;
-}
-.h-60 {
-  height: 80vh;
-}
-.w48 {
-  width: 40%;
-}
+
 .iDSList {
   display: none;
+  z-index: -9;
 }
-.blackContainer {
-  width: 100%;
-  height: 25px;
-  background-color: rgba(17, 17, 17);
-}
+
 .iDSList:hover {
   display: block;
 }
@@ -393,8 +422,11 @@ img {
   display: block;
   color: white;
 }
-.iDSLinks:hover {
-  text-decoration: underline;
+.blackContainer {
+  width: 100%;
+  height: 7px;
+  background-color: black;
+  display: block;
 }
 .iDS:hover > .iDSList {
   display: block;
@@ -403,6 +435,7 @@ img {
   top: 100%;
   left: 6%;
   right: 0;
+  box-shadow: 0px 1px 20px 0 rgba(0, 0, 0, 0.59);
 }
 
 /* home */
@@ -1036,17 +1069,23 @@ td {
   padding: 1rem;
   background: linear-gradient(to top, rgb(0, 0, 0), rgba(0, 0, 0, 0.6));
 }
+.keyPrinciplesContainer:hover > .keyPrinciples:not(:hover) {
+  filter: blur(5px);
+  transform: scale(0.8);
+  transition: transform 1s;
+}
+.keyPrinciplesContainer:not(:hover) > .keyPrinciples {
+  transition: all 1s;
+}
 .keyPrinciples:hover {
   transform: scale(1.2);
   transition: transform 1s;
 }
-.keyPrinciples:not(:hover) {
-  transform: scale(0.9);
-  transition: transform 1s;
-}
+
 .keyPrinciples:hover > .keyPrinciplesOverlay {
   color: white;
   background: linear-gradient(to top, rgba(0, 0, 0), rgba(0, 0, 0, 0));
+  transition: all 1s;
 }
 
 .discoverMore {
@@ -1402,6 +1441,7 @@ td {
   .navLink {
     color: rgb(0, 0, 0);
   }
+
   .hutContainer {
     width: 81%;
     margin: 8rem auto 0 auto;

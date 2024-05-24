@@ -48,17 +48,13 @@ function Header(props) {
           <li className="navigationList iDS relative">
             <NavLink
               to="/integrated-design-solutions"
-              className="uppercase"
+              className="navLink uppercase pointer ml-3"
               activeClassName="active"
+              onClick={() => {
+                props.setSidebar(false);
+              }}
             >
-              <div
-                onClick={() => {
-                  props.setSidebar(false);
-                }}
-                className="navLink uppercase pointer ml-3 "
-              >
-                Integrated Design Solutions
-              </div>
+              Integrated Design Solutions
             </NavLink>
             <div className="iDSList">
               <ul>

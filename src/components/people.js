@@ -5,6 +5,7 @@ import gb from "../images/people/gb.webp";
 import v5e from "../images/people/v5e.jpg";
 import nb from "../images/people/nb.jpeg";
 import { keyPrinciplesData } from "../data";
+import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 
 function People() {
   const divRefs = useRef([]);
@@ -95,7 +96,7 @@ function People() {
         <div className="line"></div>
         <p className="ml-7 fs-27 ">Our Founder's Key Principles</p>
       </div>
-      <div className="flex items-start justify-between">
+      <div className="flex items-start justify-between keyPrinciplesContainer">
         <div
           onClick={() => {
             setIsKPOpen(true);
@@ -105,7 +106,11 @@ function People() {
         >
           <div className="keyPrinciplesOverlay ">
             Green Buildings{" "}
-            <span className="fs-12 discoverMore">Discover More</span>{" "}
+            <span className="fs-12 discoverMore">
+              <FaArrowUpRightFromSquare
+                style={{ fontSize: "12px", marginLeft: "4px" }}
+              />
+            </span>{" "}
           </div>
           <img className="w-full h-full " src={gb} alt="gb"></img>
         </div>
@@ -118,7 +123,11 @@ function People() {
         >
           <div className="keyPrinciplesOverlay ">
             Vastu Science{" "}
-            <span className="fs-12 discoverMore">Discover More</span>
+            <span className="fs-12 discoverMore">
+              <FaArrowUpRightFromSquare
+                style={{ fontSize: "12px", marginLeft: "4px" }}
+              />
+            </span>
           </div>
           <img className="w-full h-full " src={v5e} alt="v5e"></img>
         </div>
@@ -131,7 +140,11 @@ function People() {
         >
           <div className="keyPrinciplesOverlay ">
             Natural Buildings{" "}
-            <span className="fs-12 discoverMore">Discover More</span>
+            <span className="fs-12 discoverMore">
+              <FaArrowUpRightFromSquare
+                style={{ fontSize: "12px", marginLeft: "4px" }}
+              />
+            </span>
           </div>
           <img className="w-full h-full " src={nb} alt="nb"></img>
         </div>

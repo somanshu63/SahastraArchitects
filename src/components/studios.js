@@ -6,7 +6,7 @@ import MapWithMarkers from "./map";
 function Studios() {
   const divRefs = useRef([]);
   const [inView, setInView] = useState(null);
-  const [counts, setCounts] = useState([0]);
+  const [counts, setCounts] = useState([0, 0]);
 
   const typingEffect = (event) => {
     const updateContent = event;
@@ -35,6 +35,14 @@ function Studios() {
                 typingEffect(entry);
               }
             }
+            if (entry.target.id === "div2") {
+              if (counts[1] < 1) {
+                const array = counts;
+                array[1] = 1;
+                setCounts(array);
+                entry?.target.classList.add("fadeInAnimation");
+              }
+            }
           }
         });
       },
@@ -58,7 +66,9 @@ function Studios() {
 
   return (
     <div className="pLR67 mRT3">
-      <MapWithMarkers />
+      <div id="div2" ref={(el) => (divRefs.current[1] = el)}>
+        <MapWithMarkers />
+      </div>
 
       <p
         id="div1"

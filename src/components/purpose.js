@@ -10,54 +10,64 @@ import { useEffect, useRef, useState } from "react";
 
 function Purpose() {
   const divRefs = useRef([]);
+  const [counts, setCounts] = useState([0, 0, 0, 0, 0, 0]);
 
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  }, []);
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             if (entry.target.id === "div1") {
-              typingEffect(entry);
+              if (counts[0] < 1) {
+                const array = counts;
+                array[0] = 1;
+                setCounts(array);
+                typingEffect(entry);
+              }
             }
             if (entry.target.id === "div2") {
-              typingEffect(entry);
-              entry.target.children[1].classList.add("animateRight");
-              setTimeout(() => {
-                entry.target.children[1].classList.remove("animateRight");
-              }, 2000);
+              if (counts[1] < 1) {
+                const array = counts;
+                array[1] = 1;
+                setCounts(array);
+                typingEffect(entry);
+                entry.target.children[1].classList.add("animateRight");
+              }
             }
             if (entry.target.id === "div3") {
-              entry.target.children[0].classList.add("animateLeft");
-              entry.target.children[1].classList.add("animateRight");
-              setTimeout(() => {
-                entry.target.children[0].classList.remove("animateLeft");
-              }, 2000);
-              setTimeout(() => {
-                entry.target.children[1].classList.remove("animateRight");
-              }, 3000);
+              if (counts[2] < 1) {
+                const array = counts;
+                array[2] = 1;
+                setCounts(array);
+                entry.target.children[0].classList.add("animateLeft");
+                entry.target.children[1].classList.add("animateRight");
+              }
             }
             if (entry.target.id === "div4") {
-              entry.target.children[0].classList.add("animateLeft");
-              entry.target.children[1].classList.add("animateRight");
-              setTimeout(() => {
-                entry.target.children[0].classList.remove("animateLeft");
-              }, 2000);
-              setTimeout(() => {
-                entry.target.children[1].classList.remove("animateRight");
-              }, 3000);
+              if (counts[3] < 1) {
+                const array = counts;
+                array[3] = 1;
+                setCounts(array);
+                entry.target.children[0].classList.add("animateLeft");
+                entry.target.children[1].classList.add("animateRight");
+              }
             }
             if (entry.target.id === "div5") {
-              typingEffect(entry);
-              entry.target.children[1].classList.add("animateRight");
-              setTimeout(() => {
-                entry.target.children[1].classList.remove("animateRight");
-              }, 2000);
+              if (counts[4] < 1) {
+                const array = counts;
+                array[4] = 1;
+                setCounts(array);
+                typingEffect(entry);
+                entry.target.children[1].classList.add("animateRight");
+              }
             }
             if (entry.target.id === "div6") {
-              typingEffect(entry);
+              if (counts[5] < 1) {
+                const array = counts;
+                array[5] = 1;
+                setCounts(array);
+                typingEffect(entry);
+              }
             }
           }
         });

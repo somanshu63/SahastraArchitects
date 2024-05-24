@@ -30,10 +30,9 @@ function Work() {
   const [loading, setLoading] = useState(true);
   const height = window.innerWidth < 550 ? 400 : 600;
   const divRefs = useRef([]);
+  const [counts, setCounts] = useState([0, 0]);
   const [inView, setInView] = useState(null);
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  }, []);
+
   const typingEffect = (event) => {
     const updateContent = event;
 
@@ -54,7 +53,20 @@ function Work() {
           if (entry.isIntersecting) {
             setInView(entry.target.id);
             if (entry.target.id === "div1") {
-              typingEffect(entry);
+              if (counts[0] < 1) {
+                const array = counts;
+                array[0] = 1;
+                setCounts(array);
+                typingEffect(entry);
+              }
+            }
+            if (entry.target.id === "div2") {
+              if (counts[1] < 1) {
+                const array = counts;
+                array[1] = 1;
+                setCounts(array);
+                entry.target.classList.add("fadeInAnimation");
+              }
             }
           }
         });
@@ -85,7 +97,11 @@ function Work() {
 
   return (
     <div className="pLR67 workContainer h-full">
-      <div className="relative">
+      <div
+        id="div2"
+        ref={(el) => (divRefs.current[1] = el)}
+        className="relative"
+      >
         {currectVideoIndex === 0 ? (
           <video className="video" autoPlay controls>
             <source src={videos[0].video} type="video/mp4" />

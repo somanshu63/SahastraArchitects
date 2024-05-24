@@ -4,9 +4,10 @@ function IDSImage() {
   return (
     <div>
       <div className="structure relative mt-14">
-        <div className="hoverText">
+        <div className="structureImageOverlay">
           What's hidden in this image? Hover to see!
         </div>
+
         <NavLink to="/vastu-solutions">
           <div className="structureVastu"></div>
           <div className="vastuLabelStructure label">Vastu</div>

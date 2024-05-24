@@ -6,9 +6,8 @@ import MapWithMarkers from "./map";
 function Studios() {
   const divRefs = useRef([]);
   const [inView, setInView] = useState(null);
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  }, []);
+  const [counts, setCounts] = useState([0]);
+
   const typingEffect = (event) => {
     const updateContent = event;
 
@@ -29,7 +28,12 @@ function Studios() {
           if (entry.isIntersecting) {
             setInView(entry.target.id);
             if (entry.target.id === "div1") {
-              typingEffect(entry);
+              if (counts[0] < 1) {
+                const array = counts;
+                array[0] = 1;
+                setCounts(array);
+                typingEffect(entry);
+              }
             }
           }
         });
@@ -51,9 +55,7 @@ function Studios() {
       });
     };
   }, []);
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  }, []);
+
   return (
     <div className="pLR67 mRT3">
       <MapWithMarkers />

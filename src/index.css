@@ -239,6 +239,7 @@ body {
   position: fixed;
   bottom: 15%;
   right: 1%;
+  z-index: 100;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -419,8 +420,8 @@ img {
   z-index: 10;
 }
 
-.hutContainer:hover > .hutBorder,
-.hutContainer:hover > .chimney > .chimneyWall {
+.hutContainer:hover > .hutBorderNavlink > .hutBorder,
+.hutContainer:hover > .hutBorderNavlink > .chimney > .chimneyWall {
   background: url("../src/images/home/woodenTexture.webp");
 }
 .topLeft {
@@ -468,6 +469,7 @@ img {
   height: 5.5rem;
   right: 0;
   top: 0%;
+  z-index: 1;
 }
 .chimneyTop {
   position: absolute;
@@ -642,17 +644,29 @@ img {
 }
 .structure {
   height: 92vh;
-  width: 98.7vw;
+  width: 100%;
+}
+.structureImageOverlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 75%;
+  top: 0;
+  z-index: 10;
+  padding-top: 3%;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  background: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0));
 }
 .structureImage {
   filter: grayscale(100);
 }
 .structureVastu {
   position: absolute;
-  top: 5%;
+  top: 3.7%;
   left: 6%;
   bottom: 42%;
-  z-index: 10;
+  z-index: 9;
   right: 78.8%;
   background: url("../src/images/home/lamp.jpg");
   background-size: cover;
@@ -668,10 +682,10 @@ img {
 .structureLandscape {
   position: absolute;
   top: 42%;
-  left: 86%;
+  left: 85%;
   bottom: 0%;
   z-index: 10;
-  right: 0%;
+  right: 1%;
   background: url("../src/images/home/landscape.jpg");
   background-size: cover;
   filter: grayscale(100);
@@ -760,20 +774,18 @@ img {
   border-right: 30px solid rgb(248, 142, 3);
   border-bottom: 20px solid transparent;
 }
-.hoverText {
-  position: absolute;
-  top: 5%;
-  left: 40%;
-  z-index: 10;
-  color: rgb(0, 0, 0);
-  text-shadow: 3px 3px 3px rgb(255, 255, 255);
-}
+
 .hutHoverText {
   position: absolute;
-  top: -7%;
-  left: 15%;
+  top: -13.5%;
+  left: 0;
+  right: 0;
+  bottom: 106%;
+  background: linear-gradient(rgba(0, 0, 0), rgba(0, 0, 0, 0));
+  text-align: center;
+  padding-top: 2%;
   z-index: 10;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
 }
 .pL67 {
   margin-left: 5.875rem;
@@ -998,6 +1010,93 @@ td {
   animation-duration: 2s;
 }
 
+/* people */
+
+.keyPrinciples {
+  width: 30%;
+  position: relative;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.keyPrinciples:hover > .KPHoverText {
+  display: none;
+}
+.keyPrinciplesOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  font-size: 27px;
+  color: rgba(255, 255, 255, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  padding: 1rem;
+  background: linear-gradient(to top, rgb(0, 0, 0), rgba(0, 0, 0, 0.6));
+}
+.keyPrinciples:hover {
+  transform: scale(1.2);
+  transition: transform 1s;
+}
+.keyPrinciples:not(:hover) {
+  transform: scale(0.9);
+  transition: transform 1s;
+}
+.keyPrinciples:hover > .keyPrinciplesOverlay {
+  color: white;
+  background: linear-gradient(to top, rgba(0, 0, 0), rgba(0, 0, 0, 0));
+}
+
+.discoverMore {
+  display: none;
+}
+.keyPrinciples:hover > .keyPrinciplesOverlay > .discoverMore {
+  display: block;
+  position: absolute;
+  bottom: 2%;
+  right: 2%;
+}
+.br50 {
+  border-radius: 50%;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+.KPOverlay {
+  font-family: "Shadows Into Light Two", cursive;
+  position: fixed;
+  letter-spacing: 3px;
+  top: 0%;
+  right: 0%;
+  bottom: 0%;
+  left: 0%;
+  z-index: 101;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.96);
+  animation: fadeIn 0.5s;
+}
+.fadeOutAnimation {
+  animation: fadeOut 0.5s;
+}
+.fadeInAnimation {
+  animation: fadeIn 0.8s;
+}
+
 /* mobile screen */
 @media screen and (max-width: 1200px) {
   .container {
@@ -1006,6 +1105,10 @@ td {
   .video,
   .h-60 {
     height: 40vh;
+  }
+  .structure {
+    height: 33vh;
+    width: 100%;
   }
   .home {
     height: 40vh;
@@ -1064,6 +1167,10 @@ td {
   .h-80 {
     height: 17rem;
   }
+  .structure {
+    height: 30vh;
+    width: 100%;
+  }
   .hutContainer {
     width: 75%;
     margin: 8rem auto 0 auto;
@@ -1098,6 +1205,10 @@ td {
   .home {
     height: 40vh;
     margin: 0 4rem;
+  }
+  .structure {
+    height: 33vh;
+    width: 100%;
   }
   .pLR67 {
     padding: 0 4rem;
@@ -1183,6 +1294,10 @@ td {
   .home {
     height: 40vh;
     margin: 0 3rem;
+  }
+  .structure {
+    height: 33vh;
+    width: 100%;
   }
   .pLR67 {
     padding: 0 3rem;
@@ -1314,6 +1429,10 @@ td {
   .home {
     height: 30vh;
     margin: 0 2rem;
+  }
+  .structure {
+    height: 20vh;
+    width: 100%;
   }
   .video {
     height: 30vh;

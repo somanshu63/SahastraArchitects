@@ -13,7 +13,6 @@ import spotlight2 from "../images/home/spotlight1.jpg";
 import { collectionArray } from "../data";
 import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 import IDSImage from "./IDSImage";
-const div7 = [...document.getElementsByClassName("div7")];
 const doonOfficePictures = [DoonOffice1, DoonOffice2];
 const spotlightPictures = [spotlight1, spotlight2];
 
@@ -21,9 +20,9 @@ function Home(props) {
   const [collection, setCollection] = useState(collectionArray);
   const [width, setWidth] = useState(window.innerWidth * 0.14);
   const [actualWidth, setActualWidth] = useState(window.innerWidth * 1.14);
-
   const [currentPictureIndex, setCurrentPictureIndex] = useState(0);
   const [currentSpotlightIndex, setCurrentSpotlightIndex] = useState(1);
+  const [counts, setCounts] = useState([0, 0, 0, 0, 0, 0, 0, 0]);
   const handleNext = () => {
     const updatedCollection = [...collection.slice(1), collection[0]]; // Move the first item to the end
     setCollection(updatedCollection);
@@ -54,50 +53,68 @@ function Home(props) {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             if (entry.target.id === "div1") {
-              typingEffect(entry);
-              entry.target.children[1].classList.add("animateRight");
-              setTimeout(() => {
-                entry.target.children[1].classList.remove("animateRight");
-              }, 2000);
+              if (counts[0] < 1) {
+                const array = counts;
+                array[0] = 1;
+                setCounts(array);
+                typingEffect(entry);
+                entry.target.children[1].classList.add("animateRight");
+              }
             }
             if (entry.target.id === "div2") {
-              typingEffect(entry);
-              entry.target.children[1].classList.add("animateRight");
-              setTimeout(() => {
-                entry.target.children[1].classList.remove("animateRight");
-              }, 2000);
+              if (counts[1] < 1) {
+                const array = counts;
+                array[1] = 1;
+                setCounts(array);
+                typingEffect(entry);
+                entry.target.children[1].classList.add("animateRight");
+              }
             }
             if (entry.target.id === "div3") {
               entry.target.children[0].classList.add("animateLeft");
               entry.target.children[1].classList.add("animateRight");
-              setTimeout(() => {
-                entry.target.children[0].classList.remove("animateLeft");
-              }, 2000);
-              setTimeout(() => {
-                entry.target.children[1].classList.remove("animateRight");
-              }, 3000);
             }
             if (entry.target.id === "div4") {
-              typingEffect2(entry);
+              if (counts[3] < 1) {
+                const array = counts;
+                array[3] = 1;
+                setCounts(array);
+                typingEffect2(entry);
+              }
             }
             if (entry.target.id === "div5") {
-              typingEffect(entry);
-              entry.target.children[1].classList.add("animateRight");
-              setTimeout(() => {
-                entry.target.children[1].classList.remove("animateRight");
-              }, 2000);
+              if (counts[4] < 1) {
+                const array = counts;
+                array[4] = 1;
+                setCounts(array);
+                typingEffect(entry);
+                entry.target.children[1].classList.add("animateRight");
+              }
             }
             if (entry.target.id === "div6") {
-              typingEffect(entry);
-              entry.target.children[1].classList.add("animateRight");
-              setTimeout(() => {
-                entry.target.children[1].classList.remove("animateRight");
-              }, 2000);
+              if (counts[5] < 1) {
+                const array = counts;
+                array[5] = 1;
+                setCounts(array);
+                typingEffect(entry);
+                entry.target.children[1].classList.add("animateRight");
+              }
             }
-            if (entry.target.id === "div4") {
-              div7?.map((div) => {
-                typingEffect3(div);
-              });
+            if (entry.target.id === "div7") {
+              if (counts[6] < 1) {
+                const array = counts;
+                array[6] = 1;
+                setCounts(array);
+                entry.target.classList.add("fadeInAnimation");
+              }
+            }
+            if (entry.target.id === "div8") {
+              if (counts[7] < 1) {
+                const array = counts;
+                array[7] = 1;
+                setCounts(array);
+                entry.target.classList.add("fadeInAnimation");
+              }
             }
           }
         });
@@ -142,7 +159,6 @@ function Home(props) {
     }
   };
   const typingEffect2 = (event) => {
-    console.log(event);
     const updateContent = event;
     const contentDescription = updateContent.target?.innerText;
     for (let i = 0; i <= contentDescription.length; i++) {
@@ -151,20 +167,24 @@ function Home(props) {
       }, i * 15);
     }
   };
-  const typingEffect3 = (event) => {
-    const updateContent = event;
-    const contentDescription = updateContent.innerText;
-    for (let i = 0; i <= contentDescription.length; i++) {
-      setTimeout(() => {
-        updateContent.innerText = contentDescription.substring(0, i);
-      }, i * 15);
-    }
-  };
+  // const typingEffect3 = (event) => {
+  //   const updateContent = event;
+  //   const contentDescription = updateContent.innerText;
+  //   for (let i = 0; i <= contentDescription.length; i++) {
+  //     setTimeout(() => {
+  //       updateContent.innerText = contentDescription.substring(0, i);
+  //     }, i * 15);
+  //   }
+  // };
 
   return (
     <div>
-      <HeaderHome />
-      <IDSImage />
+      <div id="div7" ref={(el) => (divRefs.current[6] = el)}>
+        <HeaderHome />
+      </div>
+      <div id="div8" ref={(el) => (divRefs.current[7] = el)}>
+        <IDSImage />
+      </div>
       <div
         id="div1"
         ref={(el) => (divRefs.current[0] = el)}
@@ -347,11 +367,7 @@ function Home(props) {
                     ></img>
                   </NavLink>
 
-                  <p
-                    id="div7"
-                    ref={(el) => (divRefs.current[6] = el)}
-                    className="gray text-base text-justify font-semibold div7 leading-6"
-                  >
+                  <p className="gray text-base text-justify font-semibold div7 leading-6">
                     {item.description}{" "}
                   </p>
                   {window.innerWidth > 550 && (id === 0 || id === 5) ? (

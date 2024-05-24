@@ -77,6 +77,34 @@ import worktheBackpackersStay1 from "../src/images/work images/backpackers stay1
 import workaihtm from "../src/images/work images/aihtm.jpg";
 import worktheWoodenBrownHouse from "../src/images/work images/the wooden brown house.jpg";
 import worksns from "../src/images/work images/sns.png";
+import gb from "../src/images/people/gb.webp";
+import v5e from "../src/images/people/v5e.jpg";
+import nb from "../src/images/people/nb.jpeg";
+
+export const keyPrinciplesData = [
+  {
+    name: "Green Buildings Concept",
+    image: { src: gb, alt: "green buildings concept" },
+    li1: "A green building is a clean, sustainable structure designed with natural materials, minimal energy use, and renewable resources. It is easy to maintain and cost-effective.",
+    li2: "Under CEO Abhinav Gupta, Sahastra Architects leads in sustainable design, prioritizing resource efficiency, healthy indoor environments, sustainable materials, waste reduction, and water conservation.",
+    li3: "Sahastra Architects' innovative designs embody environmental responsibility, creating beautiful, functional, and sustainable buildings for a better future.",
+  },
+  {
+    name: "Vastu Science",
+    image: { src: v5e, alt: "Vastu Science" },
+    li1: "At Sahastra Architects, under the leadership of CEO Abhinav Gupta, our design philosophy is deeply rooted in the ancient Indian architectural science of Vastu Shastra.",
+    li2: "We seamlessly weave Vastu principles into our designs, paying special attention to the five elemental forces: Earth, Water, Fire, Air, and Space.",
+    li3: "Each element holds significance in promoting stability, prosperity, energy, movement, and expansion within our architectural creations.",
+  },
+  {
+    name: "Natural Buildings Concept",
+    image: { src: nb, alt: "Natural Buildings Concept" },
+
+    li1: "At Sahastra Architects, led by CEO Abhinav Gupta, we specialize in crafting natural buildings that seamlessly blend with their surroundings.",
+    li2: "Our approach prioritizes sustainable design, utilizing natural materials and innovative techniques to minimize environmental impact and optimize energy efficiency.",
+    li3: "With a focus on healthy living environments and integration with nature, our designs create sustainable, enriching spaces for communities to thrive.",
+  },
+];
 
 export const collectionArray = [
   {

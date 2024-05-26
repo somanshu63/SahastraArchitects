@@ -1,12 +1,62 @@
-import vastuBanner from "../images/IDS/vastuBanner.jpeg";
-import benefitsOfVastu from "../images/IDS/benefitsOfVastu.webp";
+import vastuBanner from "../images/IDS/vastuBanner.jpg";
+import benefitsOfVastu from "../images/IDS/vastuBenefits.png";
 import principleOfVastu from "../images/IDS/principleOfVastu.jpg";
-import principleOfVastu2 from "../images/IDS/principleOfVastu2.jpeg";
-import principleOfVastu4 from "../images/IDS/principleOfVastu4.jpg";
+import principleOfVastu2 from "../images/IDS/principlesOfVastu2.webp";
+import principleOfVastu4 from "../images/IDS/principlesOfVastu4.jpeg";
 import principleOfVastu3 from "../images/IDS/princpleOfVastu3.png";
 import vastuShastra from "../images/IDS/vastuShastra.jpg";
+import { useEffect, useRef, useState } from "react";
 
 function VastuSolutions() {
+  const divRefs = useRef([]);
+  const [counts, setCounts] = useState([0, 0, 0, 0, 0, 0]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            if (
+              entry.target.id === "div1" ||
+              entry.target.id === "div2" ||
+              entry.target.id === "div3"
+            ) {
+              // if (counts[0] < 1) {
+              //   const array = counts;
+              //   array[0] = 1;
+              //   setCounts(array);
+              // }
+              entry.target.children[1].classList.add("slideRight");
+              setTimeout(() => {
+                entry.target.children[1].classList.remove("imageContainer");
+                entry.target.children[1].children[0].classList.add(
+                  "aDSOverlayHidden"
+                );
+                entry.target.children[0].classList.add("slideDown");
+                entry.target.children[0].classList.remove("hidden");
+                entry.target.classList.add("justifyContentBetween");
+              }, 1000);
+            }
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    divRefs.current.forEach((div) => {
+      if (div) {
+        observer.observe(div);
+      }
+    });
+
+    return () => {
+      divRefs.current.forEach((div) => {
+        if (div) {
+          observer.unobserve(div);
+        }
+      });
+    };
+  }, []);
   return (
     <div className="-mt-3">
       <div className="vastuBannerContainer relative">
@@ -17,28 +67,46 @@ function VastuSolutions() {
         ></img>
         <div className="vastuBannerOverlay">Vastu Solutions</div>
       </div>
-      <div className="flex items-start justify-between pLR67 mt-32">
-        <div className="w-1/2 mr-8">
+      <div
+        id="div1"
+        ref={(el) => (divRefs.current[0] = el)}
+        className="flex column imageHoverContainer items-start justify-center pLR67 mt-32"
+      >
+        <div className="w-1/2 w100 mr-8 hidden">
           <div>
             <h3 className="fs-27 leading-10 mb-9 ">
               Architectural Vastu Shastra
             </h3>
             <p className="fs-17 leading-6 text-justify">
-              Architectural Vastu Shastra is an ancient Indian science that
-              governs the principles of design, layout, measurements, ground
-              preparation, space arrangement, and spatial geometry to achieve
-              harmony and balance in buildings. It is rooted in the belief that
-              the physical environment can influence various aspects of human
-              life, including health, wealth, happiness, and prosperity.
+              At Sahastra Architects, we embrace Architectural Vastu Shastra as
+              a timeless Indian science guiding our design ethos. It's more than
+              just principles—it's about creating spaces that resonate with
+              harmony and balance. From layout to spatial geometry, we believe
+              in crafting environments that nurture well-being, inviting health,
+              wealth, happiness, and prosperity into every corner. It's our way
+              of blending ancient wisdom with modern design for spaces that
+              truly feel like home.
             </p>
           </div>
         </div>
-        <div className="w48">
+        <div className="w48 w100 mRT3 imageContainer relative">
+          <div className="aDSOverlay text-center">
+            Architectural Vastu Shastra
+            {window.innerWidth < 550 ? (
+              <span className="fs-12 block mt-3">click to know more</span>
+            ) : (
+              ""
+            )}
+          </div>
           <img src={vastuShastra} alt="vastu" className="news1Image"></img>
         </div>
       </div>
-      <div className="flex items-start justify-between pLR67 mt-32">
-        <div className="w-1/2 mr-8">
+      <div
+        id="div2"
+        ref={(el) => (divRefs.current[1] = el)}
+        className="flex column imageHoverContainer items-start justify-center pLR67 mt-32"
+      >
+        <div className="w-1/2 w100 mr-8 hidden">
           <h3 className="fs-27 leading-10 mb-9  ">
             Key Principles of Vastu Shastra
           </h3>
@@ -132,7 +200,15 @@ function VastuSolutions() {
             </li>
           </ul>
         </div>
-        <div className="w48">
+        <div className="w48 w100 mRT3 imageContainer relative">
+          <div className="aDSOverlay textUp">
+            Key Principles of Vastu Shastra
+            {window.innerWidth < 550 ? (
+              <span className="fs-12 block mt-3">click to know more</span>
+            ) : (
+              ""
+            )}
+          </div>
           <img src={principleOfVastu} alt="vastu" className="news1Image"></img>
           <img
             src={principleOfVastu2}
@@ -151,8 +227,12 @@ function VastuSolutions() {
           ></img>
         </div>
       </div>
-      <div className="flex items-start justify-between pLR67 mt-32">
-        <div className="w-1/2 mr-8">
+      <div
+        id="div3"
+        ref={(el) => (divRefs.current[2] = el)}
+        className="flex column imageHoverContainer items-start justify-center pLR67 mt-32"
+      >
+        <div className="w-1/2 w100 hidden mr-8">
           <h3 className="fs-27 leading-10 mb-9  ">
             Benefits of Vastu in Architecture
           </h3>
@@ -179,7 +259,16 @@ function VastuSolutions() {
             </li>
           </ul>
         </div>
-        <div className="w48">
+        <div className="w48 w100 mRT3 imageContainer relative">
+          <div className="aDSOverlay">
+            Benefits of Vastu in Architecture
+            {window.innerWidth < 550 ? (
+              <span className="fs-12 block mt-3">click to know more</span>
+            ) : (
+              ""
+            )}
+          </div>
+
           <img
             src={benefitsOfVastu}
             alt="vastu"

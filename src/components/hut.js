@@ -11,7 +11,7 @@ function Hut() {
     <div className="">
       <div className="relative hutContainer ">
         <div className="hutHoverText">
-          Hover here to unlock the secrets of IDS!
+          Hover here to unlock the secrets of ADS!
         </div>
         <NavLink className="hutBorderNavlink" to="/facade-designs">
           <div className="hutBorder topLeft"></div>

@@ -87,7 +87,7 @@ function People() {
         <img
           src={AbhinavGupta}
           alt="projects"
-          className="w-250I object-cover mb-6"
+          className="w-250I bR50 object-cover mb-6"
         ></img>
         <p className="text-base font-bold mb-3  leading-7">Abhinav Gupta</p>
         <p className="text-xs font-bold gray">CEO</p>
@@ -96,13 +96,13 @@ function People() {
         <div className="line"></div>
         <p className="ml-7 fs-27 ">Our Founder's Key Principles</p>
       </div>
-      <div className="flex items-start justify-between keyPrinciplesContainer">
+      <div className="flex column items-start justify-between keyPrinciplesContainer">
         <div
           onClick={() => {
             setIsKPOpen(true);
             setIndex(0);
           }}
-          className="keyPrinciples"
+          className="keyPrinciples w100"
         >
           <div className="keyPrinciplesOverlay ">
             Green Buildings{" "}
@@ -119,7 +119,7 @@ function People() {
             setIsKPOpen(true);
             setIndex(1);
           }}
-          className="keyPrinciples"
+          className="keyPrinciples w100 mRT3"
         >
           <div className="keyPrinciplesOverlay ">
             Vastu Science{" "}
@@ -136,7 +136,7 @@ function People() {
             setIsKPOpen(true);
             setIndex(2);
           }}
-          className="keyPrinciples"
+          className="keyPrinciples w100 mRT3"
         >
           <div className="keyPrinciplesOverlay ">
             Natural Buildings{" "}
@@ -150,7 +150,7 @@ function People() {
         </div>
       </div>
       {isKPOpen ? (
-        <div className="KPOverlay">
+        <div className="KPOverlay p-12">
           <div className="flex justify-end">
             <IoClose
               onClick={() => {
@@ -161,15 +161,15 @@ function People() {
               style={{ fontSize: "2rem", color: "white" }}
             />
           </div>
-          <div className="flex items-start">
-            <div className="w-1/3 mr-8">
+          <div className="flex column justify-between items-start">
+            <div className="w-1/3 mRT3 w100">
               <img
-                className="w-full h-full "
+                className="w-full h-full"
                 src={keyPrinciplesData[index].image.src}
                 alt={keyPrinciplesData[index].image.alt}
               ></img>
             </div>
-            <div className="text-white w-3/5">
+            <div className="text-white w-3/5 w100 mRT3">
               <h1 className="fs-27 mb-8">{keyPrinciplesData[index].name}</h1>
 
               <ul className="mb-6">

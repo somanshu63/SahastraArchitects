@@ -134,8 +134,10 @@ function Purpose() {
             We're in it for the greater good.
           </h3>
           <p className="fs-17 leading-6 pr-8">
-            Our goal is to design places that make a positive difference in the
-            world. That’s why people are at the heart of everything we do.
+            At Sahastra Architects, we’re all about designing spaces that truly
+            make a difference. People are at the heart of every project we
+            undertake because creating positive, impactful places is our
+            passion.
           </p>
         </div>
         <div className="w48 w100 mRT3 text-right">
@@ -266,10 +268,10 @@ function Purpose() {
             We create places with meaning.
           </h3>
           <p className="fs-17 leading-6 pr-8">
-            There’s so much more to architecture than what meets the eye. Every
-            place has a story, and as we design, we help tell it. Our work
-            enlivens neighborhoods, builds communities, energizes the citizenry,
-            and respects and protects our planet.
+            Architecture is more than just buildings; it's about storytelling.
+            Every place has its own unique story, and our designs bring these
+            stories to life. We create spaces that enrich neighborhoods, build
+            strong communities, energize people, and care for our planet.
           </p>
         </div>
         <div className="w48 w100 mRT3 text-right">
@@ -302,10 +304,11 @@ function Purpose() {
         <div className="w-1/2">
           <h3 className="fs-27 leading-10  mb-9">We design with purpose.</h3>
           <p className="fs-17 leading-6 pr-6 text-justify">
-            Several ideals ignite our passions and keep us focused on what
-            matters. These core values are the building blocks of who we are and
-            what we stand for. They give us purpose. We invite you to learn more
-            about them, as well as our legacy.
+            At Sahastra Architects, several ideals ignite our passions and keep
+            us focused on what matters most. These core values are the building
+            blocks of who we are and what we stand for, giving us a sense of
+            purpose. We warmly invite you to explore our values and discover our
+            legacy.
           </p>
         </div>
       </div>

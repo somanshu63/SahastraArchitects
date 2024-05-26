@@ -143,6 +143,7 @@ html {
 }
 body {
   font-family: "Open Sans", sans-serif;
+  background: #e5e4e2;
 }
 .container {
   max-width: 1600px;
@@ -347,6 +348,7 @@ img {
   padding: 18px 0;
   display: inline-flex;
   z-index: 10;
+  border-bottom: 2px solid transparent;
 }
 .fixedBar {
   position: fixed;
@@ -373,18 +375,6 @@ img {
     transform: scale(1);
   }
 
-  /* 14% {
-    transform: scale(1.2);
-  }
-
-  28% {
-    transform: scale(1);
-  }
-
-  42% {
-    transform: scale(1.2);
-  } */
-
   50% {
     transform: scale(1.2);
   }
@@ -392,16 +382,25 @@ img {
     transform: scale(1);
   }
 }
-.navLink:hover,
-.iDSLinks:hover {
-  border-bottom: 2px solid white;
+
+.navLink:hover {
+  border-color: white;
   animation: navlinkAnimation 0.5s;
+}
+.iDSLinks:hover {
+  animation: navlinkAnimation 0.5s;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
 }
 .brand:hover {
   animation: navlinkAnimation 0.5s;
 }
 .active {
   border-bottom: 2px solid white;
+}
+.iDSActive {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
 }
 .no-underline {
   text-decoration: none;
@@ -880,12 +879,15 @@ img {
   right: 0;
   left: 0;
   bottom: 0;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(229, 228, 226, 0.5);
 }
 .collectionImage {
   width: 100%;
   height: 10.625rem;
   margin-bottom: 30px;
+}
+.bR50 {
+  border-radius: 50%;
 }
 .imageHoverBox {
   display: none;
@@ -1018,11 +1020,11 @@ td {
 
 @keyframes imageAnimationRight {
   0% {
-    margin-right: -50%;
+    transform: translate(100%);
   }
 
   100% {
-    margin-right: 0%;
+    transform: translate(0);
   }
 }
 .animateRight {
@@ -1031,11 +1033,11 @@ td {
 }
 @keyframes imageAnimationLeft {
   0% {
-    margin-left: -50%;
+    transform: translate(-100%);
   }
 
   100% {
-    margin-left: 0%;
+    transform: translate(0);
   }
 }
 .animateLeft {
@@ -1125,7 +1127,6 @@ td {
   bottom: 0%;
   left: 0%;
   z-index: 101;
-  padding: 2rem;
   background: rgba(0, 0, 0, 0.96);
   animation: fadeIn 0.5s;
 }
@@ -1134,6 +1135,76 @@ td {
 }
 .fadeInAnimation {
   animation: fadeIn 0.8s;
+}
+
+/* ADS */
+.mT-14 {
+  margin-top: -61px;
+}
+.hidden {
+  display: none;
+}
+.aDSOverlay {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  bottom: 0%;
+  left: 0%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 27px;
+  background: rgba(0, 0, 0, 0.7);
+}
+.textUp {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: row;
+  padding-top: 23%;
+}
+.justifyContentBetween {
+  justify-content: space-between;
+}
+.imageContainer {
+  width: 60%;
+}
+
+@keyframes slideRight {
+  0% {
+  }
+  100% {
+    width: 40%;
+    transform: translateX(75%);
+  }
+}
+@keyframes slideDown {
+  0% {
+    display: block;
+    transform: translateY(-100%);
+  }
+  100% {
+    display: block;
+    transform: translateY(0%);
+  }
+}
+.imageHoverContainer {
+  overflow: hidden;
+}
+
+.slideRight {
+  animation: slideRight 1s;
+}
+.slideDown {
+  animation: slideDown 1s;
+}
+.hiddenBlock {
+  display: block;
+}
+.aDSOverlayHidden {
+  display: none;
 }
 
 /* mobile screen */
@@ -1178,9 +1249,9 @@ td {
     height: 18rem;
   }
   .hutContainer {
-    width: 68%;
+    width: 40%;
     margin: 8rem auto 0 auto;
-    height: 45vh;
+    height: 36vh;
   }
 }
 @media screen and (max-width: 992px) {
@@ -1211,9 +1282,9 @@ td {
     width: 100%;
   }
   .hutContainer {
-    width: 75%;
+    width: 44%;
     margin: 8rem auto 0 auto;
-    height: 45vh;
+    height: 37vh;
   }
   .pLR67 {
     padding: 0 4.5rem;
@@ -1258,17 +1329,7 @@ td {
   .pR67 {
     margin-right: 4rem;
   }
-  .sidebar {
-    box-shadow: 0px 1px 20px 0 rgba(0, 0, 0, 0.59);
-    position: absolute;
-    top: 3.75rem;
-    right: 1.5rem;
-    height: 100vh;
-    background-color: white;
-    padding: 1.875rem;
-    z-index: 10;
-    margin-right: 5%;
-  }
+
   .header {
     padding: 1rem 4rem;
   }
@@ -1291,9 +1352,9 @@ td {
     height: 8rem;
   }
   .hutContainer {
-    width: 68%;
+    width: 40%;
     margin: 8rem auto 0 auto;
-    height: 44vh;
+    height: 36vh;
   }
 }
 @media screen and (max-width: 576px) {
@@ -1311,7 +1372,7 @@ td {
     bottom: 0;
     height: 100vh;
     width: 100%;
-
+    padding: 2rem 3rem;
     background-color: rgba(255, 255, 255, 0.9);
   }
   .navList {
@@ -1322,7 +1383,7 @@ td {
     height: 100%;
   }
   .navigationList {
-    margin-bottom: 3rem;
+    margin-bottom: 0.5rem;
   }
   .column {
     flex-direction: column;
@@ -1443,9 +1504,12 @@ td {
   }
 
   .hutContainer {
-    width: 81%;
+    width: 47%;
     margin: 8rem auto 0 auto;
-    height: 52vh;
+    height: 42vh;
+  }
+  .-mt-3 {
+    margin-top: -2.75rem;
   }
 }
 @media screen and (max-width: 468px) {
@@ -1455,17 +1519,7 @@ td {
   .container {
     max-width: 440px;
   }
-  .sidebar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 100vh;
-    width: 100%;
-    padding: 3rem;
-    background-color: rgba(255, 255, 255, 0.9);
-  }
+
   .home {
     height: 30vh;
     margin: 0 2rem;
@@ -1555,7 +1609,7 @@ td {
   .hutContainer {
     width: 80%;
     margin: 8rem auto 0 auto;
-    height: 40vh;
+    height: 45vh;
   }
   .bottom {
     width: 97.5%;
@@ -1564,14 +1618,17 @@ td {
     transform: rotate(90deg);
     width: 8.125rem;
     right: 11%;
-    bottom: 28%;
+    bottom: 40%;
   }
   .desk {
     left: 20%;
   }
   .left {
-    left: -32.7%;
-    top: 50%;
-    width: 27rem;
+    left: -30.7%;
+    top: 42%;
+    width: 25rem;
+  }
+  .chimney {
+    top: 2%;
   }
 }

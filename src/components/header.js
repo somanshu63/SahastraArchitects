@@ -19,7 +19,6 @@ function Header(props) {
           <span className="uppercase">Sahastra Architects</span>
         </a>
       </div>
-
       {window.innerWidth < 550 ? (
         <div className="">
           <IoMdMenu
@@ -31,7 +30,7 @@ function Header(props) {
           />
         </div>
       ) : (
-        <ul className="navList flex items-center">
+        <ul className={`navList flex items-center `}>
           <li className="navigationList">
             <NavLink
               to="/"
@@ -54,7 +53,7 @@ function Header(props) {
                 props.setSidebar(false);
               }}
             >
-              Integrated Design Solutions
+              Architectural design solutions
             </NavLink>
             <div className="iDSList">
               <ul>
@@ -63,7 +62,7 @@ function Header(props) {
                   <NavLink
                     to="/facade-designs"
                     className="uppercase iDSLinks"
-                    activeClassName="active"
+                    activeClassName="iDSActive"
                   >
                     Facade Designs
                   </NavLink>
@@ -72,7 +71,7 @@ function Header(props) {
                   <NavLink
                     to="/interior-designs"
                     className="uppercase iDSLinks"
-                    activeClassName="active"
+                    activeClassName="iDSActive"
                   >
                     Interior Designs
                   </NavLink>
@@ -81,7 +80,7 @@ function Header(props) {
                   <NavLink
                     to="/vastu-solutions"
                     className="uppercase iDSLinks"
-                    activeClassName="active"
+                    activeClassName="iDSActive"
                   >
                     Vastu Solutions
                   </NavLink>
@@ -90,7 +89,7 @@ function Header(props) {
                   <NavLink
                     to="/landscape-designs"
                     className="uppercase iDSLinks"
-                    activeClassName="active"
+                    activeClassName="iDSActive"
                   >
                     Landscape Designs
                   </NavLink>
@@ -171,8 +170,7 @@ function Header(props) {
               style={{ fontSize: "2.5rem" }}
             />
           </div>
-
-          <ul className="navList flex items-center">
+          <ul className={`navList flex items-center `}>
             <li className="navigationList">
               <NavLink
                 to="/"
@@ -180,10 +178,58 @@ function Header(props) {
                 onClick={() => {
                   props.setSidebar(false);
                 }}
-                className="navLink font-bold uppercase ml-3"
+                className="navLink uppercase ml-3"
                 activeClassName="active"
               >
                 Home
+              </NavLink>
+            </li>
+            <li className="navigationList iDS relative">
+              <NavLink
+                to="/integrated-design-solutions"
+                className="navLink uppercase pointer ml-3"
+                activeClassName="active"
+                onClick={() => {
+                  props.setSidebar(false);
+                }}
+              >
+                Architectural design solutions
+              </NavLink>
+            </li>
+            <li className="navigationList">
+              <NavLink
+                to="/facade-designs"
+                className="navLink uppercase pointer"
+                activeClassName="active"
+              >
+                Facade Designs
+              </NavLink>
+            </li>
+            <li className="navigationList">
+              <NavLink
+                to="/interior-designs"
+                className="navLink uppercase pointer"
+                activeClassName="active"
+              >
+                Interior Designs
+              </NavLink>
+            </li>
+            <li className="navigationList">
+              <NavLink
+                to="/vastu-solutions"
+                className="navLink uppercase pointer"
+                activeClassName="active"
+              >
+                Vastu Solutions
+              </NavLink>
+            </li>
+            <li className="navigationList">
+              <NavLink
+                to="/landscape-designs"
+                className="navLink uppercase pointer"
+                activeClassName="active"
+              >
+                Landscape Designs
               </NavLink>
             </li>
             <li className="navigationList">
@@ -192,7 +238,7 @@ function Header(props) {
                 onClick={() => {
                   props.setSidebar(false);
                 }}
-                className="navLink font-bold uppercase ml-3"
+                className="navLink uppercase ml-3"
                 activeClassName="active"
               >
                 Work
@@ -204,7 +250,7 @@ function Header(props) {
                 onClick={() => {
                   props.setSidebar(false);
                 }}
-                className="navLink font-bold uppercase ml-3"
+                className="navLink uppercase ml-3"
                 activeClassName="active"
               >
                 purpose
@@ -216,7 +262,7 @@ function Header(props) {
                 onClick={() => {
                   props.setSidebar(false);
                 }}
-                className="navLink font-bold uppercase ml-3"
+                className="navLink uppercase ml-3"
                 activeClassName="active"
               >
                 people
@@ -228,7 +274,7 @@ function Header(props) {
                 onClick={() => {
                   props.setSidebar(false);
                 }}
-                className="navLink font-bold uppercase ml-3"
+                className="navLink uppercase ml-3"
                 activeClassName="active"
               >
                 studios
@@ -240,7 +286,7 @@ function Header(props) {
                 onClick={() => {
                   props.setSidebar(false);
                 }}
-                className="navLink font-bold uppercase ml-3"
+                className="navLink uppercase ml-3"
                 activeClassName="active"
               >
                 career

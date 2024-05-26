@@ -440,7 +440,7 @@ img {
 /* home */
 .hutContainer {
   width: 32%;
-  margin: 8rem auto 0 auto;
+  margin: 15rem auto 0 auto;
   height: 80vh;
 }
 
@@ -809,10 +809,10 @@ img {
 
 .hutHoverText {
   position: absolute;
-  top: -13.5%;
+  top: -10%;
   left: 0;
   right: 0;
-  bottom: 106%;
+  bottom: 100%;
   background: linear-gradient(rgba(0, 0, 0), rgba(0, 0, 0, 0));
   text-align: center;
   padding-top: 2%;
@@ -1015,7 +1015,6 @@ td {
 .dot {
   list-style: circle;
   margin-left: 1.5rem;
-  margin-bottom: 1rem;
 }
 
 @keyframes imageAnimationRight {
@@ -1073,14 +1072,14 @@ td {
 }
 .keyPrinciplesContainer:hover > .keyPrinciples:not(:hover) {
   filter: blur(2px);
-  transform: scale(0.8);
+  transform: scale(0.7);
   transition: transform 1s;
 }
 .keyPrinciplesContainer:not(:hover) > .keyPrinciples {
   transition: all 1s;
 }
 .keyPrinciples:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
   transition: transform 1s;
 }
 
@@ -1180,6 +1179,28 @@ td {
     transform: translateX(75%);
   }
 }
+@keyframes textSlideRight {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.textSlideRight {
+  animation: textSlideRight 1s;
+}
+@keyframes slideDown550 {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(80%);
+  }
+}
+.slideDown550 {
+  animation: slideDown550 1s;
+}
 @keyframes slideDown {
   0% {
     display: block;
@@ -1257,7 +1278,6 @@ td {
   }
   .hutContainer {
     width: 40%;
-    margin: 8rem auto 0 auto;
     height: 36vh;
   }
 }
@@ -1290,8 +1310,10 @@ td {
   }
   .hutContainer {
     width: 44%;
-    margin: 8rem auto 0 auto;
     height: 37vh;
+  }
+  .vastuBannerContainer {
+    margin-top: -1.2rem;
   }
   .pLR67 {
     padding: 0 4.5rem;
@@ -1336,7 +1358,9 @@ td {
   .pR67 {
     margin-right: 4rem;
   }
-
+  .vastuBannerContainer {
+    margin-top: -1.8rem;
+  }
   .header {
     padding: 1rem 4rem;
   }
@@ -1360,7 +1384,6 @@ td {
   }
   .hutContainer {
     width: 40%;
-    margin: 8rem auto 0 auto;
     height: 36vh;
   }
 }
@@ -1512,7 +1535,6 @@ td {
 
   .hutContainer {
     width: 47%;
-    margin: 8rem auto 0 auto;
     height: 42vh;
   }
   .-mt-3 {
@@ -1615,7 +1637,6 @@ td {
   }
   .hutContainer {
     width: 80%;
-    margin: 8rem auto 0 auto;
     height: 45vh;
   }
   .bottom {

@@ -2,6 +2,7 @@ import react, { useRef, useState, Component, useEffect } from "react";
 import DoonOffice2 from "../images/home/DoonOffice2.jpg";
 import haridwarOffice from "../images/home/DoonOffice3.jpg";
 import MapWithMarkers from "./map";
+import Career from "./career";
 
 function Studios() {
   const divRefs = useRef([]);
@@ -88,7 +89,7 @@ function Studios() {
         <div className="line"></div>
         <p className="ml-7 fs-27  ">Our Studios</p>
       </div>
-      <ul className="flex items-start">
+      <ul className="flex items-start mb-32">
         <li className="w-250O mr-8">
           <img
             src={DoonOffice2}
@@ -106,6 +107,7 @@ function Studios() {
           <p className="text-base font-bold mb-3  leading-7">Haridwar</p>
         </li>
       </ul>
+      <Career />
     </div>
   );
 }

@@ -1,5 +1,5 @@
 import hangingFlowerPot from "../images/home/hanging flower pot.webp";
-import flowerPot from "../images/home/flower pot.png";
+import flowerPot from "../images/home/flowerPot.jpeg";
 import desk from "../images/home/desk.jpg";
 import vastu1 from "../images/home/vastu1.jpg";
 import vastu2 from "../images/home/vastu2.jpg";

@@ -145,18 +145,6 @@ function Header(props) {
               studios
             </NavLink>
           </li>
-          <li className="navigationList">
-            <NavLink
-              to="/career"
-              onClick={() => {
-                props.setSidebar(false);
-              }}
-              className="navLink uppercase ml-3"
-              activeClassName="active"
-            >
-              career
-            </NavLink>
-          </li>
         </ul>
       )}
       {props.sidebar ? (
@@ -201,6 +189,9 @@ function Header(props) {
                 to="/facade-designs"
                 className="navLink uppercase pointer"
                 activeClassName="active"
+                onClick={() => {
+                  props.setSidebar(false);
+                }}
               >
                 Facade Designs
               </NavLink>
@@ -210,6 +201,9 @@ function Header(props) {
                 to="/interior-designs"
                 className="navLink uppercase pointer"
                 activeClassName="active"
+                onClick={() => {
+                  props.setSidebar(false);
+                }}
               >
                 Interior Designs
               </NavLink>
@@ -219,6 +213,9 @@ function Header(props) {
                 to="/vastu-solutions"
                 className="navLink uppercase pointer"
                 activeClassName="active"
+                onClick={() => {
+                  props.setSidebar(false);
+                }}
               >
                 Vastu Solutions
               </NavLink>
@@ -228,6 +225,9 @@ function Header(props) {
                 to="/landscape-designs"
                 className="navLink uppercase pointer"
                 activeClassName="active"
+                onClick={() => {
+                  props.setSidebar(false);
+                }}
               >
                 Landscape Designs
               </NavLink>
@@ -278,18 +278,6 @@ function Header(props) {
                 activeClassName="active"
               >
                 studios
-              </NavLink>
-            </li>
-            <li className="navigationList">
-              <NavLink
-                to="/career"
-                onClick={() => {
-                  props.setSidebar(false);
-                }}
-                className="navLink uppercase ml-3"
-                activeClassName="active"
-              >
-                career
               </NavLink>
             </li>
           </ul>

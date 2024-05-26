@@ -7,15 +7,12 @@ import Footer from "./footer";
 import Purpose from "./purpose";
 import People from "./people";
 import Studios from "./studios";
-import News from "./news";
-import Career from "./career";
 import { FaArrowUp } from "react-icons/fa6";
 import SingleProject from "./singleProject";
 import VastuSolutions from "./vastuSolutions";
 import InteriorDesigns from "./interiorDesigns";
 import FacadeDesigns from "./facadeDesigns";
 import LandscapeDesigns from "./landscapeDesigns";
-import InViewComponent from "./purpose";
 import Ids from "./ids";
 
 function App(props) {
@@ -64,12 +61,6 @@ function App(props) {
         </Route>
         <Route path="/studios">
           <Studios />
-        </Route>
-        {/* <Route path="/news">
-          <News />
-        </Route> */}
-        <Route path="/career">
-          <Career />
         </Route>
       </Switch>
 

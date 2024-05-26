@@ -10,7 +10,7 @@ function Ids() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
   return (
-    <div className="-mt-3 bg-white">
+    <div className="-mt-3 bg-white -mb-32 pb-32">
       <div className="vastuBannerContainer relative ">
         <img
           src={aDSBanner}
@@ -28,39 +28,33 @@ function Ids() {
             Architectural design solutions
           </h3>
 
-          <p className="fs-17 leading-6 mb-6 text-justify">
-            At Sahastra Architects, we specialize in creating architectural
-            design solutions that blend functionality, aesthetics, and
-            regulatory compliance seamlessly. From the initial concept
-            development and site analysis, we ensure our designs fit perfectly
-            within their surroundings. Our focus on efficient layouts,
-            structural stability, and sustainable practices—like using
-            energy-efficient systems and eco-friendly materials—sets us apart.
-            Detailed blueprints and careful cost estimation keep the project on
-            track and within budget. We work closely with our clients,
-            incorporating their feedback through visualizations and models, to
-            create buildings that are not only practical but also beautiful and
-            inspiring.
-          </p>
-          <p className="fs-17 leading-6 mb-4 font-bold">
-            Architectural design solutions includes:-
-          </p>
           <ul>
-            <NavLink to="/facade-designs">
-              <li className="dot fs-17 mb-2 pointer">Facade Designs</li>
-            </NavLink>
-            <NavLink to="/interior-designs">
-              <li className="dot fs-17 mb-2 pointer">Interior Designs</li>
-            </NavLink>
-            <NavLink to="/vastu-solutions">
-              <li className="dot fs-17 mb-2 pointer">Vastu Solutions</li>
-            </NavLink>
-            <NavLink to="/landscape-designs">
-              <li className="dot fs-17 mb-2 pointer">Landscape Designs</li>
-            </NavLink>
+            <li className="fs-17 mb-4 dot leading-6 text-justify">
+              At Sahastra Architects, we specialize in creating architectural
+              design solutions that blend functionality, aesthetics, and
+              regulatory compliance seamlessly.
+            </li>
+            <li className="fs-17 mb-4 dot leading-6 text-justify">
+              From the initial concept development and site analysis, we ensure
+              our designs fit perfectly within their surroundings.
+            </li>
+            <li className="fs-17 mb-4 dot leading-6 text-justify">
+              Our focus on efficient layouts, structural stability, and
+              sustainable practices—like using energy-efficient systems and
+              eco-friendly materials—sets us apart.
+            </li>
+            <li className="fs-17 mb-4 dot leading-6 text-justify">
+              Detailed blueprints and careful cost estimation keep the project
+              on track and within budget.
+            </li>
+            <li className="fs-17 mb-4 dot leading-6 text-justify">
+              We work closely with our clients, incorporating their feedback
+              through visualizations and models, to create buildings that are
+              not only practical but also beautiful and inspiring.
+            </li>
           </ul>
         </div>
-        <div className="w48 w100">
+        <div className="w48 w100 mRT3">
           <img src={aDS} alt="ADS" className="mb-12"></img>
           <img src={aDS2} alt="ADS2"></img>
         </div>

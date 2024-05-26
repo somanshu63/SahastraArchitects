@@ -1,14 +1,7 @@
 import cycle from "../src/images/home/cycle.jpeg";
 import kitchen from "../src/images/home/kitchen.jpeg";
 import sns from "../src/images/home/sns.png";
-// news
-import imola from "../src/images/news/imola.jpg";
-import shanghai from "../src/images/news/shanghai.jpg";
-import yokohama from "../src/images/news/yokohama.jpg";
-import mini from "../src/images/news/mini.jpg";
-import soho from "../src/images/news/soho.jpg";
-import soil from "../src/images/news/soil.jpg";
-import biomimicry from "../src/images/news/biomimicry.jpg";
+
 // singleProject
 import hobbit1 from "../src/images/singleProject/hobbit cafe1.jpeg";
 import hobbit2 from "../src/images/singleProject/hobbit cafe2.jpeg";
@@ -149,37 +142,6 @@ export const collectionArray = [
     alt: "sns",
     description:
       "Adventure at Sun n Soil Hostel: Comfort, community, unforgettable experiences!",
-  },
-];
-
-export const news = [
-  {
-    name: "Urban Bloom / AIM Architecture + Urban Matters Installations & Structures",
-    image: shanghai,
-  },
-  {
-    name: "7 Architects Create 7 New Community Spaces Beneath a Disused Japanese Overpass",
-    image: yokohama,
-  },
-  {
-    name: "MINI LIVING's First Permanent Building Will Transform a Paint Factory into a Co-living Hotspot in Shanghai",
-    image: mini,
-  },
-  {
-    name: "SO-IL and MINI LIVING Develop Housing Prototype for Resource-Conscious Shared Living",
-    image: soil,
-  },
-  {
-    name: "SOHO China Property Mogul Zhang Xin on the Chinese Economy and Her Changing Business Model",
-    image: soho,
-  },
-  {
-    name: "Financial Times Article Details How Biomimicry Can be Applied to Architecture",
-    image: biomimicry,
-  },
-  {
-    name: "CityLab Article Details da Vinci's Technically Astounding Map of Imola",
-    image: imola,
   },
 ];
 

@@ -763,7 +763,7 @@ img {
   content: "";
   position: absolute;
   bottom: -25%;
-  left: -50%;
+  left: -45%;
   width: 0;
   height: 0;
   border-top: 20px solid transparent;
@@ -1122,12 +1122,12 @@ td {
   font-family: "Shadows Into Light Two", cursive;
   position: fixed;
   letter-spacing: 3px;
-  top: 0%;
-  right: 0%;
-  bottom: 0%;
-  left: 0%;
+  top: 10%;
+  right: 10%;
+  bottom: 10%;
+  left: 10%;
   z-index: 101;
-  background: rgba(0, 0, 0, 0.96);
+  background: rgba(255, 255, 255, 0.96);
   animation: fadeIn 0.5s;
 }
 .fadeOutAnimation {
@@ -1205,6 +1205,13 @@ td {
 }
 .aDSOverlayHidden {
   display: none;
+}
+.mapOverlay {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  bottom: 0%;
+  left: 10%;
 }
 
 /* mobile screen */

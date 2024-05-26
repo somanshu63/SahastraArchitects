@@ -66,8 +66,13 @@ function Studios() {
 
   return (
     <div className="pLR67 mRT3">
-      <div id="div2" ref={(el) => (divRefs.current[1] = el)}>
+      <div
+        id="div2"
+        ref={(el) => (divRefs.current[1] = el)}
+        className=" relative"
+      >
         <MapWithMarkers />
+        <div className="mapOverlay"></div>
       </div>
 
       <p

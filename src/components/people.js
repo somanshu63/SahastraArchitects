@@ -150,7 +150,7 @@ function People() {
         </div>
       </div>
       {isKPOpen ? (
-        <div className="KPOverlay p-12">
+        <div className="KPOverlay p-8">
           <div className="flex justify-end">
             <IoClose
               onClick={() => {
@@ -158,7 +158,7 @@ function People() {
                 setIsKPOpen(false);
               }}
               className=" pointer"
-              style={{ fontSize: "2rem", color: "white" }}
+              style={{ fontSize: "2rem", color: "black" }}
             />
           </div>
           <div className="flex column justify-between items-start">
@@ -169,7 +169,7 @@ function People() {
                 alt={keyPrinciplesData[index].image.alt}
               ></img>
             </div>
-            <div className="text-white w-3/5 w100 mRT3">
+            <div className="text-black w-3/5 w100 mRT3">
               <h1 className="fs-27 mb-8">{keyPrinciplesData[index].name}</h1>
 
               <ul className="mb-6">

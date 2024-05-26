@@ -272,7 +272,7 @@ function Work() {
         )}
 
         {!loading && work === "map" && (
-          <div className="mapContainer">
+          <div className="mapContainer relative">
             <Map
               height={height}
               width={"100%"}
@@ -294,6 +294,7 @@ function Work() {
                 />
               ))}
             </Map>
+            <div className="mapOverlay"></div>
           </div>
         )}
         {!loading && work === "list" && (

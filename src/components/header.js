@@ -5,6 +5,8 @@ import { IoClose } from "react-icons/io5";
 import { NavLink } from "react-router-dom";
 import { useHistory } from "react-router-dom";
 import logo from "../images/home/favicon.jpeg";
+import { IoIosArrowDown } from "react-icons/io";
+import { MdKeyboardArrowRight } from "react-icons/md";
 
 function Header(props) {
   const history = useHistory();
@@ -47,13 +49,16 @@ function Header(props) {
           <li className="navigationList iDS relative">
             <NavLink
               to="/integrated-design-solutions"
-              className="navLink uppercase pointer ml-3"
+              className="navLink uppercase pointer ml-3 flex items-center"
               activeClassName="active"
               onClick={() => {
                 props.setSidebar(false);
               }}
             >
               Architectural design solutions
+              <span className="ml-1">
+                <IoIosArrowDown style={{ fontSize: "1rem" }} />
+              </span>
             </NavLink>
             <div className="iDSList">
               <ul>
@@ -175,13 +180,16 @@ function Header(props) {
             <li className="navigationList iDS relative">
               <NavLink
                 to="/integrated-design-solutions"
-                className="navLink uppercase pointer ml-3"
+                className="navLink uppercase pointer ml-3 flex items-center"
                 activeClassName="active"
                 onClick={() => {
                   props.setSidebar(false);
                 }}
               >
                 Architectural design solutions
+                {/* <span className="ml-1 ">
+                  <MdKeyboardArrowRight style={{ fontSize: "1.2rem" }} />
+                </span> */}
               </NavLink>
             </li>
             <li className="navigationList">

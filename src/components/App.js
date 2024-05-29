@@ -14,6 +14,7 @@ import InteriorDesigns from "./interiorDesigns";
 import FacadeDesigns from "./facadeDesigns";
 import LandscapeDesigns from "./landscapeDesigns";
 import Ids from "./ids";
+import Gallery from "./gallery";
 
 function App(props) {
   const [sidebar, setSidebar] = useState(false);
@@ -40,6 +41,9 @@ function App(props) {
         <Route path="/projects/:slug" component={SingleProject}></Route>
         <Route path="/purpose">
           <Purpose />
+        </Route>
+        <Route path="/gallery">
+          <Gallery />
         </Route>
         <Route path="/integrated-design-solutions">
           <Ids />

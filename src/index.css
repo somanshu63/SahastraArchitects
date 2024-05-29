@@ -318,8 +318,9 @@ img {
 /* header */
 .home {
   position: relative;
-  height: 80vh;
-  margin: 0 5.875rem;
+  height: 75vh;
+  width: 75vw;
+  margin: 0 auto;
 }
 .image {
   width: 100%;
@@ -1128,6 +1129,7 @@ td {
   z-index: 101;
   background: rgba(255, 255, 255, 0.96);
   animation: fadeIn 0.5s;
+  overflow: auto;
 }
 .fadeOutAnimation {
   animation: fadeOut 0.5s;

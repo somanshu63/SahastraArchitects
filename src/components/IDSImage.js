@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom/cjs/react-router-dom.min";
 function IDSImage() {
   return (
     <div>
-      <div className="structure relative mt-14">
+      <div className="structure relative -mt-4 mb-32">
         <div className="structureImageOverlay">
           What's hidden in this image? Hover to see!
         </div>

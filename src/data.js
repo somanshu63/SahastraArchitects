@@ -137,7 +137,7 @@ export const collectionArray = [
       "Elevate cooking with us! Top appliances, expert guidance, culinary delights.",
   },
   {
-    slug: "sns",
+    slug: "sun-n-soil-backpackers-hostel",
     image: worksns,
     alt: "sns",
     description:

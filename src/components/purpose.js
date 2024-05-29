@@ -127,7 +127,7 @@ function Purpose() {
       <div
         id="div2"
         ref={(el) => (divRefs.current[1] = el)}
-        className="mt-32 column justify-between pLR67 flex relative"
+        className="mt-32 column overflow-hidden justify-between pLR67 flex relative"
       >
         <div className=" w100 mRT3 newsContent ">
           <h3 className="fs-27 leading-10 mb-9 ">
@@ -165,7 +165,7 @@ function Purpose() {
       <div
         id="div3"
         ref={(el) => (divRefs.current[2] = el)}
-        className="mt-32 column flex pLR67  justify-between"
+        className="mt-32 column overflow-hidden flex pLR67  justify-between"
       >
         <div className="w48 w100">
           <div className="imageHover">
@@ -213,7 +213,7 @@ function Purpose() {
       <div
         id="div4"
         ref={(el) => (divRefs.current[3] = el)}
-        className="mt-32 column flex pLR67  justify-between"
+        className="mt-32 overflow-hidden column flex pLR67  justify-between"
       >
         <div className="w48 w100">
           <div className="imageHover">
@@ -261,7 +261,7 @@ function Purpose() {
       <div
         id="div5"
         ref={(el) => (divRefs.current[4] = el)}
-        className="mt-32 column pLR67 flex justify-between"
+        className="mt-32 overflow-hidden column pLR67 flex justify-between"
       >
         <div className=" mRT3 w100 newsContent  pL0">
           <h3 className="fs-27 leading-10  mb-9">

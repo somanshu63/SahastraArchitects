@@ -116,6 +116,18 @@ function Header(props) {
           </li>
           <li className="navigationList">
             <NavLink
+              to="/gallery"
+              onClick={() => {
+                props.setSidebar(false);
+              }}
+              className="navLink uppercase ml-3"
+              activeClassName="active"
+            >
+              gallery
+            </NavLink>
+          </li>
+          <li className="navigationList">
+            <NavLink
               to="/purpose"
               onClick={() => {
                 props.setSidebar(false);
@@ -238,6 +250,18 @@ function Header(props) {
                 }}
               >
                 Landscape Designs
+              </NavLink>
+            </li>
+            <li className="navigationList">
+              <NavLink
+                to="/gallery"
+                onClick={() => {
+                  props.setSidebar(false);
+                }}
+                className="navLink uppercase ml-3"
+                activeClassName="active"
+              >
+                gallery
               </NavLink>
             </li>
             <li className="navigationList">

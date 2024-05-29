@@ -91,31 +91,31 @@ function Home(props) {
                 entry.target.children[1].classList.add("animateRight");
               }
             }
-            if (entry.target.id === "div6") {
-              if (counts[5] < 1) {
-                const array = counts;
-                array[5] = 1;
-                setCounts(array);
-                typingEffect(entry);
-                entry.target.children[1].classList.add("animateRight");
-              }
-            }
-            if (entry.target.id === "div7") {
-              if (counts[6] < 1) {
-                const array = counts;
-                array[6] = 1;
-                setCounts(array);
-                entry.target.classList.add("fadeInAnimation");
-              }
-            }
-            if (entry.target.id === "div8") {
-              if (counts[7] < 1) {
-                const array = counts;
-                array[7] = 1;
-                setCounts(array);
-                entry.target.classList.add("fadeInAnimation");
-              }
-            }
+            // if (entry.target.id === "div6") {
+            //   if (counts[5] < 1) {
+            //     const array = counts;
+            //     array[5] = 1;
+            //     setCounts(array);
+            //     typingEffect(entry);
+            //     // entry.target.children[1].classList.add("animateRight");
+            //   }
+            // }
+            // if (entry.target.id === "div7") {
+            //   if (counts[6] < 1) {
+            //     const array = counts;
+            //     array[6] = 1;
+            //     setCounts(array);
+            //     entry.target.classList.add("fadeInAnimation");
+            //   }
+            // }
+            // if (entry.target.id === "div8") {
+            //   if (counts[7] < 1) {
+            //     const array = counts;
+            //     array[7] = 1;
+            //     setCounts(array);
+            //     entry.target.classList.add("fadeInAnimation");
+            //   }
+            // }
           }
         });
       },
@@ -179,16 +179,16 @@ function Home(props) {
 
   return (
     <div>
-      <div id="div7" ref={(el) => (divRefs.current[6] = el)}>
-        <HeaderHome />
-      </div>
       <div id="div8" ref={(el) => (divRefs.current[7] = el)}>
         <IDSImage />
       </div>
+      {/* <div id="div7" ref={(el) => (divRefs.current[6] = el)}>
+        <HeaderHome />
+      </div> */}
       <div
         id="div1"
         ref={(el) => (divRefs.current[0] = el)}
-        className="pLR67 justify-between mt-32 mR3 flex column "
+        className="pLR67 justify-between mt-32 overflow-hidden mR3 flex column "
       >
         <div className=" w100 newsContent pL0 ">
           <span className="fs-12 mb-5">NEWS</span>
@@ -250,7 +250,7 @@ function Home(props) {
       <div
         id="div2"
         ref={(el) => (divRefs.current[1] = el)}
-        className="mt-32 mL3 flex column pLR67 justify-between"
+        className="mt-32 mL3 flex column overflow-hidden pLR67 justify-between"
       >
         <div className=" mRT3 w100 newsContent pL0 ">
           <span className="fs-12 mb-5">IT'S NOT A MOMENT, IT'S A MINDSET</span>
@@ -295,7 +295,7 @@ function Home(props) {
       <div
         id="div3"
         ref={(el) => (divRefs.current[2] = el)}
-        className="mt-32 flex pLR67 column justify-between"
+        className="mt-32 overflow-hidden flex pLR67 column justify-between"
       >
         <div className="w48 w100 ">
           <div className="imageHover">
@@ -408,7 +408,7 @@ function Home(props) {
       <div
         id="div5"
         ref={(el) => (divRefs.current[4] = el)}
-        className="pLR67 justify-between mt-52 column mR3 flex"
+        className="pLR67 overflow-hidden justify-between mt-52 column mR3 flex"
       >
         <div className=" w100 newsContent pL0 ">
           <div></div>

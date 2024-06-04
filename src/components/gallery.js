@@ -196,8 +196,11 @@ const imagesArray = [
 
 export default function Gallery() {
   return (
-    <div className="pLR67 mt-32">
-      <h3 className="fs-27 leadin-10 mb-9 ">Gallery</h3>
+    <div className="pLR67 mt-48">
+      <div className="flex items-center mb-14">
+        <div className="line"></div>
+        <p className="ml-7 fs-27 ">Gallery</p>
+      </div>
       <ImageGallery
         imagesInfoArray={imagesArray}
         columnCount={"auto"}

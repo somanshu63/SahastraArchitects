@@ -162,6 +162,18 @@ function Header(props) {
               studios
             </NavLink>
           </li>
+          <li className="navigationList">
+            <NavLink
+              to="/sitemap"
+              onClick={() => {
+                props.setSidebar(false);
+              }}
+              className="navLink uppercase ml-3"
+              activeClassName="active"
+            >
+              sitemap
+            </NavLink>
+          </li>
         </ul>
       )}
       {props.sidebar ? (
@@ -310,6 +322,18 @@ function Header(props) {
                 activeClassName="active"
               >
                 studios
+              </NavLink>
+            </li>
+            <li className="navigationList">
+              <NavLink
+                to="/sitemap"
+                onClick={() => {
+                  props.setSidebar(false);
+                }}
+                className="navLink uppercase ml-3"
+                activeClassName="active"
+              >
+                sitemap
               </NavLink>
             </li>
           </ul>

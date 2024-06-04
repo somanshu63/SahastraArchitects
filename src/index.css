@@ -341,7 +341,7 @@ img {
 .brand {
   color: white;
   font-weight: 500;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 .navLink {
   text-decoration: none;
@@ -360,9 +360,9 @@ img {
   z-index: 100;
 }
 .navigationList {
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   font-weight: 500;
-  margin-left: 12px;
+  margin-left: 10px;
   text-transform: capitalize;
   color: white;
 }
@@ -416,7 +416,7 @@ img {
   display: block;
 }
 .iDSLinks {
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   font-weight: 500;
   margin: 18px;
   display: block;
@@ -689,6 +689,7 @@ img {
   padding-top: 3%;
   color: rgb(255, 255, 255);
   text-align: center;
+  font-size: 14px;
   background: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0));
 }
 .structureImage {
@@ -1237,6 +1238,66 @@ td {
   left: 10%;
 }
 
+/* sitemap */
+.hr {
+  width: 30px;
+  height: 3px;
+  background-color: black;
+}
+
+.arrowDown {
+  transform: rotate(90deg);
+  margin-right: 0;
+  z-index: -1;
+}
+.flatHr {
+  height: 3px;
+  background-color: black;
+  margin-bottom: -1.8rem;
+  margin-top: -2.3rem;
+  margin-left: 2.87rem;
+  margin-right: 3.4rem;
+}
+.sitemapContainer {
+  margin: 8rem auto 16rem auto;
+  width: 90vw;
+}
+
+.wADSHR {
+  margin-left: 6.1rem;
+  margin-right: 7rem;
+}
+.ADSAbsoluteContainer {
+  left: -100%;
+}
+.linkContainer {
+  text-wrap: nowrap;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.linksSitemap {
+  padding: 0.8rem 1.6rem;
+  background-color: white;
+  border-radius: 1rem;
+  z-index: 100;
+}
+.linksSitemap:hover {
+  color: #009b77;
+  animation: navlinkAnimation 0.5s;
+}
+.aDH {
+  width: 5rem;
+}
+.homeSitemap {
+  padding: 0.8rem 1.6rem;
+  background-color: #009b77;
+  color: white;
+  border-radius: 1.5rem;
+}
+
 /* mobile screen */
 @media screen and (max-width: 1200px) {
   .container {
@@ -1415,7 +1476,7 @@ td {
     height: 100%;
   }
   .navigationList {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.3rem;
   }
   .column {
     flex-direction: column;

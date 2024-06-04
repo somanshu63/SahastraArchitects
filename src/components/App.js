@@ -15,6 +15,7 @@ import FacadeDesigns from "./facadeDesigns";
 import LandscapeDesigns from "./landscapeDesigns";
 import Ids from "./ids";
 import Gallery from "./gallery";
+import Sitemap from "./sitemap";
 
 function App(props) {
   const [sidebar, setSidebar] = useState(false);
@@ -65,6 +66,9 @@ function App(props) {
         </Route>
         <Route path="/studios">
           <Studios />
+        </Route>
+        <Route path="/sitemap">
+          <Sitemap />
         </Route>
       </Switch>
 

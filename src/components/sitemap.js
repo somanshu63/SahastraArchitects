@@ -1,6 +1,6 @@
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { Link } from "react-router-dom";
-import underConstructionImage from "../images/sitemap.jpg";
+import underConstructionImage from "../images/sitemap.webp";
 
 function Sitemap() {
   return (
@@ -181,7 +181,7 @@ function Sitemap() {
       </div> */}
       <img
         src={underConstructionImage}
-        className="w-full h-screen"
+        className="w-full"
         alt="under contruction image"
       ></img>
     </>

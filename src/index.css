@@ -1282,7 +1282,7 @@ td {
   padding: 0.8rem 1.6rem;
   background-color: white;
   border-radius: 1rem;
-  z-index: 100;
+  z-index: 10;
 }
 .linksSitemap:hover {
   color: #009b77;

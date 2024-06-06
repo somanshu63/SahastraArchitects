@@ -1,10 +1,11 @@
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { Link } from "react-router-dom";
+import underConstructionImage from "../images/sitemap.jpg";
 
 function Sitemap() {
   return (
     <>
-      <p className="mr-3 fw-700 pLR67">Sitemap</p>
+      {/* <p className="mr-3 fw-700 pLR67">Sitemap</p>
 
       <div className=" sitemapContainer">
         <div className="relative">
@@ -177,7 +178,12 @@ function Sitemap() {
           </div>
           <ul className="flex items-start justify-between"></ul>
         </div>
-      </div>
+      </div> */}
+      <img
+        src={underConstructionImage}
+        className="w-full h-screen"
+        alt="under contruction image"
+      ></img>
     </>
   );
 }

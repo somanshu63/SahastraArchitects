@@ -1,4 +1,4 @@
-# Movie Critic
+# Sahastra Architects
 ![alt text](https://github.com/somanshu63/SahastraArchitects/blob/main/preview.png)
 # Basic Overview - [Live Demo](https://sahastra-architects.vercel.app/)
 

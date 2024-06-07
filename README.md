@@ -6,6 +6,6 @@ Tech Stack:
 React.Js
 
 Additional:
-Pigeon Maps for locating no. of locations
-React Grid Image Gallery for gallery
+Pigeon Maps for locating no. of locations,
+React Grid Image Gallery for gallery,
 Animations

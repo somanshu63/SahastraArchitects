@@ -16,6 +16,9 @@ import LandscapeDesigns from "./landscapeDesigns";
 import Ids from "./ids";
 import Gallery from "./gallery";
 import Sitemap from "./sitemap";
+import Faqs from "./faqs";
+import ContactUs from "./contactUs";
+import Dashboard from "./dashboard";
 
 function App(props) {
   const [sidebar, setSidebar] = useState(false);
@@ -45,6 +48,14 @@ function App(props) {
         </Route>
         <Route path="/gallery">
           <Gallery />
+        </Route>
+        <Route path="/dashboard">
+          <Dashboard />
+        </Route>
+        <Route path="/faqs" component={Faqs}></Route>
+        <Route path="/admin-faqs" component={Faqs}></Route>
+        <Route path="/contact-us">
+          <ContactUs />
         </Route>
         <Route path="/integrated-design-solutions">
           <Ids />

@@ -429,6 +429,7 @@ img {
   display: block;
 }
 .iDS:hover > .iDSList {
+  width: 300%;
   display: block;
   background-color: #009b77;
   position: absolute;
@@ -1128,9 +1129,10 @@ td {
   bottom: 10%;
   left: 10%;
   z-index: 101;
-  background: rgba(255, 255, 255, 0.96);
+  background: #e5e4e2;
   animation: fadeIn 0.5s;
   overflow: auto;
+  box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.6);
 }
 .fadeOutAnimation {
   animation: fadeOut 0.5s;
@@ -1240,14 +1242,17 @@ td {
 
 /* sitemap */
 .hr {
-  width: 30px;
-  height: 3px;
-  background-color: black;
+  width: 25px;
+  /* height: 3px; */
+  border-top: 2px solid rgba(0, 0, 0, 0.8);
+  /* background-color: black; */
 }
 
 .arrowDown {
   transform: rotate(90deg);
   margin-right: 0;
+  margin-top: -0.6rem;
+  margin-bottom: -1.3rem;
   z-index: -1;
 }
 .flatHr {
@@ -1255,20 +1260,26 @@ td {
   background-color: black;
   margin-bottom: -1.8rem;
   margin-top: -2.3rem;
-  margin-left: 2.87rem;
-  margin-right: 3.4rem;
+  margin-left: 2.7rem;
+  margin-right: 2.7rem;
+}
+.mt8 {
+  margin-top: -2.3rem;
 }
 .sitemapContainer {
   margin: 8rem auto 16rem auto;
   width: 90vw;
 }
-
+.ADSArrowDown {
+  margin-top: -2.3rem;
+}
 .wADSHR {
-  margin-left: 6.1rem;
-  margin-right: 7rem;
+  margin-left: 3.7rem;
+  margin-right: 3.7rem;
 }
 .ADSAbsoluteContainer {
   left: -100%;
+  top: 111%;
 }
 .linkContainer {
   text-wrap: nowrap;
@@ -1279,10 +1290,44 @@ td {
   flex-direction: column;
 }
 .linksSitemap {
-  padding: 0.8rem 1.6rem;
+  position: relative;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4rem;
   background-color: white;
-  border-radius: 1rem;
+  border-radius: 4px;
   z-index: 10;
+  font-size: 12px;
+  width: 5.5rem;
+  text-align: center;
+  font-weight: 600;
+  box-shadow: 2px 4px 8px 2px rgba(0, 0, 0, 0.4);
+}
+.smallGradient {
+  position: absolute;
+  top: -1rem;
+  left: 0;
+  right: 0;
+  height: 1.4rem;
+  width: 100%;
+  margin: 0;
+  padding: 0 5px;
+  color: rgb(0, 0, 0);
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  font-size: 12px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  /* background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  ); */
+  background-color: gray;
 }
 .linksSitemap:hover {
   color: #009b77;
@@ -1292,10 +1337,150 @@ td {
   width: 5rem;
 }
 .homeSitemap {
-  padding: 0.8rem 1.6rem;
+  padding: 1rem;
   background-color: #009b77;
   color: white;
-  border-radius: 1.5rem;
+  font-size: 24px;
+  border-radius: 0.5rem;
+}
+
+/* insights */
+.query {
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+.userIcon {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  margin-right: 12px;
+}
+
+.adminIcon {
+  margin-bottom: -3px;
+}
+.faqContainer {
+  border: 1px solid black;
+  padding: 1rem;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+.ask {
+  padding: 0.25rem 0.5rem;
+  margin-left: 0.5rem;
+  border-radius: 12px;
+  border: 1px solid black;
+  font-size: 15px;
+  font-weight: 500;
+}
+.askForm {
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  left: 10%;
+  bottom: 10%;
+  background: #e5e4e2;
+  box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.6);
+  z-index: 100;
+}
+.input {
+  background: none;
+  width: 150%;
+  margin: 1rem 0;
+  border-radius: 6px;
+  border: 1px solid gray;
+  padding: 0.5rem;
+}
+.inputAnswer {
+  background: none;
+  width: 200%;
+  margin: 0 1rem 0 0;
+  border-radius: 6px;
+  border: 1px solid gray;
+  padding: 0.25rem;
+  font-size: 12px;
+}
+.fs-12 {
+  font-size: 12px;
+}
+.askBtn {
+  position: absolute;
+  bottom: 6%;
+  left: 42%;
+  right: 42%;
+}
+.answer {
+  line-height: 1.3;
+  font-size: 15px;
+}
+.adminImage {
+  width: 50px;
+  height: 50px;
+}
+.dashboardLinks {
+  text-transform: uppercase;
+  text-decoration: underline;
+  margin: 1rem 0;
+  display: block;
+  color: white;
+  font-size: 13px;
+}
+.sidebar {
+  width: 20%;
+  background-color: rgb(17, 17, 17);
+  margin-top: -0.5rem;
+  padding: 2rem;
+  height: 90vh;
+  margin-bottom: -8rem;
+}
+.activeDLink {
+  font-weight: 700;
+  font-size: 20px;
+}
+.messagesTable {
+  width: 100%;
+}
+.noBorder {
+  border: none;
+}
+.messageTableHeading {
+  font-weight: 600;
+  font-size: 13px;
+  padding: 1rem;
+  text-align: left;
+}
+.messageTableContent {
+  font-size: 13px;
+  padding: 1rem;
+  text-align: left;
+  overflow: hidden;
+}
+.mTCSquare:hover {
+  transform: scale(1.5);
+}
+.mTCSquare {
+  padding: 0;
+}
+
+/* contact us */
+.contactForm {
+  width: 60%;
+  margin: 0 auto;
+  border: 1px solid black;
+  padding: 2rem;
+  border-radius: 12px;
+}
+.contactInput {
+  background: none;
+  width: 100%;
+  margin: 1rem 0;
+  border-radius: 6px;
+  border: 1px solid gray;
+  padding: 0.5rem;
+}
+.contactSubmitBtn {
+  padding: 0.5rem 1rem;
+  margin: 1rem;
 }
 
 /* mobile screen */
@@ -1473,7 +1658,7 @@ td {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 100%;
+    height: 95%;
   }
   .navigationList {
     margin-bottom: 0.3rem;
@@ -1594,6 +1779,7 @@ td {
   }
   .navLink {
     color: rgb(0, 0, 0);
+    padding: 12px 0;
   }
 
   .hutContainer {

@@ -49,6 +49,7 @@ import sns4 from "../images/singleProject/sns4.jpg";
 import sns5 from "../images/home/spotlight1.jpg";
 import sns6 from "../images/home/earthImage.jpeg";
 import theWoodenBrownHouse from "../images/singleProject/the wooden brown house.jpg";
+import { useEffect, useState } from "react";
 
 const imagesArray = [
   {
@@ -195,18 +196,28 @@ const imagesArray = [
 ];
 
 export default function Gallery() {
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+  }, []);
   return (
     <div className="pLR67 mt-48">
       <div className="flex items-center mb-14">
         <div className="line"></div>
         <p className="ml-7 fs-27 ">Gallery</p>
       </div>
-      <ImageGallery
-        imagesInfoArray={imagesArray}
-        columnCount={"auto"}
-        columnWidth={230}
-        gapSize={24}
-      />
+      {loading ? (
+        <div className="load"></div>
+      ) : (
+        <ImageGallery
+          imagesInfoArray={imagesArray}
+          columnCount={"auto"}
+          columnWidth={230}
+          gapSize={24}
+        />
+      )}
     </div>
   );
 }

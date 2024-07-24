@@ -55,7 +55,7 @@ function Header(props) {
                 props.setSidebar(false);
               }}
             >
-              Architectural design solutions
+              ADS
               <span className="ml-1">
                 <IoIosArrowDown style={{ fontSize: "1rem" }} />
               </span>
@@ -160,6 +160,30 @@ function Header(props) {
               activeClassName="active"
             >
               studios
+            </NavLink>
+          </li>
+          <li className="navigationList">
+            <NavLink
+              to="/faqs"
+              onClick={() => {
+                props.setSidebar(false);
+              }}
+              className="navLink uppercase ml-3"
+              activeClassName="active"
+            >
+              Insight
+            </NavLink>
+          </li>
+          <li className="navigationList">
+            <NavLink
+              to="/contact-us"
+              onClick={() => {
+                props.setSidebar(false);
+              }}
+              className="navLink uppercase ml-3"
+              activeClassName="active"
+            >
+              Contact Us
             </NavLink>
           </li>
           <li className="navigationList">
@@ -322,6 +346,30 @@ function Header(props) {
                 activeClassName="active"
               >
                 studios
+              </NavLink>
+            </li>
+            <li className="navigationList">
+              <NavLink
+                to="/faqs"
+                onClick={() => {
+                  props.setSidebar(false);
+                }}
+                className="navLink uppercase ml-3"
+                activeClassName="active"
+              >
+                Insight
+              </NavLink>
+            </li>
+            <li className="navigationList">
+              <NavLink
+                to="/contact-us"
+                onClick={() => {
+                  props.setSidebar(false);
+                }}
+                className="navLink uppercase ml-3"
+                activeClassName="active"
+              >
+                Contact Us
               </NavLink>
             </li>
             <li className="navigationList">

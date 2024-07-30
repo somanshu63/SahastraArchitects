@@ -182,7 +182,7 @@ function Sitemap() {
                 /> */}
               </div>
 
-              <Link className="block linksSitemap" to="/faqs">
+              <Link className="block linksSitemap" to="/insight">
                 <div className="smallGradient">8.0</div>
                 Insight
               </Link>

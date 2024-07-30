@@ -164,7 +164,7 @@ function Header(props) {
           </li>
           <li className="navigationList">
             <NavLink
-              to="/faqs"
+              to="/insight"
               onClick={() => {
                 props.setSidebar(false);
               }}
@@ -350,7 +350,7 @@ function Header(props) {
             </li>
             <li className="navigationList">
               <NavLink
-                to="/faqs"
+                to="/insight"
                 onClick={() => {
                   props.setSidebar(false);
                 }}

@@ -1366,7 +1366,7 @@ td {
   margin-bottom: 1rem;
 }
 .ask {
-  padding: 0.25rem 0.5rem;
+  padding: 0.5rem 1rem;
   margin-left: 0.5rem;
   border-radius: 12px;
   border: 1px solid black;
@@ -1406,8 +1406,8 @@ td {
 .askBtn {
   position: absolute;
   bottom: 6%;
-  left: 42%;
-  right: 42%;
+  left: 41%;
+  right: 41%;
 }
 .answer {
   line-height: 1.3;

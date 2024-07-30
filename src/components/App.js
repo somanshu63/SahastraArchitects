@@ -52,8 +52,7 @@ function App(props) {
         <Route path="/dashboard">
           <Dashboard />
         </Route>
-        <Route path="/faqs" component={Faqs}></Route>
-        <Route path="/admin-faqs" component={Faqs}></Route>
+        <Route path="/insight" component={Faqs}></Route>
         <Route path="/contact-us">
           <ContactUs />
         </Route>

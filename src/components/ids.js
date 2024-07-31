@@ -7,6 +7,22 @@ import { NavLink } from "react-router-dom/cjs/react-router-dom.min";
 
 function Ids() {
   useEffect(() => {
+    return () => {
+      fetch("https://sahastrabackend.onrender.com/dashboard", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          site: "ADS",
+        }),
+      })
+        .then(() => {})
+        .catch((error) => {});
+    };
+  }, []);
+
+  useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
   return (

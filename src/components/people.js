@@ -17,6 +17,21 @@ function People() {
   //   window.scrollTo({ top: 0, behavior: "smooth" });
   // }, []);
   useEffect(() => {
+    return () => {
+      fetch("https://sahastrabackend.onrender.com/dashboard", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          site: "people",
+        }),
+      })
+        .then(() => {})
+        .catch((error) => {});
+    };
+  }, []);
+  useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {

@@ -197,6 +197,22 @@ const imagesArray = [
 
 export default function Gallery() {
   const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    return () => {
+      fetch("https://sahastrabackend.onrender.com/dashboard", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          site: "gallery",
+        }),
+      })
+        .then(() => {})
+        .catch((error) => {});
+    };
+  }, []);
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);

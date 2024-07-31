@@ -1,8 +1,24 @@
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { Link } from "react-router-dom";
 import underConstructionImage from "../images/sitemap.webp";
+import { useEffect, useState } from "react";
 
 function Sitemap() {
+  useEffect(() => {
+    return () => {
+      fetch("https://sahastrabackend.onrender.com/dashboard", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          site: "sitemap",
+        }),
+      })
+        .then(() => {})
+        .catch((error) => {});
+    };
+  }, []);
   return (
     <>
       <p className="mr-3 fw-700 pLR67">Sitemap</p>

@@ -23,6 +23,21 @@ function Studios() {
     }
   };
   useEffect(() => {
+    return () => {
+      fetch("https://sahastrabackend.onrender.com/dashboard", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          site: "studios",
+        }),
+      })
+        .then(() => {})
+        .catch((error) => {});
+    };
+  }, []);
+  useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {

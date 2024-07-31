@@ -32,7 +32,21 @@ function Work() {
   const divRefs = useRef([]);
   const [counts, setCounts] = useState([0, 0]);
   const [inView, setInView] = useState(null);
-
+  useEffect(() => {
+    return () => {
+      fetch("https://sahastrabackend.onrender.com/dashboard", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          site: "work",
+        }),
+      })
+        .then(() => {})
+        .catch((error) => {});
+    };
+  }, []);
   const typingEffect = (event) => {
     const updateContent = event;
 

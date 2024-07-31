@@ -34,6 +34,22 @@ function Home(props) {
     ];
     setCollection(updatedCollection);
   };
+
+  useEffect(() => {
+    return () => {
+      fetch("https://sahastrabackend.onrender.com/dashboard", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          site: "home",
+        }),
+      })
+        .then(() => {})
+        .catch((error) => {});
+    };
+  }, []);
   useEffect(() => {
     const handleWidth = () => {
       setWidth(window.innerWidth * 0.14);

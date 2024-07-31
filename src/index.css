@@ -1413,6 +1413,8 @@ td {
   line-height: 1.3;
   font-size: 15px;
 }
+
+/* dashboard */
 .adminImage {
   width: 50px;
   height: 50px;
@@ -1434,8 +1436,9 @@ td {
   margin-bottom: -8rem;
 }
 .activeDLink {
-  font-weight: 700;
-  font-size: 20px;
+  font-weight: 800;
+  font-size: 15px;
+  color: #009b77;
 }
 .messagesTable {
   width: 100%;
@@ -1460,6 +1463,40 @@ td {
 }
 .mTCSquare {
   padding: 0;
+}
+.analyticsBox {
+  border: 2px solid black;
+  border-radius: 12px;
+  background-color: white;
+  width: 48%;
+  height: 42vh;
+  overflow: auto;
+}
+.analyticsTable {
+  overflow: auto;
+  height: 100%;
+}
+/* For WebKit browsers */
+::-webkit-scrollbar {
+  width: 10px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Color of the track */
+  border-radius: 20px; /* Rounded corners on the track */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888; /* Color of the scrollbar thumb */
+  border-radius: 10px; /* Rounded corners on the thumb */
+  border: 2px solid #f1f1f1; /* Add space around thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Color of the thumb on hover */
+}
+.chartContainer {
+  overflow: hidden;
 }
 
 /* contact us */

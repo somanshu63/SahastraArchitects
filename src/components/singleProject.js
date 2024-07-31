@@ -24,7 +24,21 @@ function SingleProject(props) {
   useEffect(() => {
     project && setLoading(false);
   }, [project]);
-
+  useEffect(() => {
+    return () => {
+      fetch("https://sahastrabackend.onrender.com/dashboard", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          site: "single project",
+        }),
+      })
+        .then(() => {})
+        .catch((error) => {});
+    };
+  }, []);
   return (
     <div className="pLR67 mRT3">
       {loading ? (

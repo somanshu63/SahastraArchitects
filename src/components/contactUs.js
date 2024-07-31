@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function ContactUs() {
   const [name, setName] = useState("");
@@ -6,6 +6,22 @@ function ContactUs() {
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
   const [error, setError] = useState("");
+
+  useEffect(() => {
+    return () => {
+      fetch("https://sahastrabackend.onrender.com/dashboard", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          site: "contact us",
+        }),
+      })
+        .then(() => {})
+        .catch((error) => {});
+    };
+  }, []);
 
   const sendMessage = () => {
     fetch("https://sahastrabackend.onrender.com/contact-us", {

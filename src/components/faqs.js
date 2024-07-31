@@ -12,6 +12,23 @@ function Faqs(props) {
   const [currentAnswerIndex, setCurrentAnswerIndex] = useState();
   const [isAdminLoggedIn, setIsAdminLoggedIn] = useState(false);
   const [isAskFormOpen, setIsAskFormOpen] = useState(false);
+
+  useEffect(() => {
+    return () => {
+      fetch("https://sahastrabackend.onrender.com/dashboard", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          site: "insight",
+        }),
+      })
+        .then(() => {})
+        .catch((error) => {});
+    };
+  }, []);
+
   useEffect(() => {
     fetch("https://sahastrabackend.onrender.com/faq")
       .then((data) => data.json())

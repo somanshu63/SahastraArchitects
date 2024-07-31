@@ -10,7 +10,21 @@ import { useEffect, useRef, useState } from "react";
 function VastuSolutions() {
   const divRefs = useRef([]);
   const [counts, setCounts] = useState([0, 0, 0, 0, 0, 0]);
-
+  useEffect(() => {
+    return () => {
+      fetch("https://sahastrabackend.onrender.com/dashboard", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          site: "vastu",
+        }),
+      })
+        .then(() => {})
+        .catch((error) => {});
+    };
+  }, []);
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
